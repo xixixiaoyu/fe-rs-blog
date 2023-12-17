@@ -4,21 +4,21 @@
 		"name": "vue 组件库封装",
 		"label": "vue 组件库封装",
 		"collapsible": true,
-		"collapsed": false
+		"collapsed": true
 	},
 	{
 		"type": "dir",
 		"name": "vue 设计与实现",
 		"label": "vue 设计与实现",
 		"collapsible": true,
-		"collapsed": false
+		"collapsed": true
 	},
 	{
 		"type": "dir",
 		"name": "函数式编程",
 		"label": "函数式编程",
 		"collapsible": true,
-		"collapsed": false
+		"collapsed": true
 	},
 	{
 		"type": "file",
