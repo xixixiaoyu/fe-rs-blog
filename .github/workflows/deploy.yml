@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./doc_dist # 指定构建产物的目录，根据您的项目实际情况来设置
+          publish_dir: ./doc_build # 指定构建产物的目录，根据您的项目实际情况来设置
