@@ -1,14 +1,21 @@
 [
 	{
-		"type": "file",
-		"name": "前端全栈项目技术选型",
-		"label": "前端全栈项目技术选型"
-	},
-	{
 		"type": "dir",
-		"name": "vue 组件库封装",
+		"name": "vue.js组件库封装",
 		"label": "vue 组件库封装",
 		"collapsible": true,
 		"collapsed": false
+	},
+	{
+		"type": "dir",
+		"name": "vue.js设计与实现",
+		"label": "vue.js 设计与实现",
+		"collapsible": true,
+		"collapsed": false
+	},
+	{
+		"type": "file",
+		"name": "前端全栈项目技术选型",
+		"label": "前端全栈项目技术选型"
 	}
 ]

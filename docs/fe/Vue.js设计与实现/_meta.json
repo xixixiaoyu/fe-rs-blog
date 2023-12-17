@@ -2,61 +2,86 @@
 	{
 		"type": "file",
 		"name": "01_第 1、2、3 章框架设计概览",
-		"label": "01_第 1、2、3 章框架设计概览"
+		"label": "第 1、2、3 章框架设计概览"
 	},
 	{
 		"type": "file",
-		"name": "具有数据校验功能的表单组件 - Form",
-		"label": "具有数据校验功能的表单组件 - Form"
+		"name": "02_第 4 章Vue.js 中的响应系统",
+		"label": "第 4 章Vue.js 中的响应系统"
 	},
 	{
 		"type": "file",
-		"name": "组合多选框组件 - CheckboxGroup & Checkbox",
-		"label": "组合多选框组件 - CheckboxGroup & Checkbox"
+		"name": "03_第 5 章非原始值的响应式方案",
+		"label": "第 5 章非原始值的响应式方案"
 	},
 	{
 		"type": "file",
-		"name": "Vue 的构造器 - extend 与手动挂载 - $mount",
-		"label": "Vue 的构造器 - extend 与手动挂载 - $mount"
+		"name": "04_第 6 章原始值的响应式方案",
+		"label": "第 6 章原始值的响应式方案"
 	},
 	{
 		"type": "file",
-		"name": "动态渲染 .vue 文件的组件 - Display",
-		"label": "动态渲染 .vue 文件的组件 - Display"
+		"name": "05_第 7 章渲染器的设计",
+		"label": "第 7 章渲染器的设计"
 	},
 	{
 		"type": "file",
-		"name": "全局提示组件——$Alert",
-		"label": "全局提示组件——$Alert"
+		"name": "06_第 8 章挂载与更新",
+		"label": "第 8 章挂载与更新"
 	},
 	{
 		"type": "file",
-		"name": "Render 函数与 Functional Render",
-		"label": "Render 函数与 Functional Render"
+		"name": "07_第 9 章简单 diff 算法",
+		"label": "第 9 章简单 diff 算法"
 	},
 	{
 		"type": "file",
-		"name": "可用 Render 自定义列的表格组件 - Table",
-		"label": "可用 Render 自定义列的表格组件 - Table"
+		"name": "08_第 10 章双端 diff 算法",
+		"label": "第 10 章双端 diff 算法"
 	},
 	{
 		"type": "file",
-		"name": "slot-scope 自定义列的表格组件——Table",
-		"label": "slot-scope 自定义列的表格组件——Table"
+		"name": "09_第 11 章快速 diff 算法",
+		"label": "第 11 章快速 diff 算法"
 	},
 	{
 		"type": "file",
-		"name": "树形控件 - Tree",
-		"label": "树形控件 - Tree"
+		"name": "10_第 12 章组件的实现原理",
+		"label": "第 12 章组件的实现原理"
 	},
 	{
 		"type": "file",
-		"name": "递归组件与动态组件",
-		"label": "递归组件与动态组件"
+		"name": "11_第 13 章异步组件与函数式组件",
+		"label": "第 13 章异步组件与函数式组件"
 	},
 	{
 		"type": "file",
-		"name": "总结",
-		"label": "总结"
+		"name": "12_第 14 章内建组件和模块",
+		"label": "第 14 章内建组件和模块"
+	},
+	{
+		"type": "file",
+		"name": "13_第 15 章 编译器核心技术概览",
+		"label": "第 15 章 编译器核心技术概览"
+	},
+	{
+		"type": "file",
+		"name": "14_第 16 章解析器",
+		"label": "第 16 章解析器"
+	},
+	{
+		"type": "file",
+		"name": "14_第 16 章解析器",
+		"label": "第 16 章解析器"
+	},
+	{
+		"type": "file",
+		"name": "15_第 17 章编译优化",
+		"label": "第 17 章编译优化"
+	},
+	{
+		"type": "file",
+		"name": "16_第 18 章同构渲染",
+		"label": "第 18 章同构渲染"
 	}
 ]
