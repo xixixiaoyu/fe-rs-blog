@@ -11,7 +11,6 @@ export default defineConfig({
 		light: '/rspress-light-logo.png',
 		dark: '/rspress-dark-logo.png',
 	},
-	ssg: false,
 	themeConfig: {
 		socialLinks: [
 			{
@@ -21,5 +20,17 @@ export default defineConfig({
 			},
 		],
 		hideNavbar: 'never',
+	},
+	builderConfig: {
+		html: {
+			tags: [
+				{
+					tag: 'meta',
+					attrs: {
+						referrer: 'no-referrer',
+					},
+				},
+			],
+		},
 	},
 });
