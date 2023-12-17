@@ -1,0 +1,12 @@
+[
+	{
+		"text": "Guide",
+		"link": "/guide/",
+		"activeMatch": "/guide/"
+	},
+	{
+		"text": "算法和数据结构",
+		"link": "/algorithms/两数之和",
+		"activeMatch": "/algorithms/"
+	}
+]
