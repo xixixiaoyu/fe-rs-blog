@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /algorithms/两数之和
+      link: /algorithms/1 两数之和
     - theme: alt
       text: Github
       link: https://github.com/web-infra-dev/rspress

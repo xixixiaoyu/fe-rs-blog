@@ -14,8 +14,20 @@
 		"collapsed": false
 	},
 	{
+		"type": "dir",
+		"name": "函数式编程",
+		"label": "函数式编程",
+		"collapsible": true,
+		"collapsed": false
+	},
+	{
 		"type": "file",
-		"name": "前端全栈项目技术选型",
-		"label": "前端全栈项目技术选型"
+		"name": "全栈技术选型，前后端编程本质",
+		"label": "全栈技术选型，前后端编程本质"
+	},
+	{
+		"type": "file",
+		"name": "大厂项目标准开发流程和排期",
+		"label": "大厂项目标准开发流程和排期"
 	}
 ]

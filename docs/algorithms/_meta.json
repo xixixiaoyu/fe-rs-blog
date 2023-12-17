@@ -1,7 +1,37 @@
 [
 	{
 		"type": "file",
-		"name": "两数之和.md",
-		"label": "两数之和"
+		"name": "1 两数之和",
+		"label": "1 两数之和"
+	},
+	{
+		"type": "file",
+		"name": "3 无重复字符的最长子串",
+		"label": "3 无重复字符的最长子串"
+	},
+	{
+		"type": "file",
+		"name": "300 最长递增子序列",
+		"label": "300 最长递增子序列"
+	},
+	{
+		"type": "file",
+		"name": "56 合并区间",
+		"label": "56 合并区间"
+	},
+	{
+		"type": "file",
+		"name": "70 爬楼梯",
+		"label": "70 爬楼梯"
+	},
+	{
+		"type": "file",
+		"name": "归并排序",
+		"label": "归并排序"
+	},
+	{
+		"type": "file",
+		"name": "快速排序",
+		"label": "快速排序"
 	}
 ]
