@@ -1,12 +1,12 @@
 [
 	{
-		"text": "Guide",
-		"link": "/guide/",
-		"activeMatch": "/guide/"
-	},
-	{
 		"text": "算法和数据结构",
 		"link": "/algorithms/两数之和",
 		"activeMatch": "/algorithms/"
+	},
+	{
+		"text": "前端",
+		"link": "/fe/前端全栈项目技术选型",
+		"activeMatch": "/fe/"
 	}
 ]
