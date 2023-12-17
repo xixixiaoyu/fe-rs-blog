@@ -1,15 +1,15 @@
 [
 	{
 		"type": "dir",
-		"name": "vue.js组件库封装",
+		"name": "vue 组件库封装",
 		"label": "vue 组件库封装",
 		"collapsible": true,
 		"collapsed": false
 	},
 	{
 		"type": "dir",
-		"name": "vue.js设计与实现",
-		"label": "vue.js 设计与实现",
+		"name": "vue 设计与实现",
+		"label": "vue 设计与实现",
 		"collapsible": true,
 		"collapsed": false
 	},
