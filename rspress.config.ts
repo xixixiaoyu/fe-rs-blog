@@ -27,7 +27,8 @@ export default defineConfig({
 				{
 					tag: 'meta',
 					attrs: {
-						referrer: 'no-referrer',
+						name: 'referrer',
+						content: 'no-referrer',
 					},
 				},
 			],
