@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 或者是您用于部署的分支
+
+      jobs:
+        deploy:
+          runs-on: ubuntu-latest
+          steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v2
+      
+          - name: Set up Node.js
+            uses: actions/setup-node@v2
+            with:
+              node-version: '14'  # 指定 Node.js 的版本
+      
+          - name: Install pnpm
+            run: npm install -g pnpm
+      
+          - name: Install Dependencies
+            run: pnpm install
+      
+          - name: Build
+            run: pnpm build
+      
+          - name: Deploy to GitHub Pages
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./dist  # 指定构建产物的目录，根据您的项目实际情况来设置
