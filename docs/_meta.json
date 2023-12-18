@@ -6,7 +6,7 @@
 	},
 	{
 		"text": "算法和数据结构",
-		"link": "/algorithms/1 两数之和",
+		"link": "/algorithms/哈希表/1.两数之和",
 		"activeMatch": "/algorithms/"
 	}
 ]

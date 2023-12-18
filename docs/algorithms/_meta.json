@@ -1,13 +1,10 @@
 [
 	{
-		"type": "file",
-		"name": "1 两数之和",
-		"label": "1 两数之和"
-	},
-	{
-		"type": "file",
-		"name": "3 无重复字符的最长子串",
-		"label": "3 无重复字符的最长子串"
+		"type": "dir",
+		"name": "哈希表",
+		"label": "哈希表",
+		"collapsible": true,
+		"collapsed": true
 	},
 	{
 		"type": "file",
