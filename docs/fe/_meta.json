@@ -50,5 +50,10 @@
 		"type": "file",
 		"name": "大厂项目标准开发流程和排期",
 		"label": "大厂项目标准开发流程和排期"
+	},
+	{
+		"type": "file",
+		"name": "组件和 react hooks 的最佳实践",
+		"label": "组件和 react hooks 的最佳实践"
 	}
 ]
