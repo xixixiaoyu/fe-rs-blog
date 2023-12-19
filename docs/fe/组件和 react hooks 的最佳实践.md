@@ -1,33 +1,31 @@
 ## 脚手架简介
-脚手架在前端开发中是一种工具或者说是一个工程模板，它帮助开发者快速搭建起一个基础的项目结构，并提供配置好的开发环境和构建流程。这样，开发者就可以专注于编写业务代码，而不必从零开始搭建整个项目结构。<br />脚手架通常会包括以下几个方面的内容：
+脚手架（Scaffolding）是一种项目模板工具，旨在帮助开发者快速搭建新的项目结构，配置开发环境，以及生成一些基本的代码和文件结构。使用脚手架可以大大提高开发效率，避免重复性的工作，同时确保项目结构的一致性和遵循最佳实践。<br />脚手架工具通常提供以下功能：
 
-1. **项目结构**：提供一个预设的目录结构，帮助组织项目代码和文件。
-2. **配置文件**：包含了各种工具的配置文件，例如 Webpack、Babel、ESLint 等，以便于项目能够使用现代化的 JavaScript 特性，保证代码风格一致性，以及进行自动化构建等。
-3. **构建工具**：集成了如 Webpack、Gulp 等构建工具，用于自动化处理诸如代码压缩、打包、转译等任务。
-4. **开发服务器**：提供一个本地的开发服务器，支持热模块替换（Hot Module Replacement, HMR），使得在开发过程中可以实时预览修改后的效果。
-5. **命令行工具**：通过命令行界面（CLI），开发者可以快速生成新的项目、添加新的模块或组件等。
+1. **生成项目结构**：创建项目所需的目录和文件结构，包括配置文件、源代码目录、测试目录等。
+2. **配置开发环境**：自动配置项目的开发环境，如安装依赖包、设置构建工具（如 Webpack、Babel 等）、配置代码格式化和校验工具（如 ESLint、Prettier 等）。
+3. **代码生成**：根据预设模板生成基础的代码文件，如组件、服务、路由等，帮助开发者快速开始编写业务逻辑。
+4. **自定义和扩展**：许多脚手架工具允许开发者根据自己的需求自定义模板和脚手架的行为，或者通过插件进行功能扩展。
 
 现在流行的前端脚手架有：
 
-1. **Create React App**：为 React 应用提供的脚手架，它能够让你无需配置就快速启动一个 React 项目。
-2. **Vue CLI**：Vue.js 的官方脚手架，用于快速生成 Vue.js 项目的骨架。
-3. **Angular CLI**：Angular 的命令行界面工具，可以用来初始化、开发、构建和维护 Angular 应用。
-4. **Next.js**：为 React 应用提供的一个框架，它封装了服务端渲染的复杂性，并提供了脚手架功能。
-5. **Nuxt.js**：类似于 Next.js，但是为 Vue.js 提供服务端渲染和静态站点生成的能力。
-6. **Gatsby**：一个静态站点生成器，它将 React 和 GraphQL 结合起来，用于构建性能优异的个人网站和应用。
+- **Create React App**：用于快速搭建 React 应用的脚手架工具，无需配置即可开始开发。
+- **Vue CLI**：Vue.js 的官方脚手架，提供了丰富的配置选项和插件系统，方便开发者搭建和维护 Vue 应用。
+- **Angular CLI**：Angular 的命令行接口，用于生成、开发、测试和部署 Angular 项目。
+- **Yeoman**：一个通用的脚手架系统，允许开发者创建自己的脚手架工具，支持多种前端框架和库。
 
-使用脚手架的好处是显而易见的，它可以大幅度提高开发效率，降低配置复杂性，同时也能够保证项目的结构和代码风格的一致性。对于团队协作和项目维护来说，这些都是非常重要的。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182273466-d06d9ecd-d9c6-4179-bf38-a7c1d1f8c37e.png#averageHue=%2387937e&clientId=u9b86692b-a41e-4&from=paste&height=290&id=u9b1dccb4&originHeight=766&originWidth=1586&originalType=binary&ratio=2&rotation=0&showTitle=false&size=317665&status=done&style=none&taskId=u00571de4-7e97-47e3-b12d-1eb8606e7b3&title=&width=601)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182295751-2756a4c2-b317-42c1-b052-3ef9a6cfdfde.png#averageHue=%23f9f2f2&clientId=u9b86692b-a41e-4&from=paste&height=237&id=u79357b0d&originHeight=574&originWidth=1650&originalType=binary&ratio=2&rotation=0&showTitle=false&size=274123&status=done&style=none&taskId=uf9b2c1aa-2f23-4e3c-a595-cc2e2cb91ad&title=&width=681)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182369904-9048baed-5fdf-44e5-8262-d795fe4ded9a.png#averageHue=%23faf8f8&clientId=u9b86692b-a41e-4&from=paste&height=393&id=u1b24eec3&originHeight=962&originWidth=1746&originalType=binary&ratio=2&rotation=0&showTitle=false&size=377090&status=done&style=none&taskId=u35c58e68-666b-478a-833a-0d7d3c14042&title=&width=714)<br />推荐使用 vite 作为脚手架构建工具<br />Vite 是一个现代化的前端构建工具，它利用了最新的浏览器特性，如 ES 模块导入，来提供快速的启动时间和即时模块热更新。<br />Vite 的主要优势包括：
+脚手架的使用极大地简化了前端项目的初始搭建过程，帮助开发者专注于业务代码的编写，同时保证了项目的一致性和质量。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182273466-d06d9ecd-d9c6-4179-bf38-a7c1d1f8c37e.png#averageHue=%2387937e&clientId=u9b86692b-a41e-4&from=paste&height=290&id=u9b1dccb4&originHeight=766&originWidth=1586&originalType=binary&ratio=2&rotation=0&showTitle=false&size=317665&status=done&style=none&taskId=u00571de4-7e97-47e3-b12d-1eb8606e7b3&title=&width=601)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182295751-2756a4c2-b317-42c1-b052-3ef9a6cfdfde.png#averageHue=%23f9f2f2&clientId=u9b86692b-a41e-4&from=paste&height=237&id=u79357b0d&originHeight=574&originWidth=1650&originalType=binary&ratio=2&rotation=0&showTitle=false&size=274123&status=done&style=none&taskId=uf9b2c1aa-2f23-4e3c-a595-cc2e2cb91ad&title=&width=681)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182369904-9048baed-5fdf-44e5-8262-d795fe4ded9a.png#averageHue=%23faf8f8&clientId=u9b86692b-a41e-4&from=paste&height=393&id=u1b24eec3&originHeight=962&originWidth=1746&originalType=binary&ratio=2&rotation=0&showTitle=false&size=377090&status=done&style=none&taskId=u35c58e68-666b-478a-833a-0d7d3c14042&title=&width=714)<br />推荐使用 vite 作为脚手架构建工具<br />Vite 是一种现代化的前端构建工具，它利用浏览器原生的 ES 模块导入特性（ESM）来提供快速的开发服务器启动和模块热更新。<br />Vite 的主要优势包括：
 
-1. **快速的冷启动**：传统的构建工具如Webpack在启动项目时需要对整个应用进行打包，这在大型项目中会非常缓慢。Vite 则利用浏览器支持的原生 ES 模块导入特性，只有在请求时才编译模块，这大大加快了冷启动时间。
-2. **即时的热模块更新（HMR）**：当修改代码时，Vite 只需要重新加载改变的部分，而不是整个应用，这使得热更新非常快速。
-3. **类型化的构建**：Vite 内置了对 TypeScript 的支持，无需额外的插件或配置。
-4. **优化的生产构建**：虽然 Vite 在开发环境下不需要打包，但它在生产环境下使用 Rollup 进行高效的打包，以获得最佳的加载性能。
-5. **丰富的插件生态**：Vite 支持插件，这意味着你可以很容易地扩展其功能，使用社区已经构建的插件或自己编写新插件。
-6. **易于配置**：Vite 提供了一个简单而直观的配置文件，使得开发者可以轻松地调整项目的构建过程。
-7. **框架无关**：Vite 不仅可以用于 Vue 项目，还可以用于 React、Svelte 以及任何可以使用 ES 模块的前端项目。
-8. **内置功能**：Vite 提供了许多内置功能，如 CSS 预处理器支持、文件别名等，这些功能可以使开发过程更加顺畅。
-
-总结来说，Vite 通过利用现代浏览器的特性，提供了一个快速、轻量且功能丰富的开发体验，尤其适合大型和复杂的前端项目。
+1. **快速的服务器启动**：Vite 在开发模式下不需要打包操作，因此可以实现极快的冷启动，大幅缩短等待时间。
+2. **即时的模块热更新**（HMR）：Vite 提供了高效的模块热更新机制，当文件发生变化时，只有改变的部分会被重新加载和渲染，这让开发过程更为流畅。
+3. **轻量级的构建**：Vite 在生产环境下使用 Rollup 进行打包，这意味着最终的构建版本既轻量又高效，通常比传统的打包工具生成的文件更小。
+4. **原生 ESM 支持**：Vite 利用浏览器对 ES 模块的原生支持，可以让你在开发过程中直接使用新的 JavaScript 特性而无需转译。
+5. **丰富的插件生态**：Vite 支持 Rollup 插件，这意味着你可以利用已有的 Rollup 插件生态系统，同时 Vite 自己的插件生态也在快速增长。
+6. **易于配置**：Vite 提供了一个简洁的配置文件 vite.config.js，使得对项目的配置变得简单直观。
+7. **内置功能丰富**：Vite 内置了许多实用功能，如 CSS 预处理器支持、文件别名配置、环境变量加载等，无需额外配置即可使用。
+8. **框架无关**：Vite 不仅仅适用于 Vue，还可以与 React、Svelte 等其他现代前端框架无缝集成。
+9. **TypeScript 支持**：Vite 提供开箱即用的 TypeScript 支持，无需额外安装插件或配置复杂的工具链。
+10. **优秀的 SSR 支持**：Vite 对服务端渲染（SSR）的支持也非常友好，它可以帮助开发者更容易地构建 SSR 应用。
+11. **现代化的缓存策略**：Vite 使用 HTTP 缓存来提高重载时的性能，因为它会利用浏览器缓存未改变的模块。
 
 ## 创建 react 项目
 首先确保 Node.js 版本至少为 12.0.0。<br />然后命令行输入：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182995100-34f074de-3253-451f-bb11-a4b258ece970.png#averageHue=%23fbf4e1&clientId=u9b86692b-a41e-4&from=paste&height=376&id=u2085d955&originHeight=1416&originWidth=2468&originalType=binary&ratio=2&rotation=0&showTitle=false&size=338968&status=done&style=none&taskId=ub37147e4-4267-4bd6-b371-d67d5682b0a&title=&width=655)<br />进入目录，安装依赖后：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702183202756-d9a288dc-940e-49b1-a6f8-04f279e1a02a.png#averageHue=%233c4146&clientId=u9b86692b-a41e-4&from=paste&height=441&id=ue1c7659f&originHeight=882&originWidth=348&originalType=binary&ratio=2&rotation=0&showTitle=false&size=71699&status=done&style=none&taskId=u0612ff58-3c07-4c29-95dd-af2ca01f5cb&title=&width=174)
@@ -59,7 +57,7 @@
 2. **函数组件（Function Component）**：随着 React 16.8 的更新，函数组件的能力得到了极大的扩展，特别是通过引入了 Hooks。函数组件是使用普通 JavaScript 函数或箭头函数定义的，它们可以接收 props 作为参数，返回需要渲染的 React 元素。在引入 Hooks 之前，函数组件通常被认为是无状态的，只能用于呈现 UI，不能持有状态或执行副作用。
 3. **钩子（Hooks）**：Hooks 是 React 16.8 中引入的新特性，它允许函数组件使用状态（通过 useState）和其他 React 特性（如生命周期特性，通过 useEffect等）。Hooks 的引入使得函数组件的能力与类组件相当，甚至更加灵活和强大。
 
-现在前端 UI 编程，更倾向使用函数组合的方式
+现在前端 UI 编程，更倾向使用函数组合的方式。
 
 ### 一个典型组件应该包含什么
 
