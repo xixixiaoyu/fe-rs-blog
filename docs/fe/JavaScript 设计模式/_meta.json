@@ -1,0 +1,62 @@
+[
+	{
+		"type": "file",
+		"name": "01_面向对象和 UML 类图",
+		"label": "面向对象和 UML 类图"
+	},
+	{
+		"type": "file",
+		"name": "02_设计原则和哲学",
+		"label": "设计原则和哲学"
+	},
+	{
+		"type": "file",
+		"name": "03_工厂模式",
+		"label": "工厂模式"
+	},
+	{
+		"type": "file",
+		"name": "04_单例模式",
+		"label": "单例模式"
+	},
+	{
+		"type": "file",
+		"name": "05_观察者模式",
+		"label": "观察者模式"
+	},
+	{
+		"type": "file",
+		"name": "06_迭代器模式",
+		"label": "迭代器模式"
+	},
+	{
+		"type": "file",
+		"name": "07_原型模式",
+		"label": "原型模式"
+	},
+	{
+		"type": "file",
+		"name": "08_装饰器模式",
+		"label": "装饰器模式"
+	},
+	{
+		"type": "file",
+		"name": "09_代理模式",
+		"label": "代理模式"
+	},
+	{
+		"type": "file",
+		"name": "10_其他模式",
+		"label": "其他模式"
+	},
+	{
+		"type": "file",
+		"name": "11_面试实战",
+		"label": "面试实战"
+	},
+	{
+		"type": "file",
+		"name": "12_思维导图概览",
+		"label": "思维导图概览"
+	}
+]

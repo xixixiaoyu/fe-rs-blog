@@ -15,6 +15,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "JavaScript 设计模式",
+		"label": "JavaScript 设计模式",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "函数式编程",
 		"label": "函数式编程",
 		"collapsible": true,
