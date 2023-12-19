@@ -1,0 +1,32 @@
+[
+	{
+		"type": "file",
+		"name": "01-移动端基础",
+		"label": "移动端基础"
+	},
+	{
+		"type": "file",
+		"name": "02-移动端布局适配解决方案",
+		"label": "移动端布局适配解决方案"
+	},
+	{
+		"type": "file",
+		"name": "03-移动端事件",
+		"label": "移动端事件"
+	},
+	{
+		"type": "file",
+		"name": "04-移动端问题",
+		"label": "移动端问题"
+	},
+	{
+		"type": "file",
+		"name": "05-移动端性能优化",
+		"label": "移动端性能优化"
+	},
+	{
+		"type": "file",
+		"name": "06-Swiper触摸滑动插件",
+		"label": "Swiper触摸滑动插件"
+	}
+]
