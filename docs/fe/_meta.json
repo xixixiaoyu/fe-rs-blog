@@ -15,8 +15,15 @@
 	},
 	{
 		"type": "dir",
-		"name": "JavaScript 设计模式",
-		"label": "JavaScript 设计模式",
+		"name": "vue",
+		"label": "vue",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "javascript 设计模式",
+		"label": "设计模式",
 		"collapsible": true,
 		"collapsed": true
 	},

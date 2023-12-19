@@ -1,0 +1,122 @@
+[
+	{
+		"type": "file",
+		"name": "01-邂逅Vue3",
+		"label": "邂逅Vue3"
+	},
+	{
+		"type": "file",
+		"name": "02-模板语法",
+		"label": "模板语法"
+	},
+	{
+		"type": "file",
+		"name": "03-optionsAPI",
+		"label": "optionsAPI"
+	},
+	{
+		"type": "file",
+		"name": "04-Vue3的表单",
+		"label": "Vue3的表单"
+	},
+	{
+		"type": "file",
+		"name": "05-Vue3组件化开发",
+		"label": "Vue3组件化开发"
+	},
+	{
+		"type": "file",
+		"name": "06-Vue CLI脚手架",
+		"label": "Vue CLI脚手架"
+	},
+	{
+		"type": "file",
+		"name": "07-vue3组件化父子通信",
+		"label": "vue3组件化父子通信"
+	},
+	{
+		"type": "file",
+		"name": "08-vue3组件化开发非父子通信和插槽",
+		"label": "vue3组件化开发非父子通信和插槽"
+	},
+	{
+		"type": "file",
+		"name": "09-vue3组件化开发剩余知识",
+		"label": "vue3组件化开发剩余知识"
+	},
+	{
+		"type": "file",
+		"name": "10-vue3过渡和动画",
+		"label": "vue3过渡和动画"
+	},
+	{
+		"type": "file",
+		"name": "11-Vuex的使用及原理",
+		"label": "Vuex的使用及原理"
+	},
+	{
+		"type": "file",
+		"name": "12-Vue路由使用及原理",
+		"label": "Vue路由使用及原理"
+	},
+	{
+		"type": "file",
+		"name": "13-CompositionAPI",
+		"label": "CompositionAPI"
+	},
+	{
+		"type": "file",
+		"name": "14-pinia",
+		"label": "pinia"
+	},
+	{
+		"type": "file",
+		"name": "15-vue3高级",
+		"label": "vue3高级"
+	},
+	{
+		"type": "file",
+		"name": "16-Vue实用技巧（一）",
+		"label": "vue实用技巧（一）"
+	},
+	{
+		"type": "file",
+		"name": "17-Vue实用技巧（二）",
+		"label": "vue实用技巧（二）"
+	},
+	{
+		"type": "file",
+		"name": "18-MiniVue",
+		"label": "MiniVue"
+	},
+	{
+		"type": "file",
+		"name": "19-项目搭建",
+		"label": "项目搭建"
+	},
+	{
+		"type": "file",
+		"name": "20-项目打包和自动化部署",
+		"label": "项目打包和自动化部署"
+	},
+	{
+		"type": "file",
+		"name": "21-Vue_todolist",
+		"label": "vue_todolist"
+	},
+	{
+		"type": "file",
+		"name": "22-script setup",
+		"label": "script setup语法糖"
+	},
+	{
+		"type": "file",
+		"name": "23-Vue性能优化",
+		"label": "vue性能优化"
+	},
+	{
+		"type": "file",
+		"name": "24-vue2和vue3响应式原理",
+		"label": "vue2和vue3响应式原理"
+	}
+]
