@@ -7,6 +7,20 @@
 		"collapsed": true
 	},
 	{
+		"type": "dir",
+		"name": "栈",
+		"label": "栈",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "队列",
+		"label": "队列",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
 		"type": "file",
 		"name": "300 最长递增子序列",
 		"label": "300 最长递增子序列"
