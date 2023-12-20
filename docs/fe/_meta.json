@@ -15,7 +15,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "Vue",
+		"name": "vue",
 		"label": "vue",
 		"collapsible": true,
 		"collapsed": true
