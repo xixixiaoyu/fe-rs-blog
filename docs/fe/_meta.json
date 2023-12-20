@@ -14,34 +14,6 @@
 		"collapsed": true
 	},
 	{
-		"type": "dir",
-		"name": "vue 全解",
-		"label": "vue",
-		"collapsible": true,
-		"collapsed": true
-	},
-	{
-		"type": "dir",
-		"name": "javascript 设计模式",
-		"label": "设计模式",
-		"collapsible": true,
-		"collapsed": true
-	},
-	{
-		"type": "dir",
-		"name": "函数式编程",
-		"label": "函数式编程",
-		"collapsible": true,
-		"collapsed": true
-	},
-	{
-		"type": "dir",
-		"name": "移动 web 开发",
-		"label": "移动 web 开发",
-		"collapsible": true,
-		"collapsed": true
-	},
-	{
 		"type": "file",
 		"name": "全栈技术选型，前后端编程本质",
 		"label": "全栈技术选型，前后端编程本质"
