@@ -22,7 +22,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "javascript 设计模式",
+		"name": "设计模式",
 		"label": "设计模式",
 		"collapsible": true,
 		"collapsed": true
@@ -36,7 +36,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "移动 web 开发",
+		"name": "移动端开发",
 		"label": "移动 web 开发",
 		"collapsible": true,
 		"collapsed": true
