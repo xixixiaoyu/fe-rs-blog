@@ -13,19 +13,18 @@
 - **Angular CLI**：Angular 的命令行接口，用于生成、开发、测试和部署 Angular 项目。
 - **Yeoman**：一个通用的脚手架系统，允许开发者创建自己的脚手架工具，支持多种前端框架和库。
 
-脚手架的使用极大地简化了前端项目的初始搭建过程，帮助开发者专注于业务代码的编写，同时保证了项目的一致性和质量。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182273466-d06d9ecd-d9c6-4179-bf38-a7c1d1f8c37e.png#averageHue=%2387937e&clientId=u9b86692b-a41e-4&from=paste&height=290&id=u9b1dccb4&originHeight=766&originWidth=1586&originalType=binary&ratio=2&rotation=0&showTitle=false&size=317665&status=done&style=none&taskId=u00571de4-7e97-47e3-b12d-1eb8606e7b3&title=&width=601)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182295751-2756a4c2-b317-42c1-b052-3ef9a6cfdfde.png#averageHue=%23f9f2f2&clientId=u9b86692b-a41e-4&from=paste&height=237&id=u79357b0d&originHeight=574&originWidth=1650&originalType=binary&ratio=2&rotation=0&showTitle=false&size=274123&status=done&style=none&taskId=uf9b2c1aa-2f23-4e3c-a595-cc2e2cb91ad&title=&width=681)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182369904-9048baed-5fdf-44e5-8262-d795fe4ded9a.png#averageHue=%23faf8f8&clientId=u9b86692b-a41e-4&from=paste&height=393&id=u1b24eec3&originHeight=962&originWidth=1746&originalType=binary&ratio=2&rotation=0&showTitle=false&size=377090&status=done&style=none&taskId=u35c58e68-666b-478a-833a-0d7d3c14042&title=&width=714)<br />推荐使用 vite 作为脚手架构建工具<br />Vite 是一种现代化的前端构建工具，它利用浏览器原生的 ES 模块导入特性（ESM）来提供快速的开发服务器启动和模块热更新。<br />Vite 的主要优势包括：
+脚手架的使用极大地简化了前端项目的初始搭建过程，帮助开发者专注于业务代码的编写，同时保证了项目的一致性和质量。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182273466-d06d9ecd-d9c6-4179-bf38-a7c1d1f8c37e.png#averageHue=%2387937e&clientId=u9b86692b-a41e-4&from=paste&height=290&id=u9b1dccb4&originHeight=766&originWidth=1586&originalType=binary&ratio=2&rotation=0&showTitle=false&size=317665&status=done&style=none&taskId=u00571de4-7e97-47e3-b12d-1eb8606e7b3&title=&width=601)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182295751-2756a4c2-b317-42c1-b052-3ef9a6cfdfde.png#averageHue=%23f9f2f2&clientId=u9b86692b-a41e-4&from=paste&height=237&id=u79357b0d&originHeight=574&originWidth=1650&originalType=binary&ratio=2&rotation=0&showTitle=false&size=274123&status=done&style=none&taskId=uf9b2c1aa-2f23-4e3c-a595-cc2e2cb91ad&title=&width=681)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182369904-9048baed-5fdf-44e5-8262-d795fe4ded9a.png#averageHue=%23faf8f8&clientId=u9b86692b-a41e-4&from=paste&height=393&id=u1b24eec3&originHeight=962&originWidth=1746&originalType=binary&ratio=2&rotation=0&showTitle=false&size=377090&status=done&style=none&taskId=u35c58e68-666b-478a-833a-0d7d3c14042&title=&width=714)<br />推荐使用 vite 作为脚手架构建工具<br />Vite 的优势：
 
-1. **快速的服务器启动**：Vite 在开发模式下不需要打包操作，因此可以实现极快的冷启动，大幅缩短等待时间。
-2. **即时的模块热更新**（HMR）：Vite 提供了高效的模块热更新机制，当文件发生变化时，只有改变的部分会被重新加载和渲染，这让开发过程更为流畅。
-3. **轻量级的构建**：Vite 在生产环境下使用 Rollup 进行打包，这意味着最终的构建版本既轻量又高效，通常比传统的打包工具生成的文件更小。
-4. **原生 ESM 支持**：Vite 利用浏览器对 ES 模块的原生支持，可以让你在开发过程中直接使用新的 JavaScript 特性而无需转译。
-5. **丰富的插件生态**：Vite 支持 Rollup 插件，这意味着你可以利用已有的 Rollup 插件生态系统，同时 Vite 自己的插件生态也在快速增长。
-6. **易于配置**：Vite 提供了一个简洁的配置文件 vite.config.js，使得对项目的配置变得简单直观。
-7. **内置功能丰富**：Vite 内置了许多实用功能，如 CSS 预处理器支持、文件别名配置、环境变量加载等，无需额外配置即可使用。
-8. **框架无关**：Vite 不仅仅适用于 Vue，还可以与 React、Svelte 等其他现代前端框架无缝集成。
-9. **TypeScript 支持**：Vite 提供开箱即用的 TypeScript 支持，无需额外安装插件或配置复杂的工具链。
-10. **优秀的 SSR 支持**：Vite 对服务端渲染（SSR）的支持也非常友好，它可以帮助开发者更容易地构建 SSR 应用。
-11. **现代化的缓存策略**：Vite 使用 HTTP 缓存来提高重载时的性能，因为它会利用浏览器缓存未改变的模块。
+1. **快速的服务器启动**：Vite 使用原生 ES 模块（ESM）来服务代码，这意味着它不需要预先打包代码，可以快速启动开发服务器。
+2. **即时的模块热更新（HMR）**：由于 Vite 利用了 ESM 的特性，它可以实现非常快的模块热更新，这使得在开发过程中的代码更改可以几乎立即反映到浏览器上，无需等待整个应用重新打包。
+3. **按需编译**：Vite 只会编译当前正在开发的页面或组件依赖的模块，这大大减少了不必要的编译工作，进一步提升了开发环境的响应速度。
+4. **丰富的插件生态**：Vite 支持 Rollup 插件，这意味着你可以利用 Rollup 已有的插件生态，同时 Vite 本身也在快速发展其专属插件生态系统。
+5. **内置功能丰富**：Vite 内置了对 TypeScript、JSX、CSS 预处理器等的支持，无需额外配置即可使用这些现代前端技术。
+6. **优化的生产构建**：虽然 Vite 在开发环境下不需要打包代码，但它在生产环境下使用 Rollup 进行高效的代码打包，确保了生产环境的性能优化。
+7. **易于配置**：Vite 提供了一个简单而强大的配置文件，使得开发者可以轻松地自定义构建过程，同时保持配置的简洁性。
+8. **框架无关**：Vite 不仅可以用于 Vue 项目，还支持 React、Svelte 以及其他可以通过插件支持的框架，这使得它非常灵活。
+9. **现代化**：Vite 专为现代浏览器设计，利用了最新的 web 标准，如 ES 模块，从而避免了对旧浏览器的过多兼容性处理。
+10. **社区支持**：Vite 由 Vue.js 的创造者尤雨溪领导开发，得到了强大的社区支持和快速的发展迭代。
 
 ## 创建 react 项目
 首先确保 Node.js 版本至少为 12.0.0。<br />然后命令行输入：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702182995100-34f074de-3253-451f-bb11-a4b258ece970.png#averageHue=%23fbf4e1&clientId=u9b86692b-a41e-4&from=paste&height=376&id=u2085d955&originHeight=1416&originWidth=2468&originalType=binary&ratio=2&rotation=0&showTitle=false&size=338968&status=done&style=none&taskId=ub37147e4-4267-4bd6-b371-d67d5682b0a&title=&width=655)<br />进入目录，安装依赖后：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1702183202756-d9a288dc-940e-49b1-a6f8-04f279e1a02a.png#averageHue=%233c4146&clientId=u9b86692b-a41e-4&from=paste&height=441&id=ue1c7659f&originHeight=882&originWidth=348&originalType=binary&ratio=2&rotation=0&showTitle=false&size=71699&status=done&style=none&taskId=u0612ff58-3c07-4c29-95dd-af2ca01f5cb&title=&width=174)
@@ -41,7 +40,7 @@
    - vite-env.d.ts：TypeScript 声明文件，包含 Vite 相关的类型定义，用于支持 TypeScript 的类型检查。
    - .eslintrc.cjs：ESLint 的配置文件，用于定义代码质量和风格规则。
    - .gitignore：Git 的配置文件，指定了不需要加入版本控制的文件和目录。
-   - index.html：应用程序的 HTML 骨架文件，通常包含挂载点，如 <div id="app"></div>。
+   - index.html：应用程序的 HTML 骨架文件，通常包含挂载点，如 `<div id="app"></div>`。
    - package.json：定义了项目的元数据和依赖关系，以及可执行的脚本命令。
    - pnpm-lock.yaml：锁文件，确保依赖项的版本一致性，这表明项目使用 pnpm 作为包管理器。
    - README.md：Markdown 文件，通常包含项目说明、安装步骤和使用指南。
