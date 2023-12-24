@@ -1,5 +1,10 @@
 [
 	{
+		"type": "file",
+		"name": "全栈技术选型，前后端编程本质",
+		"label": "全栈技术选型，前后端编程本质"
+	},
+	{
 		"type": "dir",
 		"name": "vue 组件库封装",
 		"label": "vue 组件库封装",
@@ -57,11 +62,6 @@
 	},
 	{
 		"type": "file",
-		"name": "全栈技术选型，前后端编程本质",
-		"label": "全栈技术选型，前后端编程本质"
-	},
-	{
-		"type": "file",
 		"name": "大厂项目标准开发流程和排期",
 		"label": "大厂项目标准开发流程和排期"
 	},
@@ -69,5 +69,10 @@
 		"type": "file",
 		"name": "组件和 react hooks 的最佳实践",
 		"label": "组件和 react hooks 的最佳实践"
+	},
+	{
+		"type": "file",
+		"name": "前端核心",
+		"label": "前端核心"
 	}
 ]
