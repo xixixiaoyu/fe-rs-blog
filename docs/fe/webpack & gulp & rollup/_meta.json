@@ -1,18 +1,23 @@
 [
 	{
 		"type": "file",
+		"name": "00-前端工程化",
+		"label": "前端工程化"
+	},
+	{
+		"type": "file",
 		"name": "01-webpack基本打包",
 		"label": "webpack基本打包"
 	},
 	{
 		"type": "file",
 		"name": "02-Webpack打包其他资源",
-		"label": "Webpack打包其他资源"
+		"label": "webpack打包其他资源"
 	},
 	{
 		"type": "file",
 		"name": "03-Babel和devServer",
-		"label": "Babel和devServer"
+		"label": "babel和devServer"
 	},
 	{
 		"type": "file",
@@ -23,5 +28,10 @@
 		"type": "file",
 		"name": "05-webpack总结",
 		"label": "webpack总结"
+	},
+	{
+		"type": "file",
+		"name": "gulp",
+		"label": "gulp"
 	}
 ]

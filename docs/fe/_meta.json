@@ -6,6 +6,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "前端杂记",
+		"label": "杂记",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "vue 组件库封装",
 		"label": "vue 组件库封装",
 		"collapsible": true,
@@ -48,6 +55,27 @@
 	},
 	{
 		"type": "dir",
+		"name": "JavaScript",
+		"label": "javascript",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "JS高级",
+		"label": "js高级",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "Typescript",
+		"label": "typescript",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "移动端开发",
 		"label": "移动 web 开发",
 		"collapsible": true,
@@ -55,8 +83,8 @@
 	},
 	{
 		"type": "dir",
-		"name": "webpack",
-		"label": "webpack",
+		"name": "webpack & gulp & rollup",
+		"label": "webpack & gulp & rollup",
 		"collapsible": true,
 		"collapsed": true
 	},
@@ -70,24 +98,9 @@
 	{
 		"type": "dir",
 		"name": "uniapp和小程序",
-		"label": "uniapp、小程序",
+		"label": "uniapp & 小程序",
 		"collapsible": true,
 		"collapsed": true
-	},
-	{
-		"type": "file",
-		"name": "大厂项目标准开发流程和排期",
-		"label": "大厂项目标准开发流程和排期"
-	},
-	{
-		"type": "file",
-		"name": "组件和 react hooks 的最佳实践",
-		"label": "组件和 react hooks 的最佳实践"
-	},
-	{
-		"type": "file",
-		"name": "前端核心",
-		"label": "前端核心"
 	},
 	{
 		"type": "dir",
