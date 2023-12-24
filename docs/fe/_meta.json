@@ -55,7 +55,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "JavaScript",
+		"name": "Javascript",
 		"label": "javascript",
 		"collapsible": true,
 		"collapsed": true
