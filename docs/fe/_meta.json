@@ -61,6 +61,20 @@
 		"collapsed": true
 	},
 	{
+		"type": "dir",
+		"name": "性能优化",
+		"label": "性能优化",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "uniapp和小程序",
+		"label": "uniapp、小程序",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
 		"type": "file",
 		"name": "大厂项目标准开发流程和排期",
 		"label": "大厂项目标准开发流程和排期"

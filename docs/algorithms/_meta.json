@@ -19,50 +19,5 @@
 		"label": "队列",
 		"collapsible": true,
 		"collapsed": true
-	},
-	{
-		"type": "file",
-		"name": "300 最长递增子序列",
-		"label": "300 最长递增子序列"
-	},
-	{
-		"type": "file",
-		"name": "56 合并区间",
-		"label": "56 合并区间"
-	},
-	{
-		"type": "file",
-		"name": "70 爬楼梯",
-		"label": "70 爬楼梯"
-	},
-	{
-		"type": "file",
-		"name": "2 两数相加",
-		"label": "2 两数相加"
-	},
-	{
-		"type": "file",
-		"name": "21 合并两个有序链表",
-		"label": "21 合并两个有序链表"
-	},
-	{
-		"type": "file",
-		"name": "121 买卖股票的最佳时机",
-		"label": "121 买卖股票的最佳时机"
-	},
-	{
-		"type": "file",
-		"name": "206 反转链表",
-		"label": "206 反转链表"
-	},
-	{
-		"type": "file",
-		"name": "归并排序",
-		"label": "归并排序"
-	},
-	{
-		"type": "file",
-		"name": "快速排序",
-		"label": "快速排序"
 	}
 ]
