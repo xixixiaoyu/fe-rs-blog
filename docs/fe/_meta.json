@@ -101,12 +101,5 @@
 		"label": "uniapp & 小程序",
 		"collapsible": true,
 		"collapsed": true
-	},
-	{
-		"type": "dir",
-		"name": "HTML CSS",
-		"label": "html & css",
-		"collapsible": true,
-		"collapsed": true
 	}
 ]
