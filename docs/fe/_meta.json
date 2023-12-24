@@ -69,7 +69,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "Typescript",
+		"name": "TypeScript",
 		"label": "typescript",
 		"collapsible": true,
 		"collapsed": true
