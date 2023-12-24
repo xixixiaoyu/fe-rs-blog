@@ -97,6 +97,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "面试",
+		"label": "面试",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "uniapp和小程序",
 		"label": "uniapp & 小程序",
 		"collapsible": true,

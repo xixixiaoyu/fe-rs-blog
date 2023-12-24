@@ -1,5 +1,12 @@
 [
 	{
+		"type": "dir",
+		"name": "JS题目",
+		"label": "JS题目练习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
 		"type": "file",
 		"name": "01-认识javaScript",
 		"label": "认识javaScript"
