@@ -55,13 +55,6 @@
 	},
 	{
 		"type": "dir",
-		"name": "JavaScript",
-		"label": "javascript",
-		"collapsible": true,
-		"collapsed": true
-	},
-	{
-		"type": "dir",
 		"name": "JS高级",
 		"label": "js高级",
 		"collapsible": true,
