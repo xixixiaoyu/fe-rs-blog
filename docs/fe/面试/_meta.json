@@ -1,0 +1,62 @@
+[
+	{
+		"type": "file",
+		"name": "01-HTML&CSS",
+		"label": "HTML&CSS"
+	},
+	{
+		"type": "file",
+		"name": "02-ES基础",
+		"label": "ES基础"
+	},
+	{
+		"type": "file",
+		"name": "03-JS-Web-API",
+		"label": "JS-Web-API"
+	},
+	{
+		"type": "file",
+		"name": "04-HTTP",
+		"label": "HTTP"
+	},
+	{
+		"type": "file",
+		"name": "05-浏览器相关知识",
+		"label": "浏览器相关知识"
+	},
+	{
+		"type": "file",
+		"name": "06-开发环境",
+		"label": "开发环境"
+	},
+	{
+		"type": "file",
+		"name": "07-es6-es12",
+		"label": "es6-es12"
+	},
+	{
+		"type": "file",
+		"name": "08-框架面试押题",
+		"label": "框架面试押题"
+	},
+	{
+		"type": "file",
+		"name": "09-实践",
+		"label": "实践"
+	},
+	{
+		"type": "file",
+		"name": "10-前端工程化",
+		"label": "前端工程化"
+	},
+	{
+		"type": "file",
+		"name": "11-软技能",
+		"label": "软技能"
+	},
+	{
+		"type": "file",
+		"name": "12-算法和数据结构",
+		"label": "算法和数据结构"
+	}
+]
