@@ -49,6 +49,13 @@
 		"collapsed": true
 	},
 	{
+		"type": "dir",
+		"name": "webpack",
+		"label": "webpack",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
 		"type": "file",
 		"name": "全栈技术选型，前后端编程本质",
 		"label": "全栈技术选型，前后端编程本质"
