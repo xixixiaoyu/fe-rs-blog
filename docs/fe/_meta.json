@@ -88,5 +88,12 @@
 		"type": "file",
 		"name": "前端核心",
 		"label": "前端核心"
+	},
+	{
+		"type": "dir",
+		"name": "HTML CSS",
+		"label": "html & css",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
