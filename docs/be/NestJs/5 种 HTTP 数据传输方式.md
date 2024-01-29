@@ -97,7 +97,7 @@ bootstrap();
 ```
 api 接口和静态资源的访问都支持了，接下来就分别实现下 5 种前后端 http 数据传输的方式吧。
 
-### url param
+### url-param
 Nest 里通过 `:参数名` 的方式来声明，使用 `@Param` 装饰器来获取 URL 参数。：
 ```typescript
 @Controller('api/person')
@@ -165,7 +165,7 @@ export class PersonController {
 参数通过 params 指定，axios 会做 url encode，不需要自己做。<br />注意：这个 find 的路由要放到 :id 的路由前面，因为 Nest 是从上往下匹配的。<br />上面两种（url param、query）是通过 url 传递数据的方式，下面 3 种是通过 body 传递数据。
 
 
-### form urlencoded
+### form-urlencoded
 form urlencoded 其实是把 query 字符串放在了 body 里来传输数据，所以需要做 url encode：<br />用 Nest 接收的话，使用 `@Body` 装饰器，Nest 会解析请求体，然后注入到 dto 中。<br />dto 是 data transfer object，是用于封装传输数据的对象：
 ```typescript
 export class CreatePersonDto {
@@ -307,14 +307,14 @@ export class PersonController {
 ## 总结
 5 种 http/https 的数据传输方式：<br />其中前两种是 url 中的：
 
-- **url-param**： url 中的参数，Nest 中使用 @Param 来取
+- **url param**： url 中的参数，Nest 中使用 @Param 来取
 - **query**：url 中 ? 后的字符串，Nest 中使用 @Query 来取
 
 后三种是 body 中的：
 
-- **form urlencoded**： 类似 query 字符串，只不过是放在 body 中。Nest 中使用 @Body 来取，axios 中需要指定 content-type 为 application/x-www-form-urlencoded，并且对数据用 qs 或者 query-string 库做 url-encode
-- **json**： json 格式的数据。Nest 中使用 @Body 来取，axios 中不需要单独指定 content type，axios 内部会处理。
-- **form data**：通过 -- 作为 boundary 分隔的数据。主要用于传输文件，Nest 中要使用 FilesInterceptor 来处理其中的 binary 字段，用 @UseInterceptors 来启用，其余字段用 @Body 来取。axios 中需要指定 content type 为 multipart/form-data，并且用 FormData 对象来封装传输的内容。
+- **form-urlencoded**： 类似 query 字符串，只不过是放在 body 中。Nest 中使用 @Body 来取，axios 中需要指定 content-type 为 application/x-www-form-urlencoded，并且对数据用 qs 或者 query-string 库做 url-encode
+- **json**： json 格式的数据。Nest 中使用 @Body 来取，axios 中不需要单独指定 content-type，axios 内部会处理。
+- **form-data**：通过 -- 作为 boundary 分隔的数据。主要用于传输文件，Nest 中要使用 FilesInterceptor 来处理其中的 binary 字段，用 @UseInterceptors 来启用，其余字段用 @Body 来取。axios 中需要指定 content type 为 multipart/form-data，并且用 FormData 对象来封装传输的内容。
 
-这 5 种 http 的传输数据的方式覆盖了绝大多数开发场景。
+这 5 种 http 的传输数据的方式涵盖了绝大多数开发场景。
 
