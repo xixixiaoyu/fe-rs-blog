@@ -228,7 +228,7 @@ export class PersonController {
   }
 }
 ```
-前端代码使用 axios 发送 post 请求，默认传输 json 就会指定 content type 为 application/json，不需要手动指定：
+前端代码使用 axios 发送 post 请求，默认传输 json 就会指定 content-type 为 application/json，不需要手动指定：
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -275,7 +275,7 @@ export class PersonController {
 ```javascript
  npm i -D @types/multer
 ```
-前端代码使用 axios 发送 post 请求，指定 content type 为 multipart/form-data：
+前端代码使用 axios 发送 post 请求，指定 content-type 为 multipart/form-data：
 ```html
 <!DOCTYPE html>
 <html lang="en">
