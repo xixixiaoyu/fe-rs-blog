@@ -38,23 +38,27 @@ username=johndoe&password=123456
 这种格式在 HTTP 请求体中发送，适合发送简单的文本数据。<br />如果传递大量的数据，比如上传文件的时候就不是很合适了，因为文件 encode 一遍的话太慢了，这时候就可以用 form-data。<br />和使用 query 字符串的方式不同的是它放在了请求 body 里。<br />因为内容也是 query 字符串，所以也要最好用 encodeURIComponent 的 api 或者 query-string 库对内容编码下。
 
 ### multipart/form-data（Form-data）
-这种编码类型用于发送表单数据，尤其是包含文件上传的表单，需指定的 content type 为 multipart/form-data。<br />在这种情况下，每个表单项都作为请求的一个部分发送，允许二进制数据（如文件内容）和大块数据的传输。<br />例如，HTTP 请求体可能会包含这样的内容：
+这种编码类型用于发送表单数据，尤其是包含文件上传的表单，需指定的 content-type 为 multipart/form-data。<br />在这种情况下，每个表单项都作为请求的一个部分发送，允许二进制数据（如文件内容）和大块数据的传输。<br />例如，HTTP 请求体可能会包含这样的内容：
 ```javascript
---boundary12345
+POST /your-server-endpoint HTTP/1.1
+Host: example.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryePkpFF7tjBAqx29L
+
+------WebKitFormBoundaryePkpFF7tjBAqx29L
 Content-Disposition: form-data; name="username"
 
 johndoe
---boundary12345
-Content-Disposition: form-data; name="avatar"; filename="avatar.jpg"
-Content-Type: image/jpeg
+------WebKitFormBoundaryePkpFF7tjBAqx29L
+Content-Disposition: form-data; name="userfile"; filename="example.txt"
+Content-Type: text/plain
 
-<binary image data>
---boundary12345--
+... file contents here ...
+------WebKitFormBoundaryePkpFF7tjBAqx29L--
 ```
-form data 不再是通过 & 这种 url 方式分隔数据，而是用 -- 和 一串数字做为 boundary 分隔符。<br />这里，boundary12345 是分隔符，用于区分不同的表单项。<br />多了一些只是用来分隔的 boundary，所以请求体会增大。
+form data 不再是通过 & 这种 url 方式分隔数据，而是用 ------ 和 很多数字做为 boundary 分隔符。<br />这里，boundary12345 是分隔符，用于区分不同的表单项。<br />多了一些只是用来分隔的 boundary，所以请求体会增大。
 
 ### application/json（JSON）
-传输 json 数据的话，直接指定 content type 为 application/json 就行。<br />JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人阅读和编写，也易于机器解析和生成。使用 application/json 类型时，数据以 JSON 格式发送。<br />例如，HTTP 请求体可能会包含这样的 JSON 数据：
+传输 json 数据的话，直接指定 content-type 为 application/json 就行。<br />JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人阅读和编写，也易于机器解析和生成。使用 application/json 类型时，数据以 JSON 格式发送。<br />例如，HTTP 请求体可能会包含这样的 JSON 数据：
 ```json
 {
   "username": "johndoe",
@@ -98,7 +102,7 @@ bootstrap();
 api 接口和静态资源的访问都支持了，接下来就分别实现下 5 种前后端 http 数据传输的方式吧。
 
 ### url-param
-Nest 里通过 `:参数名` 的方式来声明，使用 `@Param` 装饰器来获取 URL 参数。：
+Nest 里通过 `:参数名` 的方式来声明，使用 `@Param` 装饰器来获取 URL 参数：
 ```typescript
 @Controller('api/person')
 export class PersonController {
@@ -139,7 +143,7 @@ export class PersonController {
   }
 }
 ```
-前端代码也是通过 axios 发送一个 get 请求：
+注意：这个 find 的路由要放到 :id 的路由前面，因为 Nest 是从上往下匹配的。<br />前端代码也是通过 axios 发送一个 get 请求：
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -162,11 +166,11 @@ export class PersonController {
   </body>
 </html>
 ```
-参数通过 params 指定，axios 会做 url encode，不需要自己做。<br />注意：这个 find 的路由要放到 :id 的路由前面，因为 Nest 是从上往下匹配的。<br />上面两种（url param、query）是通过 url 传递数据的方式，下面 3 种是通过 body 传递数据。
+参数通过 params 指定，axios 会做 url-encode，不需要自己做。<br />上面两种（url-param、query）是通过 url 传递数据的方式，下面 3 种是通过 body 传递数据。
 
 
 ### form-urlencoded
-form urlencoded 其实是把 query 字符串放在了 body 里来传输数据，所以需要做 url encode：<br />用 Nest 接收的话，使用 `@Body` 装饰器，Nest 会解析请求体，然后注入到 dto 中。<br />dto 是 data transfer object，是用于封装传输数据的对象：
+form urlencoded 其实是把 query 字符串放在了 body 里来传输数据，所以需要做 url-encode：<br />用 Nest 接收的话，使用 `@Body` 装饰器，Nest 会解析请求体，然后注入到 dto 中。<br />dto 是 data transfer object，是用于封装传输数据的对象：
 ```typescript
 export class CreatePersonDto {
   name: string;
@@ -182,7 +186,7 @@ export class PersonController {
   }
 }
 ```
-前端代码使用 post 方式请求，指定 content type 为 application/x-www-form-urlencoded，用 qs 做下 url encode：
+前端代码使用 post 方式请求，指定 content type 为 application/x-www-form-urlencoded，用 qs 做下 url-encode：
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -245,10 +249,10 @@ export class PersonController {
   </body>
 </html>
 ```
-json 和 form urlencoded 都不适合传递文件，想传输文件要用 form data。
+json 和 form-urlencoded 都不适合传递文件，想传输文件要用 form-data。
 
 ### form-data
-form-data 是用 -- 作为 boundary 分隔传输的内容的：<br />Nest 解析 form-data 使用 FilesInterceptor 的拦截器，用 @UseInterceptors 装饰器启用，然后通过 @UploadedFiles 来取。<br />通过 form-data 传输的非文件的内容，同样是通过 `@Body` 装饰器来获取：
+form-data 是用 ------ 作为 boundary 分隔传输的内容的：<br />Nest 解析 form-data 使用 FilesInterceptor 的拦截器，用 @UseInterceptors 装饰器启用，然后通过 @UploadedFiles 来取。<br />通过 form-data 传输的非文件的内容，同样是通过 `@Body` 装饰器来获取：
 ```typescript
 @Controller('api/person')
 export class PersonController {
@@ -301,7 +305,7 @@ export class PersonController {
   </body>
 </html>
 ```
-服务端接收到了 name 和 age：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373944121-fa1c2185-67b6-497d-89f0-dd6bfca9e9c9.png#averageHue=%23f8f8f8&clientId=ud023a9c6-9363-4&from=paste&height=55&id=ue9edb9d5&originHeight=110&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=15380&status=done&style=none&taskId=u18d266cc-924a-4b44-9e1f-50d425db8b7&title=&width=296)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373688827-d5519d0a-6e50-4c57-bede-a236d8d47d78.png#averageHue=%232d2d2d&clientId=ud023a9c6-9363-4&from=paste&height=306&id=u82931219&originHeight=612&originWidth=1368&originalType=binary&ratio=2&rotation=0&showTitle=false&size=107859&status=done&style=none&taskId=u2173c84c-1c85-4fd0-b838-636ffa7cd94&title=&width=684)
+客户端打印了 name 和 age：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373944121-fa1c2185-67b6-497d-89f0-dd6bfca9e9c9.png#averageHue=%23f8f8f8&clientId=ud023a9c6-9363-4&from=paste&height=55&id=ue9edb9d5&originHeight=110&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=15380&status=done&style=none&taskId=u18d266cc-924a-4b44-9e1f-50d425db8b7&title=&width=296)<br />服务端接收到了 file：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373688827-d5519d0a-6e50-4c57-bede-a236d8d47d78.png#averageHue=%232d2d2d&clientId=ud023a9c6-9363-4&from=paste&height=306&id=u82931219&originHeight=612&originWidth=1368&originalType=binary&ratio=2&rotation=0&showTitle=false&size=107859&status=done&style=none&taskId=u2173c84c-1c85-4fd0-b838-636ffa7cd94&title=&width=684)
 
 
 ## 总结
@@ -314,7 +318,7 @@ export class PersonController {
 
 - **form-urlencoded**： 类似 query 字符串，只不过是放在 body 中。Nest 中使用 @Body 来取，axios 中需要指定 content-type 为 application/x-www-form-urlencoded，并且对数据用 qs 或者 query-string 库做 url-encode
 - **json**： json 格式的数据。Nest 中使用 @Body 来取，axios 中不需要单独指定 content-type，axios 内部会处理。
-- **form-data**：通过 -- 作为 boundary 分隔的数据。主要用于传输文件，Nest 中要使用 FilesInterceptor 来处理其中的 binary 字段，用 @UseInterceptors 来启用，其余字段用 @Body 来取。axios 中需要指定 content type 为 multipart/form-data，并且用 FormData 对象来封装传输的内容。
+- **form-data**：通过 ------ 作为 boundary 分隔的数据。主要用于传输文件，Nest 中要使用 FilesInterceptor 来处理其中的 binary 字段，用 @UseInterceptors 来启用，其余字段用 @Body 来取。axios 中需要指定 content type 为 multipart/form-data，并且用 FormData 对象来封装传输的内容。
 
 这 5 种 http 的传输数据的方式涵盖了绝大多数开发场景。
 
