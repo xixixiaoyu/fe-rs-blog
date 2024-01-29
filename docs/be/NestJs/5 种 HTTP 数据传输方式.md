@@ -129,7 +129,7 @@ export class PersonController {
 ```
 
 ### query
-使用 `@Query` 装饰器来获取查询字符串参数。：
+使用 `@Query` 装饰器来获取查询字符串参数：
 ```javascript
 @Controller('api/person')
 export class PersonController {
