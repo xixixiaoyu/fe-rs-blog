@@ -1,7 +1,7 @@
 Nest.js 是一个构建高效、可伸缩的企业级服务器端应用程序的渐进式 Node.js 框架。<br />它支持 TypeScript 和 JavaScript（ES6、ES7、ES8），并结合了面向对象编程（OOP）、函数式编程（FP）和函数式响应编程（FRP）的理念。<br />Nest.js 在设计上从 Angular 和 Java 的 Spring 框架中汲取灵感，引入了依赖注入和面向切面编程等概念。因此，它也被称为 Node.js 版的 Spring 框架。<br />Nest 框架的底层 HTTP 平台默认基于 Express 实现，但旨在成为一个与平台无关的框架。<br />通过创建适配器，Nest 可以使用任何 Node HTTP 框架。目前，它支持开箱即用的两个 HTTP 平台：Express 和 Fastify。<br />由于 Nest.js 在行业内具有很高的关注度，因此学习 Nest.js 对于开发者来说是非常有价值的。
 
 ## 学习基础
-在学习 Nest.js 之前，具备以下基础知识和技能将更有助于你的学习：
+在学习 Nest.js 之前，具备以下基础知识更有利于学习：
 
 1. JavaScript/TypeScript 基础：了解基本的语法、数据类型、函数、类、类型等概念。
 2. Node.js 基础知识：熟悉事件循环、异步编程、模块系统等核心概念，以及 File System、HTTP 等基础库的使用。
