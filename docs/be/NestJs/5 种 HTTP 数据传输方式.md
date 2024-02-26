@@ -1,21 +1,17 @@
 ## http 数据传输的 5 种方式
-后端主要是提供 http 接口来传输数据，而这种数据传输的方式主要有 5 种：
-
 ### URL 参数（URL Params）
-URL 参数通常用于 GET 请求中，用于在 URL 的路径部分传递数据。通常用于 RESTful API 中，用来指定资源。比如：
-```javascript
+主要用于 `GET` 请求，以传递简单的数据，比如：
+```
 https://example.com/api/users/123
 ```
 在这个例子中，`123` 是一个 URL 参数，它指定了用户的 ID。
 
 ### 查询字符串（Query String）
 query 也是在 url 传递额外的数据，以键值对形式出现，并且以问号 (?) 开头，多个参数之间用和号 (&) 分隔。
-```javascript
+```
 https://example.com/search?query=keyword&page=2
 ```
-这里，`query=keyword` 和 `page=2` 是查询字符串参数，用于指定搜索关键词和页码。
-
-其中非英文的字符和一些特殊字符要经过编码，可以使用 encodeURIComponent 的 api 来编码：
+这里，`query=keyword` 和 `page=2` 是查询字符串参数，用于指定搜索关键词和页码。<br />其中非英文的字符和一些特殊字符要经过编码，可以使用 encodeURIComponent 的 api 来编码：
 ```javascript
 const query = "?name=" + encodeURIComponent('云牧') + "&age=" + encodeURIComponent(20)
 ```
@@ -31,15 +27,15 @@ queryString.stringify({
 
 
 ### application/x-www-form-urlencoded（Form-urlencoded）
-这是 HTML 表单提交的默认编码格式。只需要指定的 content-type 是 application/x-www-form-urlencoded。<br />当表单设置为这种编码类型时，表单数据会被编码成键值对，类似于查询字符串的格式。这种类型通常用于 POST 请求。<br />例如，提交表单时，数据可能会被编码为：
-```javascript
+这是 HTML 表单提交的默认编码格式。只需要指定的 content-type 是 application/x-www-form-urlencoded。<br />和使用 query 字符串的方式不同的是它放在了请求 body 里。<br />因为内容也是 query 字符串，所以也要最好用 encodeURIComponent 的 api 或者 query-string 库对内容编码下。<br />当表单设置为这种编码类型时，表单数据会被编码成键值对，类似于查询字符串的格式。这种类型通常用于 POST 请求。<br />例如，提交表单时，数据可能会被编码为：
+```
 username=johndoe&password=123456
 ```
-这种格式在 HTTP 请求体中发送，适合发送简单的文本数据。<br />如果传递大量的数据，比如上传文件的时候就不是很合适了，因为文件 encode 一遍的话太慢了，这时候就可以用 form-data。<br />和使用 query 字符串的方式不同的是它放在了请求 body 里。<br />因为内容也是 query 字符串，所以也要最好用 encodeURIComponent 的 api 或者 query-string 库对内容编码下。
+这种格式在 HTTP 请求体中发送，适合发送简单的文本数据。<br />如果传递大量的数据，比如上传文件的时候就不是很合适了，因为文件 encode 一遍的话太慢了，这时候就可以用 form-data。
 
 ### multipart/form-data（Form-data）
 这种编码类型用于发送表单数据，尤其是包含文件上传的表单，需指定的 content-type 为 multipart/form-data。<br />在这种情况下，每个表单项都作为请求的一个部分发送，允许二进制数据（如文件内容）和大块数据的传输。<br />例如，HTTP 请求体可能会包含这样的内容：
-```javascript
+```
 POST /your-server-endpoint HTTP/1.1
 Host: example.com
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryePkpFF7tjBAqx29L
@@ -55,7 +51,7 @@ Content-Type: text/plain
 ... file contents here ...
 ------WebKitFormBoundaryePkpFF7tjBAqx29L--
 ```
-form data 不再是通过 & 这种 url 方式分隔数据，而是用 ------ 和 很多数字做为 boundary 分隔符。<br />这里，boundary12345 是分隔符，用于区分不同的表单项。<br />多了一些只是用来分隔的 boundary，所以请求体会增大。
+form data 不再是通过 & 这种 url 方式分隔数据，而是用 ------ 和很多数字做为 boundary 分隔符。<br />这里，boundary 分隔符，用于区分不同的表单项。<br />因为多了一些只是用来分隔的 boundary，所以请求体会增大。
 
 ### application/json（JSON）
 传输 json 数据的话，直接指定 content-type 为 application/json 就行。<br />JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人阅读和编写，也易于机器解析和生成。使用 application/json 类型时，数据以 JSON 格式发送。<br />例如，HTTP 请求体可能会包含这样的 JSON 数据：
@@ -66,13 +62,6 @@ form data 不再是通过 & 这种 url 方式分隔数据，而是用 ------ 和
 }
 ```
 这种格式适合发送复杂结构的数据，如对象或数组。
-
-### 总结
-
-- **URL 参数**和**查询字符串**适用于 GET 请求，用于在 URL 中传递简单数据。
-- **Form-urlencoded**适用于 POST 请求，传递简单的文本数据。
-- **Form-data**适用于 POST 请求，可以上传文件。
-- **JSON**适用于 POST 请求，传递复杂结构的数据，是现代 Web API 的首选格式。
 
 ## 使用 Nest 实现 5 种传输方式
 Nest 创建一个 crud 服务是非常快的，只需要这么几步：
@@ -94,9 +83,12 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  
   app.useStaticAssets(join(__dirname, '..', 'public'), { prefix: '/static' });
+  
   await app.listen(3000);
 }
+
 bootstrap();
 ```
 api 接口和静态资源的访问都支持了，接下来就分别实现下 5 种前后端 http 数据传输的方式吧。
@@ -306,19 +298,4 @@ export class PersonController {
 </html>
 ```
 客户端打印了 name 和 age：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373944121-fa1c2185-67b6-497d-89f0-dd6bfca9e9c9.png#averageHue=%23f8f8f8&clientId=ud023a9c6-9363-4&from=paste&height=55&id=ue9edb9d5&originHeight=110&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=15380&status=done&style=none&taskId=u18d266cc-924a-4b44-9e1f-50d425db8b7&title=&width=296)<br />服务端接收到了 file：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1686373688827-d5519d0a-6e50-4c57-bede-a236d8d47d78.png#averageHue=%232d2d2d&clientId=ud023a9c6-9363-4&from=paste&height=306&id=u82931219&originHeight=612&originWidth=1368&originalType=binary&ratio=2&rotation=0&showTitle=false&size=107859&status=done&style=none&taskId=u2173c84c-1c85-4fd0-b838-636ffa7cd94&title=&width=684)
-
-
-## 总结
-5 种 http/https 的数据传输方式：<br />其中前两种是 url 中的：
-
-- **url param**： url 中的参数，Nest 中使用 @Param 来取
-- **query**：url 中 ? 后的字符串，Nest 中使用 @Query 来取
-
-后三种是 body 中的：
-
-- **form-urlencoded**： 类似 query 字符串，只不过是放在 body 中。Nest 中使用 @Body 来取，axios 中需要指定 content-type 为 application/x-www-form-urlencoded，并且对数据用 qs 或者 query-string 库做 url-encode
-- **json**： json 格式的数据。Nest 中使用 @Body 来取，axios 中不需要单独指定 content-type，axios 内部会处理。
-- **form-data**：通过 ------ 作为 boundary 分隔的数据。主要用于传输文件，Nest 中要使用 FilesInterceptor 来处理其中的 binary 字段，用 @UseInterceptors 来启用，其余字段用 @Body 来取。axios 中需要指定 content type 为 multipart/form-data，并且用 FormData 对象来封装传输的内容。
-
-这 5 种 http 的传输数据的方式涵盖了绝大多数开发场景。
 
