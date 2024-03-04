@@ -4,7 +4,7 @@ Nest 模块之间可以通过 imports 引用其他模块。<br />那 Module 和 
 创建一个 nest 项目：
 ```bash
 nest new module-forward -p npm
-```
+``` 
 创建两个 Module：
 ```bash
 nest g module a
