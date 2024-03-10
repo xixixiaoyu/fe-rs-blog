@@ -1,13 +1,14 @@
 ## docker 介绍和优势
-Docker 是一个轻量级容器化工具，可以将应用程序及其运行环境打包成镜像，确保在不同环境中的一致性。这些镜像由多层组成，每层记录一个变更，便于快速构建和分发。<br />后端会部署很多服务，比如 mysql 和 redis 等中间件的服务，部署他们需要安装一系列的依赖和进行环境变量设置。<br />如果我们部署多台机器，同样的操作需要重复多次，服务才能正常启动，环境配置很麻烦。
+后端会部署很多服务，比如 mysql 和 redis 等中间件的服务，部署他们需要安装一系列的依赖和进行环境变量设置。<br />如果我们部署多台机器，同样的操作需要重复多次，服务才能正常启动，环境配置很麻烦。
 
-从这些镜像中会创建容器，每个容器都在隔离的环境中运行，有自己的文件系统和网络空间，不会互相干扰。虽然容器共享主机操作系统内核，但它们的运行进程是隔离的，保证了安全性和稳定性。<br />这种设计非常适合微服务架构，其中应用程序被拆分成多个小型、独立的服务。每个服务都可以打包成一个 Docker 容器，独立部署和扩展。<br />例如，用户认证、数据库处理和前端展示等服务可以各自运行在自己的容器中。这种模块化方法简化了管理，提高了系统的可伸缩性和可用性。
+而 docker 就完美解决了这个问题。<br />Docker 是一个轻量级容器化工具，可以将应用程序及其运行环境打包成镜像，确保在不同环境中的一致性。这些镜像由多层组成，每层记录一个变更，便于快速构建和分发。<br />从这些镜像中可以快速创建容器，每个容器都在隔离的环境中运行，有自己的文件系统和网络空间，不会互相干扰。虽然容器共享主机操作系统内核，但它们的运行进程是隔离的，保证了安全性和稳定性。 
 
-相比之下虚拟机也是一种带环境安装的解决方案，它可以在一种操作系统内运行另一种操作系统。然而，虚拟机存在资源占用多、冗余步骤多和启动慢等缺点。
+这种设计非常适合微服务架构，其中应用程序被拆分成多个小型、独立的服务。每个服务都可以打包成一个 Docker 容器，独立部署和扩展。例如，用户认证、数据库处理和前端展示等服务可以各自运行在自己的容器中。这种模块化方法简化了管理，提高了系统的可伸缩性和可用性。<br />相比之下虚拟机也是一种带环境安装的解决方案，它可以在一种操作系统内运行另一种操作系统。然而，虚拟机存在资源占用多、冗余步骤多和启动慢等缺点。
+
 ## 安装 docker
 首先需要安装 Docker，直接从[官网](https://www.docker.com/products/docker-desktop/)下载 docker desktop 就行。<br />安装完成命令行输入 `docker -h` 看下 docker 命令是否可用，如果不可用，在 Settings > Advanced 设置下环境变量即可。
 
-docker 的界面 images 是本地的所有镜像，containers 是镜像跑起来的容器，volumes 是数据卷：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1687188411567-ef53d38a-44a8-4120-93a5-2f2667c6716b.png#averageHue=%23d7e0eb&clientId=ua5797894-9318-4&from=paste&height=459&id=uc368ca40&originHeight=1456&originWidth=2386&originalType=binary&ratio=2&rotation=0&showTitle=false&size=255396&status=done&style=none&taskId=u40f83dcb-926f-45fb-9198-5923f04f929&title=&width=752)
+docker desktop 的界面， images 是本地的所有镜像，containers 是镜像跑起来的容器，volumes 是数据卷：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1687188411567-ef53d38a-44a8-4120-93a5-2f2667c6716b.png#averageHue=%23d7e0eb&clientId=ua5797894-9318-4&from=paste&height=459&id=uc368ca40&originHeight=1456&originWidth=2386&originalType=binary&ratio=2&rotation=0&showTitle=false&size=255396&status=done&style=none&taskId=u40f83dcb-926f-45fb-9198-5923f04f929&title=&width=752)
 
 ## docker 核心概念
 
@@ -218,7 +219,9 @@ docker run --name my-app-test2 -d -v ./:/usr/share/nginx/html -p 8888:80 my-app:
 
 - `-v ./:/usr/share/nginx/htm`：当前目录（./）被映射到容器内的 `/usr/share/nginx/html` 目录。这意味着对宿主机当前目录的任何更改都会反映在容器的 `/usr/share/nginx/html` 目录中，反之亦然。
 
-修改 index.html 文件：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709200027084-8acc88c7-6776-4e4f-8de3-47787e615789.png#averageHue=%23343330&clientId=uec1bf033-c89b-4&from=paste&height=238&id=u46f73118&originHeight=476&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=49143&status=done&style=none&taskId=u45aa23f3-cffa-4fe8-9b43-868eff70be6&title=&width=296)<br />访问 [http://localhost:8888/](http://localhost:8888/)：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709200043745-e1b7d96e-077a-4868-872a-9d2d976febeb.png#averageHue=%23ebebeb&clientId=uec1bf033-c89b-4&from=paste&height=79&id=u9c426bc5&originHeight=158&originWidth=574&originalType=binary&ratio=2&rotation=0&showTitle=false&size=21076&status=done&style=none&taskId=u014a0eeb-f54a-4705-90c8-feafad47570&title=&width=287)<br />没问题。<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709208180967-c3a95892-8248-4469-a71c-f997b2c81bfc.png#averageHue=%23acd890&clientId=u8d2574ea-c654-4&from=paste&height=65&id=ub0c980b0&originHeight=130&originWidth=1122&originalType=binary&ratio=2&rotation=0&showTitle=false&size=48866&status=done&style=none&taskId=ucee10b6b-c972-4ede-9c54-b6abf3a00fe&title=&width=561)<br />这样一套流程就打通了。
+修改 index.html 文件：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709200027084-8acc88c7-6776-4e4f-8de3-47787e615789.png#averageHue=%23343330&clientId=uec1bf033-c89b-4&from=paste&height=238&id=u46f73118&originHeight=476&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=49143&status=done&style=none&taskId=u45aa23f3-cffa-4fe8-9b43-868eff70be6&title=&width=296)<br />访问 [http://localhost:8888/](http://localhost:8888/)：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709200043745-e1b7d96e-077a-4868-872a-9d2d976febeb.png#averageHue=%23ebebeb&clientId=uec1bf033-c89b-4&from=paste&height=79&id=u9c426bc5&originHeight=158&originWidth=574&originalType=binary&ratio=2&rotation=0&showTitle=false&size=21076&status=done&style=none&taskId=u014a0eeb-f54a-4705-90c8-feafad47570&title=&width=287)<br />没问题。
+
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/21596389/1709862102993-4858456b-351c-4f6a-aac1-fd43e08d6f2f.jpeg)<br />这样一套流程就打通了。
 
 ## docker 原理
 
