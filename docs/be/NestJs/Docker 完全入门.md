@@ -127,29 +127,28 @@ docker push TARGET_IMAGE[:TAG]
 - docker rm container_name_or_id 删除一个容器，如果正在运行，且你想强制删除：docker rm --force container_name_or_id
 
 ## 制作 dockerfile
-Dockerfile 是一个文本文件，包含了一系列指令和配置，用来定义如何自动化构建 Docker 镜像。例如，可以指定基础镜像、工作目录、需要复制的文件、运行命令等。<br />Dockerfile 的基本结构非常简单，通常是从基础镜像开始，然后添加一系列的层，每一层都代表一个指令。
+Dockerfile 是一个文本文件，包含了一系列指令和配置，用来定义如何自动化构建 Docker 镜像。例如，可以指定基础镜像、工作目录、需要复制的文件、运行命令等。<br />Dockerfile 的基本结构非常简单，通常是从基础镜像开始，然后添加一系列的指令，每一条指令都会在镜像中创建一个新的层。
 
 ### 常用指令
 
-1. **FROM：**指定基础镜像，后续的指令都是基于这个镜像进行的，所有的 Dockerfile 都必须以一个 FROM 指令开始。例如`FROM ubuntu:latest` 表示使用最新的 `Ubuntu` 镜像作为基础。
+1. **FROM：**指定基础镜像，后续的指令都是基于这个镜像进行的，所有的 Dockerfile 都必须以一个 `FROM` 指令开始。例如`FROM ubuntu:latest` 表示使用最新的 `Ubuntu` 镜像作为基础。
 2. **RUN**：用于在镜像构建过程中运行命令。这些命令会在当前镜像的顶层添加一个新的层。
-3. **CMD**：提供容器启动时的默认命令。一个 Dockerfile 中只能有一个 CMD 指令。 例如 `CMD ["nginx", "-g", "daemon off;"]` 会启动 nginx 服务器。
+3. **CMD**：提供容器启动时的默认执行命令。一个 Dockerfile 只能有一个 CMD。 例如 `CMD ["nginx", "-g", "daemon off;"]` 会启动 nginx 服务器。
 4. **LABEL**：添加元数据到镜像，比如作者、版本、描述等。例如 `LABEL version="1.0"`。
 5. **EXPOSE**：声明容器运行时监听的端口。 例如：`EXPOSE 80` 表示容器将在运行时监听 `80` 端口。
 6. **ENV**：设置环境变量。例如 `ENV NGINX_VERSION 1.15.8` 会设置一个名为 `NGINX_VERSION` 的环境变量，其值为 `1.15.8`。
 7. **COPY**：复制本地文件或目录到镜像中，例如：`COPY . /app` 会将当前目录下的所有文件和目录复制到镜像的 `/app` 目录中。
 8. **ADD**：与 COPY 类似，但可以自动解压压缩文件，并可以从 URL 添加文件。不过，推荐使用 COPY 指令，因为它更明确且易于理解。
 9. **ENTRYPOINT**：配置容器启动时运行的命令，可以与 CMD 配合使用。
-
-VOLUME：创建一个挂载点，用于容器与宿主机之间的数据共享。例如，`VOLUME /data` 会创建一个名为 `/data` 的挂载点，会生成一个临时目录关联容器 app 目录，这样就算后面 docker run 没 -v 指定数据卷，将来也可以找回数据。
-
-10. **USER**：指定运行容器时的用户名或UID。例如 `USER nginx` 会以 `nginx` 用户的身份运行容器。
-11. **WORKDIR**：设置工作目录，后续的 RUN、CMD、ENTRYPOINT、COPY 和 ADD 指令都会在这个目录下执行。例如  `WORKDIR /app`。
+10. **VOLUME**：创建一个挂载点，用于容器与宿主机之间的数据共享。例如，`VOLUME /data` 会创建一个名为 `/data` 的挂载点，会生成一个临时目录关联容器 app 目录，这样就算后面 docker run 没 -v 指定数据卷，将来也可以找回数据。
+11. **USER**：指定运行容器时的用户名或UID。例如 `USER nginx` 会以 `nginx` 用户的身份运行容器。
+12. **WORKDIR**：设置工作目录，后续的 `RUN`、`CMD`、`ENTRYPOINT`、`COPY` 和 `ADD` 指令都会在这个目录下执行。例如  `WORKDIR /app`。
+13. **USER: **指定运行容器时的用户名或 UID。后续的 `RUN`, `CMD`, 和 `ENTRYPOINT` 指令都会使用该用户。例如：USER nobody。
 
 ### ENTRYPOINT 与 CMD 的区别
 在 Dockerfile 中，`ENTRYPOINT` 和 `CMD` 都可以用来指定容器启动时执行的命令，但还是有差别的：
 #### ENTRYPOINT
-`ENTRYPOINT` 的主要目的是指定容器启动时需要执行的命令和参数，它可以确保容器作为一个特定的应用或服务运行。<br />当使用 `ENTRYPOINT` 时，容器启动的命令会被固定下来，用户在运行容器时传递的任何额外参数都会被追加到 `ENTRYPOINT` 指定的命令之后。<br />例如，如果 Dockerfile 包含如下 `ENTRYPOINT`：
+当使用 `ENTRYPOINT` 时，容器启动的命令会被固定下来，用户在运行容器时传递的任何额外参数都会被追加到 `ENTRYPOINT` 指定的命令之后。<br />例如，如果 Dockerfile 包含如下 `ENTRYPOINT`：
 ```dockerfile
 ENTRYPOINT ["executable", "param1", "param2"]
 ```
@@ -159,19 +158,20 @@ executable param1 param2 param3 param4
 ```
 
 #### CMD
-`CMD` 也可以用来指定容器启动时执行的命令，但它更灵活。<br />如果 Dockerfile 中同时指定了 `CMD` 和 `ENTRYPOINT`，那么 `CMD` 中的内容会作为默认参数传递给 `ENTRYPOINT`。<br />如果只指定了 `CMD` 而没有指定 `ENTRYPOINT`，那么 `CMD` 中的命令和参数会在容器启动时执行。<br />用户在运行容器时传递的任何参数会覆盖 `CMD` 中的默认参数。<br />例如，Dockerfile 如下：
+如果 Dockerfile 中同时指定了 `CMD` 和 `ENTRYPOINT`，那么 `CMD` 中的内容会作为默认参数传递给 `ENTRYPOINT`。<br />用户在运行容器时传递的任何参数会覆盖 `CMD` 中的默认参数。<br />例如，Dockerfile 如下：
 ```dockerfile
 CMD ["executable", "param1", "param2"]
 ```
 如果用户在运行容器时没有传递任何参数，那么容器启动时执行的命令就是 `executable param1 param2`。<br />但如果用户传递了 `param3` 和 `param4`，那么这些将覆盖 `CMD` 中的默认参数，容器启动时执行的命令将变为 `executable param3 param4`。
 
 #### 结合使用
-在实践中，`ENTRYPOINT` 和 `CMD` 可以结合使用来提供更大的灵活性。<br />`ENTRYPOINT` 定义了容器的主要执行命令，而 `CMD` 提供了该命令的默认参数。<br />用户在运行容器时传递的任何参数都会追加到 `ENTRYPOINT` 指定的命令之后，这允许用户覆盖 `CMD` 中指定的默认参数。<br />例如：
+`ENTRYPOINT` 定义了容器的主要执行命令，而 `CMD` 提供了该命令的默认参数。<br />用户在运行容器时传递的任何参数都会追加到 `ENTRYPOINT` 指定的命令之后，这允许用户覆盖 `CMD` 中指定的默认参数。<br />例如：
 ```dockerfile
-ENTRYPOINT ["executable"]
-CMD ["param1", "param2"]
+FROM ubuntu
+ENTRYPOINT ["echo", "Hello"]
+CMD ["world"]
 ```
-这样，如果用户在运行容器时没有传递任何参数，那么执行的命令会是 `executable param1 param2`。<br />如果用户传递了 `param3`，那么执行的命令将变为 `executable param3`，这里的 `param3` 覆盖了 `CMD` 中的默认参数。
+在这个例子中，如果直接运行容器而不带任何参数，它会输出 `"Hello world"`。<br />但如果在 `docker run` 后面添加参数（例如 `docker run <image> Docker`），则 "world" 会被 "Docker" 替换，输出 "Hello Docker"。
 
 ### docker build 命令
 `docker build` 用于创建 Docker 镜像：
