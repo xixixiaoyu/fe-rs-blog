@@ -14,7 +14,7 @@ npm install mongoose
 ```
 
 ### 连接 MongoDB 插入数据
-然后，使用 Node.js 代码连接到本地运行的 MongoDB 实例：<br />创建 index.js 文件：
+创建并用 node 运行 index.js 文件：
 ```javascript
 const mongoose = require('mongoose');
 
@@ -47,7 +47,7 @@ async function main() {
 	console.log(persons);
 }
 ```
-**注意**：上面代码中 await mongoose.connect(...) 确保了数据库连接成功之后，才会执行后续操作。<br />在 MongoDB 中，一个 collection 中的 document 可以是任意形状的。<br />因此，我们需要先定义一个 Schema 来描述我们想要存储的数据结构，然后根据这个 Schema 创建 Model，以便进行增删改查（CRUD）操作。
+在 **MongoDB** 中，集合中的文档可以采用任意结构。<br />因此，我们需要先定义一个 Schema 来描述我们想要存储的数据结构，然后根据这个 Schema 创建 Model，以便进行增删改查（CRUD）操作。
 
 ### 字段值类型和对象验证
 文档结构可选的常用字段类型列表：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1710673636782-19697149-78e1-4588-a488-3e36ad1bfaa0.png#averageHue=%23faf9f8&clientId=u7d263aa0-fbf6-4&from=paste&height=309&id=u5205d061&originHeight=617&originWidth=955&originalType=binary&ratio=2&rotation=0&showTitle=false&size=99274&status=done&style=none&taskId=ue691acee-2e66-4890-98a8-74acddab644&title=&width=477.5)<br />Mongoose 可以使用对象形式对字段值进行更多验证：
