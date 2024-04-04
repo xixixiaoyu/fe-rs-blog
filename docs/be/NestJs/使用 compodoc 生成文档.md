@@ -1,5 +1,7 @@
 ## 启动 compodoc 文档
-compodoc 是一个为 TypeScript 项目生成文档的工具，它支持 Angular、Nest。<br />compodoc 会分析你的代码，并生成一个包含所有类、接口、服务、控制器和模块以及它们依赖关系的文档。<br />创建 nest 项目：
+compodoc 是一个为 TypeScript 项目生成文档的工具，它支持 Angular、Nest。<br />compodoc 会分析你的代码，并生成一个包含所有类、接口、服务、控制器和模块以及它们依赖关系的文档。
+
+创建 nest 项目：
 ```bash
 nest new compodoc-test -p npm
 ```
@@ -38,7 +40,7 @@ nest g resource test2
 在 Test1Module 导出 Test1Service：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709458583885-7a42b325-fb5d-4ce6-a89d-88e6b57fc006.png#averageHue=%232f2d2b&clientId=u40db19a7-11a8-4&from=paste&height=256&id=u6daef73c&originHeight=564&originWidth=1246&originalType=binary&ratio=2.200000047683716&rotation=0&showTitle=false&size=104502&status=done&style=none&taskId=u6a8ce65e-44ee-454a-b605-a1959f30000&title=&width=566.3636240880354)
 
 
-然后 BbbModule 引入 AaaModule：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709458656590-d9c75429-dc95-484b-b53d-1015cb884993.png#averageHue=%232f2d2b&clientId=u40db19a7-11a8-4&from=paste&height=275&id=udf6124e0&originHeight=606&originWidth=1236&originalType=binary&ratio=2.200000047683716&rotation=0&showTitle=false&size=122467&status=done&style=none&taskId=u5951eb49-c3ae-478b-a739-31005e3eca2&title=&width=561.8181696411009)<br />在 BbbService 里注入 AaaService：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709458760462-8c1aa4a6-0c48-4b24-8524-14d0e164317d.png#averageHue=%23322e2b&clientId=u40db19a7-11a8-4&from=paste&height=291&id=uc36e879f&originHeight=640&originWidth=1136&originalType=binary&ratio=2.200000047683716&rotation=0&showTitle=false&size=89232&status=done&style=none&taskId=u08e3ce9d-3e4a-4317-b528-907d12b3622&title=&width=516.3636251717562)<br />运行项目：
+然后 Test2Module 引入 Test1Module：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709458656590-d9c75429-dc95-484b-b53d-1015cb884993.png#averageHue=%232f2d2b&clientId=u40db19a7-11a8-4&from=paste&height=275&id=udf6124e0&originHeight=606&originWidth=1236&originalType=binary&ratio=2.200000047683716&rotation=0&showTitle=false&size=122467&status=done&style=none&taskId=u5951eb49-c3ae-478b-a739-31005e3eca2&title=&width=561.8181696411009)<br />在 Test2Service 里注入 Test1Service：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1709458760462-8c1aa4a6-0c48-4b24-8524-14d0e164317d.png#averageHue=%23322e2b&clientId=u40db19a7-11a8-4&from=paste&height=291&id=uc36e879f&originHeight=640&originWidth=1136&originalType=binary&ratio=2.200000047683716&rotation=0&showTitle=false&size=89232&status=done&style=none&taskId=u08e3ce9d-3e4a-4317-b528-907d12b3622&title=&width=516.3636251717562)<br />运行项目：
 ```typescript
 npm run start:dev
 ```
