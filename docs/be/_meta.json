@@ -1,8 +1,8 @@
 [
 	{
 		"type": "dir",
-		"name": "NodeJs",
-		"label": "NodeJs基础",
+		"name": "Nest",
+		"label": "Nest.js",
 		"collapsible": true,
 		"collapsed": true
 	}
