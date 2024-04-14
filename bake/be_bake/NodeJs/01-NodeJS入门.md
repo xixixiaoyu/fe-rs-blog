@@ -135,18 +135,18 @@ I 就是 Input 表示输入，O 就是 Output 表示输出，I/O 操作就是输
 Nodejs 单线程配合事件驱动架构及 libuv 实现的就是异步非阻塞 I/O 模型。
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 
-fs.readFile("./x.txt", "utf-8", function (error, data) {
-  console.log(data);
+fs.readFile('./x.txt', 'utf-8', function (error, data) {
+	console.log(data);
 });
-console.log("Hello");
+console.log('Hello');
 ```
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 
-const data = fs.readFileSync("./y.txt", { encoding: "utf-8" });
+const data = fs.readFileSync('./y.txt', { encoding: 'utf-8' });
 console.log(data);
 ```
 
@@ -182,12 +182,12 @@ console.log(data);
 
 ```js
 function A() {
-  console.log("A is running");
+	console.log('A is running');
 }
 function B(callback) {
-  console.log("B Start");
-  callback(); // A is running
-  console.log("B End");
+	console.log('B Start');
+	callback(); // A is running
+	console.log('B End');
 }
 B(A);
 ```
@@ -206,13 +206,13 @@ B(A);
 
 ```js
 function A(arg) {
-  console.log("A is running");
-  console.log(arg);
+	console.log('A is running');
+	console.log(arg);
 }
 function B(callback) {
-  console.log("B Start");
-  callback("我是B函数传递给A函数的参数"); // A is running
-  console.log("B End");
+	console.log('B Start');
+	callback('我是B函数传递给A函数的参数'); // A is running
+	console.log('B End');
 }
 B(A);
 ```
@@ -222,10 +222,10 @@ B(A);
 在异步编程中，异步 API 执行的结果就是通过回调函数传递参数的方式传递到上层代码中的。
 
 ```js
-const fs = require("fs");
-fs.readFile("./index.html", "utf-8", function (error, data) {
-  if (error) console.log("发生了错误");
-  console.log(data);
+const fs = require('fs');
+fs.readFile('./index.html', 'utf-8', function (error, data) {
+	if (error) console.log('发生了错误');
+	console.log(data);
 });
 ```
 
@@ -236,22 +236,22 @@ fs.readFile("./index.html", "utf-8", function (error, data) {
 > 基于回调函数的异步编程一不小心就会产生回调地狱的问题。
 
 ```js
-const fs = require("fs");
-fs.readFile("./x.txt", "utf-8", function (error, x) {
-  fs.readFile("./y.txt", "utf-8", function (error, y) {
-    fs.readFile("./z.txt", "utf-8", function (error, z) {
-      console.log(x);
-      console.log(y);
-      console.log(z);
-    });
-  });
+const fs = require('fs');
+fs.readFile('./x.txt', 'utf-8', function (error, x) {
+	fs.readFile('./y.txt', 'utf-8', function (error, y) {
+		fs.readFile('./z.txt', 'utf-8', function (error, z) {
+			console.log(x);
+			console.log(y);
+			console.log(z);
+		});
+	});
 });
 ```
 
 ```js
-const x = fs.readFile("./x.txt", "utf-8");
-const y = fs.readFile("./y.txt", "utf-8");
-const z = fs.readFile("./z.txt", "utf-8");
+const x = fs.readFile('./x.txt', 'utf-8');
+const y = fs.readFile('./y.txt', 'utf-8');
+const z = fs.readFile('./z.txt', 'utf-8');
 console.log(x);
 console.log(y);
 console.log(z);
@@ -278,66 +278,68 @@ console.log(z);
 2. 基础语法
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 const promise = new Promise(function (resolve, reject) {
-  fs.readFile("./x.txt", "utf-8", function (error, data) {
-    if (error) {
-      // 将状态从等待变为失败
-      reject(error);
-    } else {
-      // 将状态从等待变为成功
-      resolve(data);
-    }
-  });
+	fs.readFile('./x.txt', 'utf-8', function (error, data) {
+		if (error) {
+			// 将状态从等待变为失败
+			reject(error);
+		} else {
+			// 将状态从等待变为成功
+			resolve(data);
+		}
+	});
 });
 promise
-  .then(function (data) {
-    console.log(data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+	.then(function (data) {
+		console.log(data);
+	})
+	.catch(function (error) {
+		console.log(error);
+	});
 ```
 
 3. Promise 链式调用
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 function readFile(path) {
-  return new Promise(function (resolve, reject) {
-    fs.readFile(path, "utf-8", function (error, data) {
-      if (error) return reject(error);
-      resolve(data);
-    });
-  });
+	return new Promise(function (resolve, reject) {
+		fs.readFile(path, 'utf-8', function (error, data) {
+			if (error) return reject(error);
+			resolve(data);
+		});
+	});
 }
-readFile("./x.txt")
-  .then(function (x) {
-    console.log(x);
-    return readFile("./y.txt");
-  })
-  .then(function (y) {
-    console.log(y);
-    return readFile("./z.txt");
-  })
-  .then(function (z) {
-    console.log(z);
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
-  .finally(function () {
-    console.log("finally");
-  });
+readFile('./x.txt')
+	.then(function (x) {
+		console.log(x);
+		return readFile('./y.txt');
+	})
+	.then(function (y) {
+		console.log(y);
+		return readFile('./z.txt');
+	})
+	.then(function (z) {
+		console.log(z);
+	})
+	.catch(function (error) {
+		console.log(error);
+	})
+	.finally(function () {
+		console.log('finally');
+	});
 ```
 
 4. Promise.all 并发异步操作
 
 ```js
-const fs = require("fs");
-Promise.all([readFile("./x.txt"), readFile("./y.txt"), readFile("./z.txt")]).then(function (data) {
-  console.log(data);
-});
+const fs = require('fs');
+Promise.all([readFile('./x.txt'), readFile('./y.txt'), readFile('./z.txt')]).then(
+	function (data) {
+		console.log(data);
+	}
+);
 ```
 
 ### 8.基于异步函数的异步编程
@@ -349,20 +351,20 @@ Promise 虽然解决了回调地狱的问题，但是代码看起来仍然不简
 1. 异步函数概述
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 function readFile(path) {
-  return new Promise(function (resolve, reject) {
-    fs.readFile(path, "utf-8", function (error, data) {
-      if (error) return reject(error);
-      resolve(data);
-    });
-  });
+	return new Promise(function (resolve, reject) {
+		fs.readFile(path, 'utf-8', function (error, data) {
+			if (error) return reject(error);
+			resolve(data);
+		});
+	});
 }
 async function getFileContent() {
-  let x = await readFile("./x.txt");
-  let y = await readFile("./y.txt");
-  let z = await readFile("./z.txt");
-  return [x, y, z];
+	let x = await readFile('./x.txt');
+	let y = await readFile('./y.txt');
+	let z = await readFile('./z.txt');
+	return [x, y, z];
 }
 getFileContent().then(console.log);
 ```
@@ -380,14 +382,14 @@ await 关键字只能出现在异步函数中。
 在 Node.js 平台下，所有异步方法使用的都是基于回调函数的异步编程。为了使用异步函数提高异步编程体验，可以使用 util 模块下面的 promisify 方法将基于回调函数的异步 API 转换成返回 Promise 的 API。
 
 ```js
-const fs = require("fs");
-const util = require("util");
+const fs = require('fs');
+const util = require('util');
 const readFile = util.promisify(fs.readFile);
 async function getFileContent() {
-  let x = await readFile("./x.txt", "utf-8");
-  let y = await readFile("./y.txt", "utf-8");
-  let z = await readFile("./z.txt", "utf-8");
-  return [x, y, z];
+	let x = await readFile('./x.txt', 'utf-8');
+	let y = await readFile('./y.txt', 'utf-8');
+	let z = await readFile('./z.txt', 'utf-8');
+	return [x, y, z];
 }
 getFileContent().then(console.log);
 ```
@@ -455,50 +457,50 @@ nextTick 的优先级高于 microTask，在执行任务时，只有 nextTick 中
 在 Node 应用程序启动后，并不会立即进入事件循环，而是先执行输入代码，从上到下开始执行，同步 API 立即执行，异步 API 交给 C++ 维护的线程执行，异步 API 的回调函数被注册到对应的事件队列中。 当所有输入代码执行完成后，开始进入事件循环。
 
 ```js
-console.log("start");
+console.log('start');
 setTimeout(() => {
-  console.log("setTimeout 1");
+	console.log('setTimeout 1');
 }, 0);
 setTimeout(() => {
-  console.log("setTimeout 2");
+	console.log('setTimeout 2');
 }, 0);
-console.log("end");
+console.log('end');
 // start end 1 2
 ```
 
 ```js
-setTimeout(() => console.log("1"), 0);
-setImmediate(() => console.log("2"));
+setTimeout(() => console.log('1'), 0);
+setImmediate(() => console.log('2'));
 function sleep(delay) {
-  var start = new Date().getTime();
-  while (new Date().getTime() - start < delay) {
-    continue;
-  }
+	var start = new Date().getTime();
+	while (new Date().getTime() - start < delay) {
+		continue;
+	}
 }
 sleep(1000);
 // 1 2
 ```
 
 ```js
-setTimeout(() => console.log("1"), 0);
-setImmediate(() => console.log("2"));
+setTimeout(() => console.log('1'), 0);
+setImmediate(() => console.log('2'));
 // 2 1 或 1 2
 ```
 
 ```js
-const fs = require("fs");
-fs.readFile("./index.html", () => {
-  setTimeout(() => console.log("1"), 0);
-  setImmediate(() => console.log("2"));
+const fs = require('fs');
+fs.readFile('./index.html', () => {
+	setTimeout(() => console.log('1'), 0);
+	setImmediate(() => console.log('2'));
 });
 // 2 1
 ```
 
 ```js
-setTimeout(() => console.log("1"), 50);
-process.nextTick(() => console.log("2"));
-setImmediate(() => console.log("3"));
-process.nextTick(() => console.log("4"));
+setTimeout(() => console.log('1'), 50);
+process.nextTick(() => console.log('2'));
+setImmediate(() => console.log('3'));
+process.nextTick(() => console.log('4'));
 // 2 4 3 1
 ```
 
@@ -520,13 +522,13 @@ Promise.resolve().then(() => console.log(4));
 ```
 
 ```js
-setTimeout(() => console.log("1"), 50);
-process.nextTick(() => console.log("2"));
-setImmediate(() => console.log("3"));
+setTimeout(() => console.log('1'), 50);
+process.nextTick(() => console.log('2'));
+setImmediate(() => console.log('3'));
 process.nextTick(() =>
-  setTimeout(() => {
-    console.log("4");
-  }, 1000)
+	setTimeout(() => {
+		console.log('4');
+	}, 1000)
 );
 // 2 3 1 4
 ```
@@ -540,15 +542,15 @@ process.nextTick(() =>
 如果你希望异步任务尽可能早地执行，那就使用 process.nextTick。
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 function readFile(fileName, callback) {
-  if (typeof fileName !== "string") {
-    return callback(new TypeError("filename 必须是字符串类型"));
-  }
-  fs.readFile(filename, function (err, data) {
-    if (err) return callback(err);
-    return callback(null, data);
-  });
+	if (typeof fileName !== 'string') {
+		return callback(new TypeError('filename 必须是字符串类型'));
+	}
+	fs.readFile(filename, function (err, data) {
+		if (err) return callback(err);
+		return callback(null, data);
+	});
 }
 ```
 
@@ -580,24 +582,24 @@ setImmediate 表示立即执行，它是宏任务，回调函数会被会放置�
 
 ```js
 function sleep(delay) {
-  var start = new Date().getTime();
-  while (new Date().getTime() - start < delay) {
-    continue;
-  }
-  console.log("ok");
+	var start = new Date().getTime();
+	while (new Date().getTime() - start < delay) {
+		continue;
+	}
+	console.log('ok');
 }
 ```
 
 ```js
-console.log("start");
+console.log('start');
 sleep(2000);
-console.log("end");
+console.log('end');
 ```
 
 ```js
-console.log("start");
+console.log('start');
 setImmediate(sleep, 2000);
-console.log("end");
+console.log('end');
 ```
 
 结论：Node 适合 I/O 密集型任务，不适合 CPU 密集型任务，因为主线程一旦阻塞，程序就卡住了。
@@ -709,7 +711,7 @@ Buffer 是一个和数组类似的对象，不同是 Buffer 是专门用来保�
   //Buffer 的声明创建
   const buf_1 = Buffer.alloc(10);
   const buf_2 = Buffer.allocUnsafe(10);
-  const buf_3 = Buffer.from("yunmu");
+  const buf_3 = Buffer.from('yunmu');
   ```
 
 ##### Buffer 读取和写入
@@ -724,7 +726,7 @@ Buffer 是一个和数组类似的对象，不同是 Buffer 是专门用来保�
   //1. 通过数字获取对应的 ASCII 字符
   console.log(String.fromCharCode(121));
   //2. 通过 ASCII 字符获取对应的编号
-  console.log("a".charCodeAt());
+  console.log('a'.charCodeAt());
   //设置
   buf_3[0] = 99;
   console.log(buf_3.toString());
@@ -753,7 +755,7 @@ console.log(buf_3.toString());
 
 ```js
 //关于中文 一个UTF-8中文字符占据三个字节
-const buf_4 = Buffer.from("我爱你");
+const buf_4 = Buffer.from('我爱你');
 console.log(buf_4);
 ```
 
@@ -805,15 +807,15 @@ fs 全称为 file system，是 NodeJS 中的内置模块，可以对计算机中
     - `flag` **默认值:** `'w'`
 
     ```js
-    const fs = require("fs");
+    const fs = require('fs');
 
     // 异步写入
-    fs.writeFile("./index.html", "云牧大帅鸽\r\n", { flag: "a" }, (err) => {
-      if (err) {
-        console.log("写入失败", err);
-        return;
-      }
-      console.log("写入成功");
+    fs.writeFile('./index.html', '云牧大帅鸽\r\n', { flag: 'a' }, err => {
+    	if (err) {
+    		console.log('写入失败', err);
+    		return;
+    	}
+    	console.log('写入成功');
     });
     // flag标记
     //   r   read  只读
@@ -821,8 +823,8 @@ fs 全称为 file system，是 NodeJS 中的内置模块，可以对计算机中
     //   a   append  追加
 
     // 同步写入
-    fs.writeFileSync("./app.css", "*{margin:0;padding:0}");
-    fs.writeFileSync("./app.js", Date.now());
+    fs.writeFileSync('./app.css', '*{margin:0;padding:0}');
+    fs.writeFileSync('./app.js', Date.now());
 
     // 0o666 Linux 下文件权限的管理方式
     //   6 所有者的权限
@@ -839,18 +841,18 @@ fs 全称为 file system，是 NodeJS 中的内置模块，可以对计算机中
 
 ```js
 let data = {
-  id: 4860,
-  uuid: "5e398eef-f5cf-4ff6-a000-c24913de86dd",
-  hitokoto: "世上所以不公平之事是由于当事人能力不足所致。",
-  type: "a",
-  from: "金木研",
-  from_who: null,
-  creator: "夕之树",
-  creator_uid: 4248,
-  reviewer: 4756,
-  commit_from: "web",
-  created_at: "1573331301",
-  length: 22,
+	id: 4860,
+	uuid: '5e398eef-f5cf-4ff6-a000-c24913de86dd',
+	hitokoto: '世上所以不公平之事是由于当事人能力不足所致。',
+	type: 'a',
+	from: '金木研',
+	from_who: null,
+	creator: '夕之树',
+	creator_uid: 4248,
+	reviewer: 4756,
+	commit_from: 'web',
+	created_at: '1573331301',
+	length: 22,
 };
 
 //将 JS 对象转化为 字符串
@@ -858,14 +860,14 @@ let str = JSON.stringify(data);
 
 //D:/data.txt
 //1. 引入 fs 模块
-const fs = require("fs");
+const fs = require('fs');
 //2. 调用方法
-fs.writeFile("d:/data.json", str, function (err) {
-  if (err) {
-    console.log("写入失败");
-    return;
-  }
-  console.log("写入成功");
+fs.writeFile('d:/data.json', str, function (err) {
+	if (err) {
+		console.log('写入失败');
+		return;
+	}
+	console.log('写入成功');
 });
 ```
 
@@ -881,14 +883,14 @@ fs.writeFile("d:/data.json", str, function (err) {
 
   ```js
   //1. 引入 fs 模块
-  const fs = require("fs");
+  const fs = require('fs');
 
   //2. 创建写入流对象
-  const ws = fs.createWriteStream("./home.html");
-  const ws = fs.createWriteStream("./home.js");
+  const ws = fs.createWriteStream('./home.html');
+  const ws = fs.createWriteStream('./home.js');
 
   //3. 执行写入
-  ws.write("<html>");
+  ws.write('<html>');
   ws.write(`
       <head>
           <title>这是一个脚本创建的文件哦</title>
@@ -897,7 +899,7 @@ fs.writeFile("d:/data.json", str, function (err) {
           <h1>哎呦 不错哦~</h1>
       </body>
   `);
-  ws.write("</html>");
+  ws.write('</html>');
 
   ws.write(`
       const body = document.body;
@@ -929,20 +931,20 @@ fs.writeFile("d:/data.json", str, function (err) {
 
   ```js
   //1. 引入 fs 模块
-  const fs = require("fs");
+  const fs = require('fs');
 
   //2-1. 调用方法读取内容
-  fs.readFile("./home.html", (err, data) => {
-    if (err) {
-      console.log("读取失败,错误的对象为", err);
-      return;
-    }
-    //输出从文件中读取的内容 读取结果是Buffer
-    console.log(data.toString());
+  fs.readFile('./home.html', (err, data) => {
+  	if (err) {
+  		console.log('读取失败,错误的对象为', err);
+  		return;
+  	}
+  	//输出从文件中读取的内容 读取结果是Buffer
+  	console.log(data.toString());
   });
 
   //2-2 同步读取
-  let result = fs.readFileSync("./index.html");
+  let result = fs.readFileSync('./index.html');
   console.log(result.toString());
   ```
 
@@ -950,14 +952,14 @@ fs.writeFile("d:/data.json", str, function (err) {
 
 ```js
 //1. 引入 fs 模块
-const fs = require("fs");
+const fs = require('fs');
 
 //2. 调用方法 ./index.html
-fs.readFile("C:\\Windows\\Boot\\BootDebuggerFiles.ini", (err, data) => {
-  //判断  throw 抛出
-  if (err) throw err;
-  //输出文件的内容
-  console.log(data.toString());
+fs.readFile('C:\\Windows\\Boot\\BootDebuggerFiles.ini', (err, data) => {
+	//判断  throw 抛出
+	if (err) throw err;
+	//输出文件的内容
+	console.log(data.toString());
 });
 ```
 
@@ -967,19 +969,19 @@ fs.readFile("C:\\Windows\\Boot\\BootDebuggerFiles.ini", (err, data) => {
 
   ```js
   //1. 引入 fs 模块
-  const fs = require("fs");
+  const fs = require('fs');
 
   //2. 创建读取流对象
-  const rs = fs.createReadStream("./file/刻意练习.mp3");
+  const rs = fs.createReadStream('./file/刻意练习.mp3');
 
   // 读取流打开的时候触发
-  rs.on("open", () => {
-    console.log("读取流打开了");
+  rs.on('open', () => {
+  	console.log('读取流打开了');
   });
 
   //3. 绑定事件 when 当....时候   chunk 块   当读取完一块数据后 触发
-  rs.on("data", (chunk) => {
-    console.log(chunk.length);
+  rs.on('data', chunk => {
+  	console.log(chunk.length);
   });
 
   //readFile 与 createReadStream
@@ -992,11 +994,11 @@ fs.readFile("C:\\Windows\\Boot\\BootDebuggerFiles.ini", (err, data) => {
 ```js
 //复制文件
 //1. 模块引入
-const fs = require("fs");
+const fs = require('fs');
 
 //2. 创建流对象
-const rs = fs.createReadStream("./file/刻意练习.mp3");
-const ws = fs.createWriteStream("./file/不二法门.mp3");
+const rs = fs.createReadStream('./file/刻意练习.mp3');
+const ws = fs.createWriteStream('./file/不二法门.mp3');
 
 //3. 绑定事件读取内容
 // rs.on("data", (chunk) => {
@@ -1015,15 +1017,15 @@ rs.pipe(ws);
 
 ```js
 //1. 引入 fs 模块
-const fs = require("fs");
+const fs = require('fs');
 
 //2. 调用方法
-fs.unlink("./project/index.js", (err) => {
-  if (err) throw err;
-  console.log("删除成功");
+fs.unlink('./project/index.js', err => {
+	if (err) throw err;
+	console.log('删除成功');
 });
 
-fs.unlinkSync("./project/app.js");
+fs.unlinkSync('./project/app.js');
 ```
 
 ##### 移动文件 + 重命名
@@ -1033,21 +1035,21 @@ fs.unlinkSync("./project/app.js");
 
 ```js
 // 1. 引入模块
-const fs = require("fs");
+const fs = require('fs');
 
 //2. 调用方法
-fs.rename("./home.js", "./index.js", (err) => {
-  if (err) throw err;
-  console.log("重命名成功");
+fs.rename('./home.js', './index.js', err => {
+	if (err) throw err;
+	console.log('重命名成功');
 });
 
-fs.rename("./index.html", "./project/首页.html", (err) => {
-  if (err) throw err;
-  console.log("重命名成功");
+fs.rename('./index.html', './project/首页.html', err => {
+	if (err) throw err;
+	console.log('重命名成功');
 });
 
 //同步API
-fs.renameSync("./project/app.css", "./project/index.css");
+fs.renameSync('./project/app.css', './project/index.css');
 ```
 
 ##### 文件夹操作
@@ -1063,30 +1065,30 @@ fs.renameSync("./project/app.css", "./project/index.css");
 
 ```js
 //文件夹操作
-const fs = require("fs");
+const fs = require('fs');
 
 //创建文件夹
-fs.mkdir("./html", (err) => {
-  if (err) throw err;
-  console.log("创建成功");
+fs.mkdir('./html', err => {
+	if (err) throw err;
+	console.log('创建成功');
 });
 
 //读取文件夹 read 读取  dir 文件夹
-fs.readdir("./project", (err, files) => {
-  if (err) throw err;
-  //输出文件夹下的『文件列表』
-  console.log(files);
+fs.readdir('./project', (err, files) => {
+	if (err) throw err;
+	//输出文件夹下的『文件列表』
+	console.log(files);
 });
 
-fs.readdir("d:/", (err, files) => {
-  if (err) throw err;
-  //输出文件夹下的『文件列表』
-  console.log(files);
+fs.readdir('d:/', (err, files) => {
+	if (err) throw err;
+	//输出文件夹下的『文件列表』
+	console.log(files);
 });
 
 //删除文件夹
-fs.rmdir("./project", { recursive: true }, (err) => {
-  console.log(err);
+fs.rmdir('./project', { recursive: true }, err => {
+	console.log(err);
 });
 ```
 
@@ -1113,10 +1115,10 @@ fs.rmdir("./project", { recursive: true }, (err) => {
 > index.html 当前文件夹下的 index.html
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 //特殊的变量  『始终保存的是当前文件所在文件夹的绝对路径』
 console.log(__dirname);
-fs.writeFileSync(__dirname + "/index.html", "abc");
+fs.writeFileSync(__dirname + '/index.html', 'abc');
 ```
 
 ##### 查看『资源的状态』
@@ -1124,13 +1126,13 @@ fs.writeFileSync(__dirname + "/index.html", "abc");
 - stat(path, callback)
 
 ```js
-const fs = require("fs");
+const fs = require('fs');
 
 //查看文件状态
-fs.stat("./file", (err, stats) => {
-  if (err) throw err;
-  //如果没有错
-  console.log("是否为文件夹" + stats.isDirectory());
-  console.log("是否为文件" + stats.isFile());
+fs.stat('./file', (err, stats) => {
+	if (err) throw err;
+	//如果没有错
+	console.log('是否为文件夹' + stats.isDirectory());
+	console.log('是否为文件' + stats.isFile());
 });
 ```

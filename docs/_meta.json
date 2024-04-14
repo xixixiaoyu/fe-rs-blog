@@ -1,17 +1,7 @@
 [
 	{
-		"text": "前端",
-		"link": "/fe/全栈技术选型，前后端编程本质",
-		"activeMatch": "/fe/"
-	},
-	{
 		"text": "后端",
 		"link": "/be/NodeJs/01-NodeJS入门",
 		"activeMatch": "/be/"
-	},
-	{
-		"text": "算法和数据结构",
-		"link": "/algorithms/哈希表/1.两数之和",
-		"activeMatch": "/algorithms/"
 	}
 ]
