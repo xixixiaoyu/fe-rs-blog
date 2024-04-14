@@ -4,7 +4,7 @@ const path = require('path');
 const whitelist = ['_meta.json', 'generateMeta.js', '.DS_Store'];
 
 // 扫描当前目录
-fs.readdir('.', (err, files) => {
+fs.readdir('./', (err, files) => {
 	if (err) {
 		console.error('Error reading the directory', err);
 		return;
@@ -22,7 +22,7 @@ fs.readdir('.', (err, files) => {
 		}));
 
 	// 写入 _meta.json 文件
-	fs.writeFile('_meta.json', JSON.stringify(result, null, '\t'), err => {
+	fs.writeFile('./_meta.json', JSON.stringify(result, null, '\t'), err => {
 		if (err) {
 			console.error('Error writing _meta.json', err);
 		} else {

@@ -1,5 +1,9 @@
 import * as path from 'path';
 import { defineConfig } from 'rspress/config';
+import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';
+import remarkAutolinkHeadings from 'remark-autolink-headings';
+import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
 	base: process.env.NODE_ENV === 'development' ? '' : '/fe-rs-blog/',
@@ -20,6 +24,18 @@ export default defineConfig({
 			},
 		],
 		hideNavbar: 'never',
+	},
+	markdown: {
+		mdxRs: false,
+		remarkPlugins: [
+			[
+				remarkAutolinkHeadings,
+				{
+					behavior: 'wrap',
+				},
+			],
+		],
+		rehypePlugins: [rehypeSlug, rehypeRaw, rehypeKatex],
 	},
 	builderConfig: {
 		html: {
