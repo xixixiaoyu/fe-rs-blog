@@ -191,6 +191,54 @@ select VERSION(), DATABASE(), USER()
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1687489343263-2858db5d-231f-4948-a663-325d6dc32bf8.png#averageHue=%23ededed&clientId=u63dfacc2-7d3a-4&from=paste&height=50&id=u4a8f1ccc&originHeight=100&originWidth=464&originalType=binary&ratio=2&rotation=0&showTitle=false&size=17714&status=done&style=none&taskId=u910df4b3-3bf1-464c-b272-0537313a172&title=&width=232)
 
+### COALESCE 函数
+COALESCE 函数用于返回参数列表中第一个非 null 的值：
+```sql
+SELECT COALESCE(NULL, 1), COALESCE(NULL, NULL, 2);
+```
+此查询将分别返回 1 和 2。
+
+### GREATEST 和 LEAST 函数
+
+- GREATEST 函数返回所有给定参数中的最大值。
+- LEAST 函数返回所有给定参数中的最小值。
+```sql
+SELECT GREATEST(1, 2, 3), LEAST(1, 2, 3, 4);
+```
+此查询将返回 3 和 1。
+
+### 类型转换函数
+#### CAST 和 CONVERT
+类型转换函数如 CAST 和 CONVERT 可用于明确数据类型，以确保函数正确理解和处理数据。<br />考虑以下查询，其中 GREATEST 函数未能正确比较字符串和数字：
+```sql
+SELECT GREATEST(1, '123', 3);
+```
+由于 '123' 被视为字符串，结果将是 3。为了正确比较，我们可以使用 CAST 或 CONVERT 函数进行类型转换：
+```sql
+SELECT GREATEST(1, CONVERT('123', SIGNED), 3);
+SELECT GREATEST(1, CAST('123' AS SIGNED), 3);
+```
+这两个查询都将返回 123。
+#### 支持的类型转换
+
+- SIGNED：整型
+- UNSIGNED：无符号整型
+- DECIMAL：浮点型
+- CHAR：字符类型
+- DATE：日期类型
+- TIME：时间类型
+- DATETIME：日期时间类型
+- BINARY：二进制类型
+
+#### 日期格式转换
+
+- DATE_FORMAT 函数用于将日期转换为指定格式的字符串。
+- STR_TO_DATE 函数用于将字符串转换为日期类型。
+```sql
+SELECT DATE_FORMAT('2022-01-01', '%Y年%m月%d日');
+SELECT STR_TO_DATE('2023-06-01', '%Y-%m-%d');
+```
+
 ## 高级 SQL 技巧
 ### 使用 DISTINCT 去重
 ```sql
@@ -208,3 +256,10 @@ GROUP BY class                         -- 按班级分组，以便计算每个�
 HAVING avg_score > 85;                 -- 筛选出平均分数超过 85 分的班级
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1714909234504-2d0ed98d-3d6c-4b0e-a8c8-39ce9fd91fe9.png#averageHue=%23f8f7f5&clientId=u6bfc37de-7248-4&from=paste&height=344&id=u2295c1d6&originHeight=550&originWidth=1368&originalType=binary&ratio=1.600000023841858&rotation=0&showTitle=false&size=191130&status=done&style=none&taskId=uefdca882-c13a-48d7-9264-63697a63e02&title=&width=854.9999872595074)
+
+## 引号使用规则
+在 SQL 中，引号的使用根据上下文有所不同：
+
+- 单引号 (') 或双引号 (") 用于标记字符串值。
+- 反引号 (`) 用于标记表名或列名，尤其是在名称中包含特殊字符或关键字时。
+- 不加引号通常用于引用 SQL 关键字或函数名。
