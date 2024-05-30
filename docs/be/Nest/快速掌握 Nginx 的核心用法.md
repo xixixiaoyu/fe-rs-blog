@@ -1,41 +1,38 @@
 ## docker 里使用 nginx
-Nginx 是一款高性能的 Web 服务器，广泛用于静态资源托管和作为动态资源的反向代理。<br />Docker 是一个开放源代码的容器化技术，可以在容器中运行各种服务。
+Nginx 是一款高性能的 Web 服务器，广泛用于静态资源托管和作为动态资源的反向代理。<br />Docker 是容器化技术，可以在容器中运行各种服务。
 
-docker deskttop 搜索 nginx（需科学上网），点击 run：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688303838717-43d84ccc-cfe9-416c-b85d-5e3b05fb0843.png#averageHue=%231a2935&clientId=u7465b21a-3a98-4&from=paste&height=472&id=ue675f4a1&originHeight=1252&originWidth=1588&originalType=binary&ratio=2&rotation=0&showTitle=false&size=161059&status=done&style=none&taskId=u9dad22a8-d26a-47d0-b81f-2c1c94b9f06&title=&width=599)<br />输入容器名，将宿主机的 81 端口映射到容器的 80 端口，并启动容器：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688304434695-09573e8f-280f-4d54-bc69-18445385550f.png#averageHue=%231d2830&clientId=u7465b21a-3a98-4&from=paste&height=514&id=uecde54a3&originHeight=1328&originWidth=1828&originalType=binary&ratio=2&rotation=0&showTitle=false&size=160378&status=done&style=none&taskId=u4a67eb06-3b32-4632-8a63-d8fa8a687b2&title=&width=707)<br />浏览器访问下 [http://localhost:81](https://link.juejin.cn/?target=http%3A%2F%2Flocalhost%3A81) 可以看到 nginx 欢迎页面：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688304590915-0a6094e3-7f77-4c3a-9e77-9c9008b3d85a.png#averageHue=%23f2f2f2&clientId=u7465b21a-3a98-4&from=paste&height=241&id=u71dbb792&originHeight=534&originWidth=1680&originalType=binary&ratio=2&rotation=0&showTitle=false&size=85897&status=done&style=none&taskId=uc318f1b3-d05a-4ab9-9d5d-2e19f4d6da9&title=&width=759)
+docker deskttop 搜索 nginx（需科学上网），点击 run：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086267380-37bbee21-e396-4f31-94a5-4bf2990c62c6.png#averageHue=%230e141b&clientId=ua81a4626-f81b-4&from=paste&height=547&id=u7818daf6&originHeight=984&originWidth=2678&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=207561&status=done&style=none&taskId=u9502421c-e5c6-4933-b307-61103226559&title=&width=1487.7778171904304)<br />输入容器名，将宿主机的 81 端口映射到容器的 80 端口，并启动容器：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086317581-eea41f3e-7480-48ed-84bc-75bde7fde637.png#averageHue=%231d2730&clientId=ua81a4626-f81b-4&from=paste&height=696&id=u5e764846&originHeight=1252&originWidth=1096&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=90653&status=done&style=none&taskId=u5da5abc0-739d-4721-9969-c3addc3dc39&title=&width=608.8889050189364)<br />浏览器访问下 [http://localhost:81](https://link.juejin.cn/?target=http%3A%2F%2Flocalhost%3A81) 可以看到 nginx 欢迎页面：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717084576514-5984b52f-016e-496e-adc7-0caca8db917d.png#averageHue=%23191b1a&clientId=ua81a4626-f81b-4&from=paste&height=301&id=u9a951c02&originHeight=542&originWidth=1790&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=84425&status=done&style=none&taskId=u22fe87ac-4030-4cfe-9b0a-1b74b48ecb2&title=&width=994.4444707882265)
 
 ## 托管静态 html 页面
-在 Docker 容器中，在 files 面板可以看到容器内的文件，静态文件默认存放在 /usr/share/nginx/html/ 目录下：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688304710231-1e8624c5-63c0-4a04-b951-be0eec3ee3f3.png#averageHue=%23f6f7f8&clientId=u7465b21a-3a98-4&from=paste&height=510&id=uf1331625&originHeight=1406&originWidth=734&originalType=binary&ratio=2&rotation=0&showTitle=false&size=64779&status=done&style=none&taskId=u77ebc465-1d9f-4215-bd3a-6b0553f2e43&title=&width=266)<br />双击点开 index.html 看看：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688304777934-edd07044-6961-40ad-bab0-bba6c8c70691.png#averageHue=%23f6f6f8&clientId=u7465b21a-3a98-4&from=paste&height=443&id=uf55bbf2a&originHeight=886&originWidth=1460&originalType=binary&ratio=2&rotation=0&showTitle=false&size=138625&status=done&style=none&taskId=ufb32337c-e6c2-48a5-98fd-c625de519fc&title=&width=730)<br />就是我们之前访问的页面。
+在 Docker 容器中，在 files 面板可以看到容器内的文件，静态文件默认存放在 /usr/share/nginx/html/ 目录下：<br />双击其中 index.html 看看：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717084736410-528a761a-97a2-4baa-9f7a-cf6ec5f26fc6.png#averageHue=%231c2329&clientId=ua81a4626-f81b-4&from=paste&height=828&id=u7dc93d76&originHeight=1490&originWidth=1474&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=185417&status=done&style=none&taskId=udf02e70e-84df-4238-b915-c521b0db75a&title=&width=818.8889105820367)<br />这就是我们之前访问看到的页面。
 
 通过 Docker 的 docker cp 命令，可以在宿主机和容器之间复制文件。<br />我们先把这个目录复制出来：
 ```bash
-docker cp  nginx1:/usr/share/nginx/html ~/nginx-html
+# 将名为 nginx1 的 Docker 容器中的 /usr/share/nginx/html 目录复制到宿主机的当前用户的主目录下，并命名为 nginx-html
+docker cp nginx-test:/usr/share/nginx/html ~/nginx-html
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688305440805-2caf68a6-68ef-49db-8cb2-82728dbf88de.png#averageHue=%23fcf5e2&clientId=u7465b21a-3a98-4&from=paste&height=163&id=u59f47f7b&originHeight=326&originWidth=1954&originalType=binary&ratio=2&rotation=0&showTitle=false&size=71008&status=done&style=none&taskId=u74a3b534-312e-4ed8-aa3b-ce9a6342af7&title=&width=977)<br />比如我们把这个目录再复制到容器里：
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086374562-f150fd91-f512-47ea-b38e-2bd021597eb0.png#averageHue=%23353431&clientId=ua81a4626-f81b-4&from=paste&height=94&id=u7dce7473&originHeight=170&originWidth=934&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=23680&status=done&style=none&taskId=u94a1a707-04d5-41a0-bd75-84465ecfd5e&title=&width=518.8889026347506)<br />比如我们把这个目录再复制到容器里：
 ```bash
-docker cp  ~/nginx-html nginx1:/usr/share/nginx/html-xxx
+docker cp  ~/nginx-html/html nginx-test:/usr/share/nginx/html-test
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688305553217-e2e49e03-4880-4739-8a1c-5947ec0eb955.png#averageHue=%23f6f6f7&clientId=u7465b21a-3a98-4&from=paste&height=289&id=u2108ecc1&originHeight=648&originWidth=1490&originalType=binary&ratio=2&rotation=0&showTitle=false&size=52060&status=done&style=none&taskId=ue25d0c14-c1a0-4402-9769-9371365af8c&title=&width=664)<br />可以看到容器内就多了这个目录。<br />然后我们在这个目录下添加两个 html 来试试看：
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086416360-4ca1235a-0d02-44a8-ae38-de25762f11ce.png#averageHue=%23363532&clientId=ua81a4626-f81b-4&from=paste&height=90&id=u46c825d6&originHeight=162&originWidth=1088&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=24271&status=done&style=none&taskId=u6c9f5cda-d5e5-4c92-81ac-3d12543b888&title=&width=604.4444604567544)<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086432513-0f2d9a3b-cfe4-48f1-adf5-04058b7c2403.png#averageHue=%2319252b&clientId=ua81a4626-f81b-4&from=paste&height=173&id=u526eaa4d&originHeight=312&originWidth=1334&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=22138&status=done&style=none&taskId=ud40c284c-1ba8-4220-aba8-33b349c6aa9&title=&width=741.1111307438514)<br />可以看到容器内就多了 html-test 目录。<br />我们右键删除下 html 文件：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086493161-46454f02-0d81-43f6-89d7-18891b329b1f.png#averageHue=%231f282e&clientId=ua81a4626-f81b-4&from=paste&height=204&id=ud982f029&originHeight=368&originWidth=420&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=20158&status=done&style=none&taskId=uf03df5ad-a249-41d7-b013-acf1f8c6b03&title=&width=233.33333951455592)<br />然后我们在宿主机进去 html-test 目录，添加两个文件，并复制到容器的 html 中：
 ```bash
-echo aaa > aaa.html
+cd nginx-html/html
 
-echo bbb > bbb.html
+echo hello test1 > test1.html
 
-docker cp  ~/nginx-html nginx1:/usr/share/nginx/html
+echo hello test2 > test2.html
+
+docker cp  ~/nginx-html/html nginx-test:/usr/share/nginx/html
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688306093576-28575997-1cc7-438f-aaf8-5b3dd5149bc0.png#averageHue=%23f5f6f7&clientId=u7465b21a-3a98-4&from=paste&height=316&id=uea4a413e&originHeight=632&originWidth=324&originalType=binary&ratio=2&rotation=0&showTitle=false&size=26614&status=done&style=none&taskId=uf0a37c73-cc75-4baf-bcb3-0810f86c330&title=&width=162)<br />我们需要先删除容器的这个目录，再复制：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688306114285-d3302821-8ec3-45a6-8c56-d46234aca79c.png#averageHue=%231d1e1e&clientId=u7465b21a-3a98-4&from=paste&height=153&id=ud601d404&originHeight=306&originWidth=500&originalType=binary&ratio=2&rotation=0&showTitle=false&size=20477&status=done&style=none&taskId=u5b27afa4-21f3-40d9-b491-9ade1769e75&title=&width=250)
-```bash
-docker cp  ~/nginx-html nginx1:/usr/share/nginx/html
-```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688306164046-59ba024b-bd0e-4f11-b232-bb953d3f500b.png#averageHue=%23f3f4f6&clientId=u7465b21a-3a98-4&from=paste&height=285&id=u26298397&originHeight=570&originWidth=336&originalType=binary&ratio=2&rotation=0&showTitle=false&size=23902&status=done&style=none&taskId=ud979f499-e3d4-4f6d-89b9-56850f87955&title=&width=168)<br />这样就好了。<br />然后浏览器访问下试试：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688306198940-63354e70-f009-407f-a248-e2f8d6afa768.png#averageHue=%23f0f0f0&clientId=u7465b21a-3a98-4&from=paste&height=75&id=u5d2c65b4&originHeight=150&originWidth=602&originalType=binary&ratio=2&rotation=0&showTitle=false&size=11467&status=done&style=none&taskId=ue73361b0-fb8d-4b21-af67-a97cc77e6d1&title=&width=301)<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688306222634-6ad5e199-9c16-4fba-80ba-4edb6eb3ebaf.png#averageHue=%23ececed&clientId=u7465b21a-3a98-4&from=paste&height=72&id=ub05287a1&originHeight=144&originWidth=592&originalType=binary&ratio=2&rotation=0&showTitle=false&size=11473&status=done&style=none&taskId=u19246c71-4bd4-4651-bd5a-c537bd82c44&title=&width=296)<br />现在就可以访问容器内的这些目录了。<br />也就是说只要放到 /usr/share/nginx/html 下的文件，都可以通过被访问到。<br />可是为什么呢？
+![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086763051-bfde005f-c743-4364-b8d4-e9d05a3c45c5.png#averageHue=%2337322d&clientId=ua81a4626-f81b-4&from=paste&height=330&id=uecc3164b&originHeight=594&originWidth=1044&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=69455&status=done&style=none&taskId=u331cc3bd-6fa4-4d1e-8691-70b9567f454&title=&width=580.0000153647533)<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086792898-42222056-7462-42b3-b456-fdfdbd433c43.png#averageHue=%23182328&clientId=ua81a4626-f81b-4&from=paste&height=319&id=u8d0b63bd&originHeight=574&originWidth=1330&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=45805&status=done&style=none&taskId=u87fdcad5-e4eb-4877-ae44-3f7637838d1&title=&width=738.8889084627604)<br />然后浏览器访问下试试：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086920341-86f6979f-aaa5-400e-92d6-09293fbeabbe.png#averageHue=%23191b1a&clientId=ua81a4626-f81b-4&from=paste&height=92&id=u21ac0d6b&originHeight=166&originWidth=588&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=13552&status=done&style=none&taskId=u7f010886-3dd8-4810-8dc3-c0c6e870aaf&title=&width=326.66667532037826)<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717086936160-2eb9b11a-ed0d-4594-8dde-20d9beec4207.png#averageHue=%23191b1a&clientId=ua81a4626-f81b-4&from=paste&height=93&id=u30fb9016&originHeight=168&originWidth=604&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=14381&status=done&style=none&taskId=u7c3ae970-a42a-49a8-b5f6-d5b7998abbd&title=&width=335.55556444474234)<br />现在就可以访问容器内的这些目录了。<br />也就是说只要放到 /usr/share/nginx/html 下的文件，都可以通过被访问到。<br />这是因为 nginx 的默认配置。
 
 ## Nginx 配置文件解析
-这是因为 nginx 的默认配置。<br />我们看下 nginx 主配置文件，也就是 /etc/nginx/nginx.conf，通常放一些全局配置，比如错误日志的目录等。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688307846529-e7669414-74ea-48e9-b3da-a3da9f18e88a.png#averageHue=%23f4f4f7&clientId=u7465b21a-3a98-4&from=paste&height=284&id=u5457ad31&originHeight=568&originWidth=668&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40013&status=done&style=none&taskId=uc9cae638-d613-4bc1-bd54-65097c9a43d&title=&width=334)<br />复制出来看看：
+我们看下 nginx 主配置文件，也就是 /etc/nginx/nginx.conf，通常放一些全局配置，比如错误日志的目录等。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688307846529-e7669414-74ea-48e9-b3da-a3da9f18e88a.png#averageHue=%23f4f4f7&clientId=u7465b21a-3a98-4&from=paste&height=284&id=u5457ad31&originHeight=568&originWidth=668&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40013&status=done&style=none&taskId=uc9cae638-d613-4bc1-bd54-65097c9a43d&title=&width=334)<br />复制出来看看：
 ```bash
 docker cp  nginx1:/etc/nginx/nginx.conf ~/nginx-html
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688307922112-78b0e3b5-1188-426d-88ed-765bd6df1e4a.png#averageHue=%232b2b2b&clientId=u7465b21a-3a98-4&from=paste&height=497&id=uff59107c&originHeight=1778&originWidth=1852&originalType=binary&ratio=2&rotation=0&showTitle=false&size=224903&status=done&style=none&taskId=u0a602774-175d-483b-b37b-3205580e3a0&title=&width=518)<br />http 部分通过 include 指令引入 /etc/nginx/conf.d/*.conf 的子配置文件，这些文件通常包含具体的路由配置。
-
-我们把这个目录也复制出来看看：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688308091137-df133a07-1b61-4d22-aa03-9313b01a96c0.png#averageHue=%23ce5927&clientId=u7465b21a-3a98-4&from=paste&height=346&id=u6c3568e9&originHeight=1186&originWidth=2920&originalType=binary&ratio=2&rotation=0&showTitle=false&size=215189&status=done&style=none&taskId=ue32cead2-45ef-4af1-baf0-ade9dcc5775&title=&width=852)<br />这里面就配置了 localhost:80 的虚拟主机下的所有路由。<br />虚拟主机就是可以用一台 nginx 服务器来为多个域名和端口的提供服务。<br />在 conf.d 目录下的配置文件中，可以设置针对特定虚拟主机的路由规则。
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688307922112-78b0e3b5-1188-426d-88ed-765bd6df1e4a.png#averageHue=%232b2b2b&clientId=u7465b21a-3a98-4&from=paste&height=497&id=uff59107c&originHeight=1778&originWidth=1852&originalType=binary&ratio=2&rotation=0&showTitle=false&size=224903&status=done&style=none&taskId=u0a602774-175d-483b-b37b-3205580e3a0&title=&width=518)<br />http 部分通过 include 指令引入 /etc/nginx/conf.d/*.conf 的子配置文件，这些文件通常包含具体的路由配置。<br />我们把这个目录也复制出来看看：<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688308091137-df133a07-1b61-4d22-aa03-9313b01a96c0.png#averageHue=%23ce5927&clientId=u7465b21a-3a98-4&from=paste&height=346&id=u6c3568e9&originHeight=1186&originWidth=2920&originalType=binary&ratio=2&rotation=0&showTitle=false&size=215189&status=done&style=none&taskId=ue32cead2-45ef-4af1-baf0-ade9dcc5775&title=&width=852)<br />这里面就配置了 localhost:80 的虚拟主机下的所有路由。<br />虚拟主机就是可以用一台 nginx 服务器来为多个域名和端口的提供服务。<br />在 conf.d 目录下的配置文件中，可以设置针对特定虚拟主机的路由规则。
 
 ## location 指令详解
 location 指令用于配置路由规则，支持多种匹配语法：
@@ -109,6 +106,21 @@ location /images/ {
 
 综上所述，如果只是想为整个服务器或者某个特定的 location 设置一个基础路径，那么 root 是一个不错的选择。如果需要将某个 location 映射到一个完全不同的路径，那么 alias 更加合适。
 
+## 文件访问机制
+当客户端请求一个 URL 时，Nginx 根据配置文件中的 location 指令查找相应的文件：
+
+1. 解析 URL：Nginx 解析客户端请求的 URL。
+2. 匹配路径：根据 location 指令匹配请求路径。
+3. 查找文件：使用 root 指定的目录作为基准目录，将请求路径拼接在 root 指定的目录后，查找相应的文件。
+
+例如，当客户端请求 http://localhost/test1.html 时，Nginx 将：
+
+1. 解析请求路径 /test1.html。
+2. 匹配 location / 指令。
+3. 使用 root /usr/share/nginx/html 指定的目录，将路径 /test1.html 拼接在后面，查找文件 /usr/share/nginx/html/test1.html。
+
+因此，只要将文件放在 /usr/share/nginx/html 目录下，Nginx 就能根据请求路径正确找到并返回这些文件。
+
 ## 配置示例
 以下是一些 location 配置示例，展示了如何返回静态 HTML 文件：
 ```nginx
@@ -124,7 +136,7 @@ location ~ ^/333/bbb.*\.html$ {
 ```nginx
 docker cp ~/nginx-html/conf.d/default.conf nginx1:/etc/nginx/conf.d/default.conf
 ```
-`nginx -s reload` 重新加载配置：<br />![](https://cdn.nlark.com/yuque/0/2023/png/21596389/1688308516895-2952207a-8430-46af-abed-b2e485782dff.png?x-oss-process=image%2Fformat%2Cwebp#averageHue=%23537a9a&from=url&height=189&id=bFLhn&originHeight=356&originWidth=886&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&status=done&style=none&title=&width=471.5426025390625)
+在容器 exec 内输入 `nginx -s reload` 重新加载配置：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1717087441595-b0c71b28-3c56-4adb-859d-ffc48a70ca40.png#averageHue=%2312191d&clientId=ua81a4626-f81b-4&from=paste&height=199&id=u39fbba25&originHeight=358&originWidth=1462&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=49064&status=done&style=none&taskId=uda9feca9-8523-4689-9fdf-03acfdf55fe&title=&width=812.2222437387637)
 
 ## 动态资源的反向代理
 请求发给 nginx，由它转发给应用服务器，这一层也可以叫做网关。
