@@ -2,36 +2,35 @@
 pageType: home
 
 hero:
-  name: fe-blog
-  text: Rspack-based Static Site Generator
-  tagline: fe-blog tagline
+  name: 程序技术乐园
   actions:
     - theme: brand
-      text: Quick Start
+      text: 开启学习之旅
       link: /algorithms/哈希表/1.两数之和
     - theme: alt
-      text: Github
-      link: https://github.com/web-infra-dev/rspress
+      text: GitHub 主页
+      link: https://github.com/your-github-username
   image:
-    src: /rspress-icon.png
-    alt: fe-blog Logo
+    src: /avatar.png
+    alt: 开发者头像
+
 features:
-  - title: Blazing fast build speed
-    details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
-    icon: 🏃🏻‍♀️
-  - title: Support for MDX content writing
-    details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
-    icon: 📦
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
-    icon: 🎨
-  - title: Simpler I18n solution
-    details: With the built-in I18n solution, you can easily provide multi-language support for documents or components.
-    icon: 🌍
-  - title: Static site generation
-    details: In production, it automatically builds into static HTML files, which can be easily deployed anywhere.
-    icon: 🌈
-  - title: Providing multiple custom capabilities
-    details: Through its extension mechanism, you can easily extend theme UI and build process.
-    icon: 🔥
+  - title: 前端全栈工程师
+    details: 深耕 Vue 和 React 前端框架，熟练运用 Nest.js 和 Node.js 构建强大后端。
+    icon: 💻
+  - title: 技术博主
+    details: 通过博客、视频分享实战经验，记录技术成长，助力他人学习进步。
+    icon: 📝
+  - title: 终身学习者
+    details: 将新技术应用于实际项目，探索最佳实践方案。
+    icon: 💡
+  - title: 知识探索者
+    details: 热衷于学习各种知识，涉猎悬疑、推理、宇宙、人文历史等领域，保持对世界的好奇心。
+    icon: 🔍
+  - title: 电影爱好者
+    details: 喜欢观看各类电影，从中汲取灵感，丰富生活体验和创意思维。
+    icon: 🎬
+  - title: 技术交流者
+    details: 善于与他人交流，乐于分享经验和见解，促进互相学习和共同进步。
+    icon: 🤝
 ---

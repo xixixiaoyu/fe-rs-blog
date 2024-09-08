@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../public/LXGWWenKaiScreen.ttf') format('truetype');
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}

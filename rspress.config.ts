@@ -6,6 +6,7 @@ import remarkAutolinkHeadings from 'remark-autolink-headings';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
+	lang: 'zh-CN',
 	base: process.env.NODE_ENV === 'development' ? '' : '/fe-rs-blog/',
 	root: path.join(__dirname, 'docs'),
 	title: 'fe-blog',
@@ -24,6 +25,17 @@ export default defineConfig({
 			},
 		],
 		hideNavbar: 'never',
+		search: true,
+		nav: [
+			{
+				text: '首页',
+				link: '/',
+			},
+			{
+				text: '文档',
+				link: '/docs/',
+			},
+		],
 	},
 	markdown: {
 		mdxRs: false,
@@ -35,8 +47,9 @@ export default defineConfig({
 				},
 			],
 		],
-		rehypePlugins: [rehypeSlug, rehypeRaw, rehypeKatex],
+		rehypePlugins: [rehypeSlug, rehypeRaw, rehypeKatex as any],
 	},
+	globalStyles: path.join(__dirname, '/docs/styles/global.css'),
 	builderConfig: {
 		html: {
 			tags: [
@@ -48,6 +61,15 @@ export default defineConfig({
 					},
 				},
 			],
+		},
+		tools: {
+			rspack: config => {
+				config.module.rules.push({
+					test: /\.(woff|woff2|eot|ttf|otf)$/i,
+					type: 'asset/resource',
+				});
+				return config;
+			},
 		},
 	},
 });
