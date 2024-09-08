@@ -10,10 +10,9 @@ export default defineConfig({
 	root: path.join(__dirname, 'docs'),
 	title: 'fe-blog',
 	description: 'fe-rspress-blog',
-	icon: '/rspress-icon.png',
 	logo: {
-		light: '/rspress-light-logo.png',
-		dark: '/rspress-dark-logo.png',
+		light: '/site-icon.png',
+		dark: '/site-icon.png',
 	},
 	themeConfig: {
 		socialLinks: [
