@@ -1,8 +1,8 @@
 [
 	{
 		"type": "dir",
-		"name": "Nest",
-		"label": "Nest.js",
+		"name": "nest",
+		"label": "nest",
 		"collapsible": true,
 		"collapsed": true
 	}

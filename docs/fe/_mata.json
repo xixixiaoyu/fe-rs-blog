@@ -1,0 +1,14 @@
+[
+	{
+		"type": "dir",
+		"name": "设计模式",
+		"label": "设计模式",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "file",
+		"name": "编程本质、全栈技术选型",
+		"label": "编程本质、全栈技术选型"
+	}
+]

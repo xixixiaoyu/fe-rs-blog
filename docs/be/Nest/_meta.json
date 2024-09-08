@@ -1,212 +1,367 @@
 [
 	{
 		"type": "file",
-		"name": "15个常用 Nest 装饰器.md",
-		"label": "15个常用 Nest 装饰器.md"
+		"name": "Nest 起航",
+		"label": "Nest 起航123"
 	},
 	{
 		"type": "file",
-		"name": "5 种 http 数据传输方式.md",
-		"label": "5 种 http 数据传输方式.md"
+		"name": "基本概念：路由、控制器、服务",
+		"label": "基本概念：路由、控制器、服务"
 	},
 	{
 		"type": "file",
-		"name": "ArgumentHost 和 ExecutionContext 统一处理多种服务类型.md",
-		"label": "ArgumentHost 和 ExecutionContext 统一处理多种服务类型.md"
+		"name": "Nest Cli",
+		"label": "Nest Cli"
 	},
 	{
 		"type": "file",
-		"name": "Cookie 的使用.md",
-		"label": "Cookie 的使用.md"
+		"name": "IoC 和 MVC",
+		"label": "IoC 和 MVC"
 	},
 	{
 		"type": "file",
-		"name": "Docker Compose.md",
-		"label": "Docker Compose.md"
+		"name": "15个常用 Nest 装饰器",
+		"label": "15个常用 Nest 装饰器"
 	},
 	{
 		"type": "file",
-		"name": "Docker 完全入门.md",
-		"label": "Docker 完全入门.md"
+		"name": "5 种 http 数据传输方式",
+		"label": "5 种 http 数据传输方式"
 	},
 	{
 		"type": "file",
-		"name": "Express 使用 multer 实现文件上传.md",
-		"label": "Express 使用 multer 实现文件上传.md"
+		"name": "中间件 middleware",
+		"label": "中间件 middleware"
 	},
 	{
 		"type": "file",
-		"name": "IoC 和 MVC.md",
-		"label": "IoC 和 MVC.md"
+		"name": "守卫 guard",
+		"label": "守卫 guard"
 	},
 	{
 		"type": "file",
-		"name": "Metadata 和 Reflector.md",
-		"label": "Metadata 和 Reflector.md"
+		"name": "管道 pipe",
+		"label": "管道 pipe"
 	},
 	{
 		"type": "file",
-		"name": "Nest Cli.md",
-		"label": "Nest Cli.md"
+		"name": "异常过滤器 exception filter",
+		"label": "异常过滤器 exception filter"
 	},
 	{
 		"type": "file",
-		"name": "Nest 使用 multer 实现文件上传.md",
-		"label": "Nest 使用 multer 实现文件上传.md"
+		"name": "RxJS 和 拦截器 Interceptor",
+		"label": "RxJS 和 拦截器 Interceptor"
 	},
 	{
 		"type": "file",
-		"name": "Nest 动态、全局模块.md",
-		"label": "Nest 动态、全局模块.md"
+		"name": "自定义装饰器",
+		"label": "自定义装饰器"
 	},
 	{
 		"type": "file",
-		"name": "Nest 打印日志.md",
-		"label": "Nest 打印日志.md"
+		"name": "生命周期",
+		"label": "生命周期"
 	},
 	{
 		"type": "file",
-		"name": "Nest 的 3 种定时任务.md",
-		"label": "Nest 的 3 种定时任务.md"
+		"name": "多种 provider，灵活依赖注入",
+		"label": "多种 provider，灵活依赖注入"
 	},
 	{
 		"type": "file",
-		"name": "Nest 的 REPL 模式.md",
-		"label": "Nest 的 REPL 模式.md"
+		"name": "Nest 动态、全局模块",
+		"label": "Nest 动态、全局模块"
 	},
 	{
 		"type": "file",
-		"name": "Nest 起航.md",
-		"label": "Nest 起航.md"
+		"name": "处理 Module 和 Provider 的循环依赖",
+		"label": "处理 Module 和 Provider 的循环依赖"
 	},
 	{
 		"type": "file",
-		"name": "Nest 集成日志框架 Winston.md",
-		"label": "Nest 集成日志框架 Winston.md"
+		"name": "ArgumentHost 和 ExecutionContext 统一处理多种服务类型",
+		"label": "ArgumentHost 和 ExecutionContext 统一处理多种服务类型"
 	},
 	{
 		"type": "file",
-		"name": "Node 里使用 Winston 打印日志.md",
-		"label": "Node 里使用 Winston 打印日志.md"
+		"name": "Metadata 和 Reflector",
+		"label": "Metadata 和 Reflector"
 	},
 	{
 		"type": "file",
-		"name": "RxJS 和 拦截器 Interceptor.md",
-		"label": "RxJS 和 拦截器 Interceptor.md"
+		"name": "动态读取环境配置",
+		"label": "动态读取环境配置"
 	},
 	{
 		"type": "file",
-		"name": "Session 的使用.md",
-		"label": "Session 的使用.md"
+		"name": "配置静态资源和模板引擎",
+		"label": "配置静态资源和模板引擎"
 	},
 	{
 		"type": "file",
-		"name": "docker 和 pm2 重启策略.md",
-		"label": "docker 和 pm2 重启策略.md"
+		"name": "Nest 打印日志",
+		"label": "Nest 打印日志"
 	},
 	{
 		"type": "file",
-		"name": "mongodb 快速入门.md",
-		"label": "mongodb 快速入门.md"
+		"name": "Nest 集成日志框架 Winston",
+		"label": "Nest 集成日志框架 Winston"
 	},
 	{
 		"type": "file",
-		"name": "mongoose 操作 mongodb.md",
-		"label": "mongoose 操作 mongodb.md"
+		"name": "Node 里使用 Winston 打印日志",
+		"label": "Node 里使用 Winston 打印日志"
 	},
 	{
 		"type": "file",
-		"name": "中间件 middleware.md",
-		"label": "中间件 middleware.md"
+		"name": "使用 ValidationPipe 验证 post 请求参数",
+		"label": "使用 ValidationPipe 验证 post 请求参数"
 	},
 	{
 		"type": "file",
-		"name": "使用 PM2 运行 Node 应用.md",
-		"label": "使用 PM2 运行 Node 应用.md"
+		"name": "Nest 国际化",
+		"label": "Nest 国际化"
 	},
 	{
 		"type": "file",
-		"name": "使用 ValidationPipe 验证 post 请求参数.md",
-		"label": "使用 ValidationPipe 验证 post 请求参数.md"
+		"name": "接口多版本管理",
+		"label": "接口多版本管理"
 	},
 	{
 		"type": "file",
-		"name": "使用 compodoc 生成文档.md",
-		"label": "使用 compodoc 生成文档.md"
+		"name": "Nest 的 REPL 模式",
+		"label": "Nest 的 REPL 模式"
 	},
 	{
 		"type": "file",
-		"name": "前后端 Dockerfile 最佳实践.md",
-		"label": "前后端 Dockerfile 最佳实践.md"
+		"name": "使用 compodoc 生成文档",
+		"label": "使用 compodoc 生成文档"
 	},
 	{
 		"type": "file",
-		"name": "动态读取环境配置.md",
-		"label": "动态读取环境配置.md"
+		"name": "调试项目和源码",
+		"label": "调试项目和源码"
 	},
 	{
 		"type": "file",
-		"name": "基本概念：路由、控制器、服务.md",
-		"label": "基本概念：路由、控制器、服务.md"
+		"name": "Cookie 的使用",
+		"label": "Cookie 的使用"
 	},
 	{
 		"type": "file",
-		"name": "处理 Module 和 Provider 的循环依赖.md",
-		"label": "处理 Module 和 Provider 的循环依赖.md"
+		"name": "Session 的使用",
+		"label": "Session 的使用"
 	},
 	{
 		"type": "file",
-		"name": "多种 provider，灵活依赖注入.md",
-		"label": "多种 provider，灵活依赖注入.md"
+		"name": "JWT、Session 维持登录状态",
+		"label": "JWT、Session 维持登录状态"
 	},
 	{
 		"type": "file",
-		"name": "大文件上传.md",
-		"label": "大文件上传.md"
+		"name": "Nest 使用 multer 实现文件上传",
+		"label": "Nest 使用 multer 实现文件上传"
 	},
 	{
 		"type": "file",
-		"name": "守卫 guard.md",
-		"label": "守卫 guard.md"
+		"name": "Express 使用 multer 实现文件上传",
+		"label": "Express 使用 multer 实现文件上传"
 	},
 	{
 		"type": "file",
-		"name": "实现 Excel 导入导出.md",
-		"label": "实现 Excel 导入导出.md"
+		"name": "大文件上传",
+		"label": "大文件上传"
 	},
 	{
 		"type": "file",
-		"name": "异常过滤器 exception filter.md",
-		"label": "异常过滤器 exception filter.md"
+		"name": "oss 上传",
+		"label": "oss 上传"
 	},
 	{
 		"type": "file",
-		"name": "生命周期.md",
-		"label": "生命周期.md"
+		"name": "使用 minio 自建 oss",
+		"label": "使用 minio 自建 oss"
 	},
 	{
 		"type": "file",
-		"name": "管道 pipe.md",
-		"label": "管道 pipe.md"
+		"name": "实现 Excel 导入导出",
+		"label": "实现 Excel 导入导出"
 	},
 	{
 		"type": "file",
-		"name": "自定义装饰器.md",
-		"label": "自定义装饰器.md"
+		"name": "Nest 的 3 种定时任务",
+		"label": "Nest 的 3 种定时任务"
 	},
 	{
 		"type": "file",
-		"name": "调试项目和源码.md",
-		"label": "调试项目和源码.md"
+		"name": "长轮询、短轮询、Server Send Event",
+		"label": "长轮询、短轮询、Server Send Event"
 	},
 	{
 		"type": "file",
-		"name": "配置静态资源和模板引擎.md",
-		"label": "配置静态资源和模板引擎.md"
+		"name": "快速入门 MySQL",
+		"label": "快速入门 MySQL"
 	},
 	{
 		"type": "file",
-		"name": "长轮询、短轮询、Server Send Event.md",
-		"label": "长轮询、短轮询、Server Send Event.md"
+		"name": "使用 Node 操作 MySQL 的两种方式",
+		"label": "使用 Node 操作 MySQL 的两种方式"
+	},
+	{
+		"type": "file",
+		"name": "SQL 查询语句的所有语法和函数",
+		"label": "SQL 查询语句的所有语法和函数"
+	},
+	{
+		"type": "file",
+		"name": "子查询和 EXISTS",
+		"label": "子查询和 EXISTS"
+	},
+	{
+		"type": "file",
+		"name": "一对一、join 查询、级联方式",
+		"label": "一对一、join 查询、级联方式"
+	},
+	{
+		"type": "file",
+		"name": "一对多、多对多关系的表设计",
+		"label": "一对多、多对多关系的表设计"
+	},
+	{
+		"type": "file",
+		"name": "多级分类数据的存储与管理",
+		"label": "多级分类数据的存储与管理"
+	},
+	{
+		"type": "file",
+		"name": "MySQL 的事务和隔离级别",
+		"label": "MySQL 的事务和隔离级别"
+	},
+	{
+		"type": "file",
+		"name": "MySQL 的视图、存储过程和函数",
+		"label": "MySQL 的视图、存储过程和函数"
+	},
+	{
+		"type": "file",
+		"name": "快速掌握 TypeORM",
+		"label": "快速掌握 TypeORM"
+	},
+	{
+		"type": "file",
+		"name": "Nest 集成 TypeORM",
+		"label": "Nest 集成 TypeORM"
+	},
+	{
+		"type": "file",
+		"name": "TypeORM 一对一的映射和关联 CRUD",
+		"label": "TypeORM 一对一的映射和关联 CRUD"
+	},
+	{
+		"type": "file",
+		"name": "TypeORM 一对多的映射和关联 CRUD",
+		"label": "TypeORM 一对多的映射和关联 CRUD"
+	},
+	{
+		"type": "file",
+		"name": "TypeORM 多对多的映射和关联 CRUD",
+		"label": "TypeORM 多对多的映射和关联 CRUD"
+	},
+	{
+		"type": "file",
+		"name": "TypeORM 的 migration 迁移功能",
+		"label": "TypeORM 的 migration 迁移功能"
+	},
+	{
+		"type": "file",
+		"name": "快速入门 ORM 框架 Prisma",
+		"label": "快速入门 ORM 框架 Prisma"
+	},
+	{
+		"type": "file",
+		"name": "整合 Prisma 和 NestJS 项目",
+		"label": "整合 Prisma 和 NestJS 项目"
+	},
+	{
+		"type": "file",
+		"name": "Prisma 的全部命令",
+		"label": "Prisma 的全部命令"
+	},
+	{
+		"type": "file",
+		"name": "Prisma 的全部 schema 语法",
+		"label": "Prisma 的全部 schema 语法"
+	},
+	{
+		"type": "file",
+		"name": "Primsa Client 单表 CRUD 的全部 api",
+		"label": "Primsa Client 单表 CRUD 的全部 api"
+	},
+	{
+		"type": "file",
+		"name": "Prisma Client 多表 CRUD 的全部 api",
+		"label": "Prisma Client 多表 CRUD 的全部 api"
+	},
+	{
+		"type": "file",
+		"name": "mongodb 快速入门",
+		"label": "mongodb 快速入门"
+	},
+	{
+		"type": "file",
+		"name": "mongoose 操作 mongodb",
+		"label": "mongoose 操作 mongodb"
+	},
+	{
+		"type": "file",
+		"name": "快速入门 Redis",
+		"label": "快速入门 Redis"
+	},
+	{
+		"type": "file",
+		"name": "Nest 操作 Redis",
+		"label": "Nest 操作 Redis"
+	},
+	{
+		"type": "file",
+		"name": "消息队列 RabbitMQ",
+		"label": "消息队列 RabbitMQ"
+	},
+	{
+		"type": "file",
+		"name": "Docker 完全入门",
+		"label": "Docker 完全入门"
+	},
+	{
+		"type": "file",
+		"name": "Docker Compose",
+		"label": "Docker Compose"
+	},
+	{
+		"type": "file",
+		"name": "前后端 Dockerfile 最佳实践",
+		"label": "前后端 Dockerfile 最佳实践"
+	},
+	{
+		"type": "file",
+		"name": "docker 和 pm2 重启策略",
+		"label": "docker 和 pm2 重启策略"
+	},
+	{
+		"type": "file",
+		"name": "使用 PM2 运行 Node 应用",
+		"label": "使用 PM2 运行 Node 应用"
+	},
+	{
+		"type": "file",
+		"name": "快速掌握 Nginx 的核心用法",
+		"label": "快速掌握 Nginx 的核心用法"
+	},
+	{
+		"type": "file",
+		"name": "基于 Nginx 实现灰度系统",
+		"label": "基于 Nginx 实现灰度系统"
 	}
 ]

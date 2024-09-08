@@ -19,23 +19,22 @@ export default defineConfig({
 	themeConfig: {
 		socialLinks: [
 			{
+				icon: 'juejin',
+				mode: 'link',
+				content: 'https://juejin.cn/user/1530130204207822',
+			},
+			{
+				icon: 'bilibili',
+				mode: 'link',
+				content: 'https://space.bilibili.com/145679856',
+			},
+			{
 				icon: 'github',
 				mode: 'link',
-				content: 'https://github.com/web-infra-dev/rspress',
+				content: 'hhttps://github.com/xixixiaoyu',
 			},
 		],
 		hideNavbar: 'never',
-		search: true,
-		nav: [
-			{
-				text: '首页',
-				link: '/',
-			},
-			{
-				text: '文档',
-				link: '/docs/',
-			},
-		],
 	},
 	markdown: {
 		mdxRs: false,

@@ -1,41 +1,51 @@
-Nest.js 是一个构建高效、可伸缩的企业级服务器端应用程序的渐进式 Node.js 框架。<br />它支持 TypeScript 和 JavaScript（ES6、ES7、ES8），并结合了面向对象编程（OOP）、函数式编程（FP）和函数式响应编程（FRP）的理念。<br />Nest.js 在设计上从 Angular 和 Java 的 Spring 框架中汲取灵感，引入了依赖注入和面向切面编程等概念。因此，它也被称为 Node.js 版的 Spring 框架。<br />Nest 框架的底层 HTTP 平台默认基于 Express 实现，但旨在成为一个与平台无关的框架。<br />通过创建适配器，Nest 可以使用任何 Node HTTP 框架。目前，它支持开箱即用的两个 HTTP 平台：Express 和 Fastify。<br />由于 Nest.js 在行业内具有很高的关注度，因此学习 Nest.js 对于开发者来说是非常有价值的。
+Nest.js 是一个构建高效、可伸缩的企业级服务器端应用程序的渐进式 Node.js 框架。 <br />它支持 TypeScript 和 JavaScript（ES6、ES7、ES8），并结合了面向对象编程（OOP）、函数式编程（FP）和函数式响应编程（FRP）的理念。<br />Nest.js 在设计上从 Angular 和 Java 的 Spring 框架中汲取灵感，引入了依赖注入和面向切面编程等概念。因此，它也被称为 Node.js 版的 Spring 框架。<br />Nest 框架的底层 HTTP 平台默认基于 Express 实现，但旨在成为一个与平台无关的框架。<br />通过创建适配器，Nest 可以使用任何 Node HTTP 框架。目前，它支持开箱即用的两个 HTTP 平台：Express 和 Fastify。<br />由于 Nest.js 在行业内具有很高的关注度，因此学习 Nest.js 对于开发者来说是非常有价值的。
 
 ## 学习基础
-在学习 Nest.js 之前，具备以下基础知识更有利于学习：
 
-1. JavaScript/TypeScript 基础：了解基本的语法、数据类型、函数、类、类型等概念。
-2. Node.js 基础知识：熟悉事件循环、异步编程、模块系统等核心概念，以及 File System、HTTP 等基础库的使用。
-3. Express.js 框架：由于 Nest.js 底层默认使用 Express.js，因此了解 Express.js 的中间件、路由、请求处理等机制将有所帮助。
-4. REST API 和 HTTP 协议：了解 RESTful 架构风格和 HTTP 协议的基本概念，如请求方法、状态码、请求和响应的结构等。
-5. 软件设计原则：理解面向对象编程的基本原则（如封装、继承、多态）以及 SOLID 设计原则，这些原则在使用 Nest.js 构建应用程序时非常重要。
-6. 数据库知识：了解 SQL 和 NoSQL 数据库的基础知识，以及如何在 Node.js 中与这些数据库交互，将有助于你在使用 Nest.js 时进行数据存储和检索。
+学习 Nest.js 前，建议掌握以下核心知识：
+
+1. JavaScript/TypeScript：掌握基本语法、数据类型、函数、类和类型系统。
+2. Node.js：熟悉事件循环、异步编程、模块系统及常用库（如 File System、HTTP）。
+3. Express.js：了解中间件、路由和请求处理机制，因为 Nest.js 默认基于 Express.js。
+4. REST API 和 HTTP：理解 RESTful 架构和 HTTP 协议基础，包括请求方法、状态码和报文结构。
+5. 软件设计原则：掌握面向对象编程（封装、继承、多态）和 SOLID 原则，对构建 Nest.js 应用至关重要。
+6. 数据库：了解 SQL 和 NoSQL 数据库基础，以及在 Node.js 中进行数据操作的方法。
+
+这些基础将帮助你更快地掌握 Nest.js，并构建高质量的应用程序。
 
 ## 环境搭建和运行
 
 1.  安装 Node.js：确保 Node.js 版本至少为 10.13.0，可以从 Node.js 官网下载并安装合适的版本。
 2.  **安装 Nest CLI**：
+
 ```bash
 npm i -g @nestjs/cli
 ```
 
 3.  创建项目：使用 Nest CLI 创建一个新的 NestJS 项目。替换 project-name 为你想要的项目名称：
+
 ```bash
 nest new project-name
 ```
-执行这个命令后，选择包管理器（npm、yarn 或 pnpm）即可 
 
-4.  **进入项目目录**：创建项目后，进入新创建的项目目录。 
+执行这个命令后，选择包管理器（npm、yarn 或 pnpm）即可
+
+4.  **进入项目目录**：创建项目后，进入新创建的项目目录。
+
 ```bash
 cd project-name
 ```
 
 5.  **运行项目**：（应用将在文件更改时自动重启）
+
 ```bash
 npm run start:dev
 ```
+
 Nest.js 应用应该会在默认的 `3000` 端口上启动。<br />可以通过访问 `http://localhost:3000` 在浏览器中查看它。<br />如果需要修改端口或者其他配置，在`src/main.ts` 文件中修改。
 
 ## Nest 项目目录结构
+
 初始化项目后的目录文件：<br />![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1706361899596-01445c6c-4051-4f48-8548-9703fa411db8.png#averageHue=%233e4144&clientId=u27f5a8eb-97b1-4&from=paste&height=490&id=ue3c8c03c&originHeight=882&originWidth=392&originalType=binary&ratio=1.7999999523162842&rotation=0&showTitle=false&size=80832&status=done&style=none&taskId=ueee64746-fa5e-4436-9c7b-731312a7d68&title=&width=217.77778354691887)
 
 1. node_modules/：这个目录包含了项目的所有依赖库，这些是通过 npm 或 yarn 等包管理工具安装的。
@@ -59,6 +69,7 @@ Nest.js 应用应该会在默认的 `3000` 端口上启动。<br />可以通过�
 12. tsconfig.json：TypeScript 编译器的配置文件，用于开发环境。
 
 ## Nest 最佳目录架构
+
 ```
 src/
 |-- app.controller.ts       // 应用程序的控制器
@@ -89,4 +100,5 @@ src/
     |-- app.e2e-spec.ts     // 端到端测试
     |-- jest.config.js      // Jest 配置文件
 ```
+
 按照功能模块化划分的，职责清晰，分工明确。<br />在 `common` 目录中，可以放置应用程序中多次使用的代码，如异常过滤器、管道、守卫等。<br />而 config 目录通常用于存放配置相关的代码。
