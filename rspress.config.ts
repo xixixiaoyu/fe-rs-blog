@@ -6,7 +6,6 @@ import remarkAutolinkHeadings from 'remark-autolink-headings';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-	lang: 'zh-CN',
 	base: process.env.NODE_ENV === 'development' ? '' : '/fe-rs-blog/',
 	root: path.join(__dirname, 'docs'),
 	title: 'fe-blog',

@@ -6,7 +6,19 @@
 	},
 	{
 		"text": "后端",
-		"link": "/be/nest/Nest/15个常用 Nest 装饰器/",
+		"link": "/be/nest/15个常用 Nest 装饰器",
 		"activeMatch": "/be/"
+	},
+	{
+		"text": "随笔",
+		"link": "/essay/5 个“黑入”神经系统，提升专注力的方法"
+	},
+	{
+		"text": "全栈",
+		"link": "/fullstack/"
+	},
+	{
+		"text": "计算机基础",
+		"link": "/cs/"
 	}
 ]
