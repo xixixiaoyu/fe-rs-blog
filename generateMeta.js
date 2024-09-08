@@ -3,30 +3,29 @@ const path = require('path');
 
 const whitelist = ['_meta.json', 'generateMeta.js', '.DS_Store'];
 
-// 扫描当前目录
-fs.readdir('./', (err, files) => {
-	if (err) {
-		console.error('Error reading the directory', err);
-		return;
-	}
+// 获取当前工作目录
+const currentDir = process.cwd();
 
-	files = files.filter(item => !whitelist.includes(item));
+try {
+	// 同步读取目录
+	const files = fs.readdirSync(currentDir).filter(item => !whitelist.includes(item));
 
 	// 过滤并映射文件到所需的对象结构
 	const result = files
-		.filter(file => fs.statSync(file).isFile())
+		.filter(file => fs.statSync(path.join(currentDir, file)).isFile())
 		.map(file => ({
 			type: 'file',
-			name: file,
-			label: file,
+			name: path.parse(file).name,
+			label: path.parse(file).name,
 		}));
 
-	// 写入 _meta.json 文件
-	fs.writeFile('./_meta.json', JSON.stringify(result, null, '\t'), err => {
-		if (err) {
-			console.error('Error writing _meta.json', err);
-		} else {
-			console.log('_meta.json has been saved.');
-		}
-	});
-});
+	// 同步写入或覆盖 _meta.json 文件
+	fs.writeFileSync(
+		path.join(currentDir, '_meta.json'),
+		JSON.stringify(result, null, '\t')
+	);
+
+	console.log('_meta.json 已成功写入或覆盖到当前工作目录。');
+} catch (err) {
+	console.error('发生错误:', err);
+}
