@@ -5,8 +5,7 @@
 	"scripts": {
 		"dev": "rspress dev",
 		"build": "rspress build",
-		"preview": "rspress preview",
-		"g": "node ./generateMeta.js"
+		"preview": "rspress preview"
 	},
 	"dependencies": {
 		"rehype-katex": "^7.0.1",
