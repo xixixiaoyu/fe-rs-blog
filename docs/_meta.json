@@ -10,6 +10,11 @@
 		"activeMatch": "/be/"
 	},
 	{
+		"text": "全栈",
+		"link": "/fullstack/",
+		"activeMatch": "/fullstack/"
+	},
+	{
 		"text": "AI",
 		"link": "/ai/",
 		"activeMatch": "/ai/"
@@ -18,11 +23,6 @@
 		"text": "随笔",
 		"link": "/essay/5 个“黑入”神经系统，提升专注力的方法",
 		"activeMatch": "/essay/"
-	},
-	{
-		"text": "全栈",
-		"link": "/fullstack/",
-		"activeMatch": "/fullstack/"
 	},
 	{
 		"text": "计算机基础",
