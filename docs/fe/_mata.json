@@ -1,5 +1,10 @@
 [
 	{
+		"type": "file",
+		"name": "编程本质、全栈技术选型",
+		"label": "编程本质、全栈技术选型"
+	},
+	{
 		"type": "dir",
 		"name": "设计模式",
 		"label": "设计模式",
@@ -7,8 +12,10 @@
 		"collapsed": true
 	},
 	{
-		"type": "file",
-		"name": "编程本质、全栈技术选型",
-		"label": "编程本质、全栈技术选型"
+		"type": "dir",
+		"name": "函数式编程",
+		"label": "函数式编程",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]

@@ -6,8 +6,8 @@
 	},
 	{
 		"type": "file",
-		"name": "纯函数和副作用",
-		"label": "纯函数和副作用"
+		"name": "面向对象 VS 函数式",
+		"label": "面向对象 VS 函数式"
 	},
 	{
 		"type": "file",
@@ -16,13 +16,13 @@
 	},
 	{
 		"type": "file",
-		"name": "不可变数据",
-		"label": "不可变数据"
+		"name": "纯函数和副作用",
+		"label": "纯函数和副作用"
 	},
 	{
 		"type": "file",
-		"name": "因为 DRY，所以 HOF",
-		"label": "因为 DRY，所以 HOF"
+		"name": "不可变数据",
+		"label": "不可变数据"
 	},
 	{
 		"type": "file",
@@ -31,18 +31,18 @@
 	},
 	{
 		"type": "file",
-		"name": "面向对象 VS 函数式",
-		"label": "面向对象 VS 函数式"
-	},
-	{
-		"type": "file",
-		"name": "Immer.js",
-		"label": "Immer.js"
+		"name": "因为 DRY，所以 HOF",
+		"label": "因为 DRY，所以 HOF"
 	},
 	{
 		"type": "file",
 		"name": "Reduce：函数式语言的“万金油”",
 		"label": "Reduce：函数式语言的“万金油”"
+	},
+	{
+		"type": "file",
+		"name": "immer",
+		"label": "immer.js"
 	},
 	{
 		"type": "file",
