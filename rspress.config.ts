@@ -27,7 +27,7 @@ export default defineConfig({
 			{
 				icon: 'github',
 				mode: 'link',
-				content: 'hhttps://github.com/xixixiaoyu',
+				content: 'https://github.com/xixixiaoyu',
 			},
 		],
 		hideNavbar: 'never',
