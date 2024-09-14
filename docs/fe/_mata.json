@@ -22,5 +22,12 @@
 		"label": "函数式编程",
 		"collapsible": true,
 		"collapsed": false
+	},
+	{
+		"type": "dir",
+		"name": "ts",
+		"label": "ts",
+		"collapsible": true,
+		"collapsed": false
 	}
 ]
