@@ -1,9 +1,10 @@
 [
-	"introduction",
 	{
-		"type": "file",
-		"name": "编程本质、全栈技术选型",
-		"label": "编程本质、全栈技术该如何选择"
+		"type": "dir",
+		"name": "杂记",
+		"label": "杂记",
+		"collapsible": true,
+		"collapsed": false
 	},
 	{
 		"type": "dir",

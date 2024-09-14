@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /fe/编程本质、全栈技术选型
+      link: /fe/杂记/编程本质、全栈技术选型
   image:
     src: /banner.jpg
     alt: banner
