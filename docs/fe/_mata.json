@@ -5,14 +5,16 @@
 		"label": "编程本质、全栈技术选型"
 	},
 	{
-		"type": "file",
-		"name": "闭包陷阱",
-		"label": "闭包陷阱"
+		"type": "dir",
+		"name": "react",
+		"label": "react",
+		"collapsible": true,
+		"collapsed": false
 	},
 	{
 		"type": "dir",
-		"name": "设计模式",
-		"label": "设计模式",
+		"name": "ts",
+		"label": "ts",
 		"collapsible": true,
 		"collapsed": false
 	},
@@ -25,8 +27,8 @@
 	},
 	{
 		"type": "dir",
-		"name": "ts",
-		"label": "ts",
+		"name": "设计模式",
+		"label": "设计模式",
 		"collapsible": true,
 		"collapsed": false
 	}
