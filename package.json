@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
+		"dev:watch": "nodemon --exec 'npm run dev' --watch docs",
 		"dev": "rspress dev",
 		"build": "rspress build",
 		"preview": "rspress preview"
