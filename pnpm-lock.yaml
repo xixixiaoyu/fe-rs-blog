@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@types/react':
+        specifier: ^18.3.5
+        version: 18.3.5
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
