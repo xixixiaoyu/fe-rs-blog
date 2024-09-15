@@ -31,6 +31,7 @@ export default defineConfig({
 			},
 		],
 		hideNavbar: 'never',
+		outlineTitle: '目录',
 	},
 	markdown: {
 		mdxRs: false,
