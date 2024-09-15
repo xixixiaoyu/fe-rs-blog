@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "闭包陷阱",
 		"label": "闭包陷阱"
+	},
+	{
+		"type": "file",
+		"name": "浏览器的 5 种 Observer",
+		"label": "浏览器的 5 种 Observer"
 	}
 ]
