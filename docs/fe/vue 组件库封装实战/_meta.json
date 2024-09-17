@@ -21,8 +21,8 @@
 	},
 	{
 		"type": "file",
-		"name": "动态渲染 .vue 文件的组件 - Display",
-		"label": "动态渲染 .vue 文件的组件 - Display"
+		"name": "动态渲染 vue 文件的组件 - Display",
+		"label": "动态渲染 vue 文件的组件 - Display"
 	},
 	{
 		"type": "file",
