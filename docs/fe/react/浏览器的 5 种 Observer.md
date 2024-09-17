@@ -2,7 +2,7 @@
 
 我们可以使用浏览器提供的 5 种 Observer 来监听这些变动：MutationObserver、IntersectionObserver、PerformanceObserver、ResizeObserver、ReportingObserver
 
-## IntersectionObserver
+## 1 IntersectionObserver
 
 用于监听元素与可视区域的交叉状态，例如元素从不可见到可见，或者从可见到不可见。
 
@@ -89,7 +89,7 @@ css 如下：
 - 数据采集：确定某个元素是否可见以及何时可见。
 - 懒加载：当元素可见比例达到某个阈值时触发加载。
 
-## MutationObserver
+## 2 MutationObserver
 
 用于监听 DOM 元素的属性和子节点的变化：
 
@@ -177,7 +177,7 @@ css 如下：
 - **防止水印被移除：例如 antd 的 Watermark 组件，通过监听水印节点的变化重新渲染水印。**
 - **动态内容更新：检测并响应 DOM 的动态变化。**
 
-## ResizeObserver
+## 3 ResizeObserver
 
 用于监听元素尺寸的变化：
 
@@ -228,7 +228,7 @@ export default Box;
 
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1719833581394-af2b2750-4548-4ba2-ac07-d0a95109a880.png#averageHue=%2390ee90&clientId=u27406dd5-1fe1-4&from=paste&height=276&id=ud72a9029&originHeight=304&originWidth=1667&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=48262&status=done&style=none&taskId=u38612d52-69ae-43fe-9739-e71c0ddd66f&title=&width=1515.4545126079536)
 
-## PerformanceObserver
+## 4 PerformanceObserver
 
 PerformanceObserver 用于监听记录 performance 数据的行为，例如时间点、时间段、资源加载耗时等。
 
@@ -274,7 +274,7 @@ PerformanceObserver 用于监听记录 performance 数据的行为，例如时�
 
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/21596389/1719887063209-1e068204-a084-408f-ae5d-2bae129b1dce.png#averageHue=%23f0f3ee&clientId=u0abc893c-ed6d-4&from=paste&height=585&id=u45c65c35&originHeight=643&originWidth=1888&originalType=binary&ratio=1.100000023841858&rotation=0&showTitle=false&size=146847&status=done&style=none&taskId=u62d1625d-721e-4a57-ab3e-b3381beaba5&title=&width=1716.3635991624571)
 
-## ReportingObserver
+## 5 ReportingObserver
 
 ReportingObserver 用于监听浏览器打印的过时 API 和干预报告：
 

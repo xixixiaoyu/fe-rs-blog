@@ -8,5 +8,15 @@
 		"type": "file",
 		"name": "浏览器的 5 种 Observer",
 		"label": "浏览器的 5 种 Observer"
+	},
+	{
+		"type": "file",
+		"name": "Tailwind：流行的原子化 CSS 框架",
+		"label": "Tailwind：流行的原子化 CSS 框架"
+	},
+	{
+		"type": "file",
+		"name": "断点调试",
+		"label": "断点调试"
 	}
 ]
