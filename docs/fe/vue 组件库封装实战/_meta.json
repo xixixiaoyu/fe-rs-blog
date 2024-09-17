@@ -6,48 +6,48 @@
 	},
 	{
 		"type": "file",
-		"name": "表单组件Form",
-		"label": "表单组件Form"
+		"name": "具有数据校验功能的表单组件 - Form",
+		"label": "具有数据校验功能的表单组件 - Form"
 	},
 	{
 		"type": "file",
-		"name": "多选框组件CheckboxGroup和Checkbox",
-		"label": "多选框组件CheckboxGroup和Checkbox"
+		"name": "组合多选框组件 - CheckboxGroup & Checkbox",
+		"label": "组合多选框组件 - CheckboxGroup & Checkbox"
 	},
 	{
 		"type": "file",
-		"name": "Vue构造器extend与手动挂载$mount",
-		"label": "Vue构造器extend与手动挂载$mount"
+		"name": "Vue 的构造器 - extend 与手动挂载 - $mount",
+		"label": "Vue 的构造器 - extend 与手动挂载 - $mount"
 	},
 	{
 		"type": "file",
-		"name": "动态渲染Vue文件组件Display",
-		"label": "动态渲染Vue文件组件Display"
+		"name": "动态渲染 .vue 文件的组件 - Display",
+		"label": "动态渲染 .vue 文件的组件 - Display"
 	},
 	{
 		"type": "file",
-		"name": "全局提示组件Alert",
-		"label": "全局提示组件Alert"
+		"name": "全局提示组件——$Alert",
+		"label": "全局提示组件——$Alert"
 	},
 	{
 		"type": "file",
-		"name": "Render函数与Functional Render",
-		"label": "Render函数与Functional Render"
+		"name": "Render 函数与 Functional Render",
+		"label": "Render 函数与 Functional Render"
 	},
 	{
 		"type": "file",
-		"name": "自定义列表格组件Table（Render版）",
-		"label": "自定义列表格组件Table（Render版）"
+		"name": "可用 Render 自定义列的表格组件 - Table",
+		"label": "可用 Render 自定义列的表格组件 - Table"
 	},
 	{
 		"type": "file",
-		"name": "自定义列表格组件Table（slot-scope版）",
-		"label": "自定义列表格组件Table（slot-scope版）"
+		"name": "slot-scope 自定义列的表格组件——Table",
+		"label": "slot-scope 自定义列的表格组件——Table"
 	},
 	{
 		"type": "file",
-		"name": "树形控件Tree",
-		"label": "树形控件Tree"
+		"name": "树形控件 - Tree",
+		"label": "树形控件 - Tree"
 	},
 	{
 		"type": "file",
