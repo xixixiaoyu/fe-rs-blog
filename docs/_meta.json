@@ -1,37 +1,37 @@
 [
-	{
-		"text": "前端",
-		"link": "/fe/杂记/编程本质、全栈技术选型",
-		"activeMatch": "/fe/"
-	},
-	{
-		"text": "后端",
-		"link": "/be/nest/15个常用 Nest 装饰器",
-		"activeMatch": "/be/"
-	},
-	{
-		"text": "全栈",
-		"link": "/fullstack/",
-		"activeMatch": "/fullstack/"
-	},
-	{
-		"text": "AI",
-		"link": "/ai/",
-		"activeMatch": "/ai/"
-	},
-	{
-		"text": "心理学",
-		"link": "/psychology/基础心理学/心智、行为和心理科学",
-		"activeMatch": "/psychology/"
-	},
-	{
-		"text": "随笔",
-		"link": "/essay/5 个“黑入”神经系统，提升专注力的方法",
-		"activeMatch": "/essay/"
-	},
-	{
-		"text": "计算机基础",
-		"link": "/cs/",
-		"activeMatch": "/cs/"
-	}
+  {
+    "text": "前端",
+    "link": "/fe/杂记/编程本质、全栈技术选型",
+    "activeMatch": "/fe/"
+  },
+  {
+    "text": "后端",
+    "link": "/be/nest/15个常用 Nest 装饰器",
+    "activeMatch": "/be/"
+  },
+  {
+    "text": "全栈",
+    "link": "/fullstack/",
+    "activeMatch": "/fullstack/"
+  },
+  {
+    "text": "AI",
+    "link": "/ai/ChatGPT 简介",
+    "activeMatch": "/ai/"
+  },
+  {
+    "text": "心理学",
+    "link": "/psychology/基础心理学/心智、行为和心理科学",
+    "activeMatch": "/psychology/"
+  },
+  {
+    "text": "随笔",
+    "link": "/essay/5 个“黑入”神经系统，提升专注力的方法",
+    "activeMatch": "/essay/"
+  },
+  {
+    "text": "计算机基础",
+    "link": "/cs/",
+    "activeMatch": "/cs/"
+  }
 ]
