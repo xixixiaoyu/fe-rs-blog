@@ -3,5 +3,10 @@
     "type": "file",
     "name": "ChatGPT 简介",
     "label": "ChatGPT 简介"
+  },
+  {
+    "type": "file",
+    "name": "AI教父 Hinton 采访要点",
+    "label": "AI教父 Hinton 采访要点"
   }
 ]
