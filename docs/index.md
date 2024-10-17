@@ -7,29 +7,29 @@ hero:
   tagline: 一位灵魂歌手
   actions:
     - theme: brand
-      text: 开始
-      link: /fe/杂记/编程本质、全栈技术选型
+      text: 开始探索
+      link: /psychology/基础心理学/心智、行为和心理科学
   image:
     src: /banner.jpg
-    alt: banner
+    alt: 主页横幅
 
 features:
   - title: 前端全栈工程师
-    details: 深耕 Vue 和 React 前端框架，熟练运用 Nest.js 和 Node.js 构建后端系统。
+    details: 深耕 Vue 和 React 前端框架，熟练使用 Nest.js 和 Node.js 构建后端系统。
     icon: 🚀
   - title: 技术博主
-    details: 乐于分享经验和见解，通过博客、视频等形式，促进互相学习和共同进步。
+    details: 乐于分享技术经验，通过博客和视频促进共同学习与进步。
     icon: ✍️
   - title: 终身学习者
-    details: 费曼学习法实践者，将复杂概念简化，并形成自己的体系。
+    details: 费曼学习法的践行者，擅长将复杂概念简化并形成自己的知识体系。
     icon: 🌱
   - title: 知识探索者
-    details: 对各种领域的知识保持好奇，宇宙物理、人文历史、悬疑推理等领域。
+    details: 对宇宙物理、人文历史、悬疑推理等领域充满好奇。
     icon: 🔭
   - title: 电影爱好者
-    details: 喜欢观看电影，品味人生百态，延展生命宽度。
+    details: 通过电影感受人生百态，拓展生命的宽度。
     icon: 🎥
   - title: 绝活诺手
-    details: lol 十多年技术流老玩家（虽然很多年没玩了）
+    details: lol 十多年技术流老玩家（虽然已经多年未玩）。
     icon: 🎮
 ---
