@@ -3,8 +3,8 @@ pageType: home
 
 hero:
   name: 你好，我是云牧
-  text: 一个前端全栈工程师
-  tagline: 一位灵魂歌手
+  text: 一位前端全栈工程师
+  tagline: 一个灵魂歌手
   actions:
     - theme: brand
       text: 开始
