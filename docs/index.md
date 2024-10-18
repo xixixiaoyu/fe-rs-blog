@@ -7,7 +7,7 @@ hero:
   tagline: 一位灵魂歌手
   actions:
     - theme: brand
-      text: 开始探索
+      text: 开始
       link: /psychology/基础心理学/心智、行为和心理科学
   image:
     src: /banner.jpg
