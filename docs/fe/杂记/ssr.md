@@ -1,3 +1,5 @@
+## SSR 概览
+
 SSR（Server-Side Rendering，服务端渲染）是一种在 Web 开发中常用的技术。
 
 ### 1. 什么是 SSR？
@@ -63,6 +65,8 @@ SSR 适合以下场景：
 ### 总结
 
 SSR 是一种在服务器端生成 HTML 的技术，能够提升首屏加载速度和 SEO 性能，但也会增加服务器的负担和开发的复杂度。它适合内容驱动、SEO 要求高的应用场景。常见的框架如 Next.js、Nuxt.js 都提供了 SSR 的支持。
+
+## Next.js 的 SSR
 
 在 Next.js 中，SSR（服务端渲染）是默认的渲染模式之一。Next.js 提供了多种方式来实现 SSR，主要通过 `getServerSideProps` 函数来实现动态的服务端渲染。
 
@@ -144,6 +148,8 @@ export default function Home({ data }) {
 ### 总结
 
 在 Next.js 中，SSR 是默认的渲染模式之一。通过 `getServerSideProps`，你可以在页面渲染之前获取动态数据，并将其传递给页面组件进行渲染。SSR 适合需要频繁更新数据的页面，并且对 SEO 友好。
+
+## Nuxt.js 的 SSR
 
 在 Nuxt.js 中，SSR（服务端渲染）是其核心功能之一，并且默认情况下是开启的。Nuxt.js 基于 Vue.js 构建，提供了开箱即用的 SSR 支持，帮助开发者轻松实现服务端渲染。
 
