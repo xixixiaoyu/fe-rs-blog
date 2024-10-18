@@ -23,5 +23,10 @@
     "type": "file",
     "name": "记忆",
     "label": "记忆"
+  },
+  {
+    "type": "file",
+    "name": "思维与智力",
+    "label": "思维与智力"
   }
 ]
