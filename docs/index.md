@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /psychology/基础心理学/心智、行为和心理科学
+      link: /psychology/基础心理学/感觉和知觉的基本概念
   image:
     src: /banner.jpg
     alt: 主页横幅
