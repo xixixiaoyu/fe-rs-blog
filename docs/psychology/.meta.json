@@ -5,12 +5,5 @@
     "label": "基础心理学",
     "collapsible": true,
     "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "基础知识点",
-    "label": "基础知识点",
-    "collapsible": true,
-    "collapsed": true
   }
 ]
