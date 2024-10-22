@@ -3,5 +3,10 @@
     "type": "file",
     "name": "有限理性",
     "label": "有限理性"
+  },
+  {
+    "type": "file",
+    "name": "前景理论",
+    "label": "前景理论"
   }
 ]
