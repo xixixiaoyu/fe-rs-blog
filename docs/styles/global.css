@@ -3,8 +3,6 @@
   src: url('../public/LXGWWenKaiScreen.ttf') format('truetype');
 }
 
-@import 'katex/dist/katex.min.css';
-
 body {
   font-family: 'CustomFont', sans-serif;
 }
