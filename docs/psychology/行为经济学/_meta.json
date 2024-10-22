@@ -8,5 +8,15 @@
     "type": "file",
     "name": "前景理论",
     "label": "前景理论"
+  },
+  {
+    "type": "file",
+    "name": "损失厌恶",
+    "label": "损失厌恶"
+  },
+  {
+    "type": "file",
+    "name": "框架效应",
+    "label": "框架效应"
   }
 ]
