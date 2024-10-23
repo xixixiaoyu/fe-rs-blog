@@ -23,5 +23,10 @@
     "type": "file",
     "name": "锚定效应",
     "label": "锚定效应"
+  },
+  {
+    "type": "file",
+    "name": "确认偏差",
+    "label": "确认偏差"
   }
 ]
