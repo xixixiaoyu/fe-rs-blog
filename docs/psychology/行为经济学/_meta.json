@@ -18,5 +18,10 @@
     "type": "file",
     "name": "框架效应",
     "label": "框架效应"
+  },
+  {
+    "type": "file",
+    "name": "锚定效应",
+    "label": "锚定效应"
   }
 ]
