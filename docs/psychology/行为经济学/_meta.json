@@ -1,42 +1,47 @@
 [
-  {
-    "type": "file",
-    "name": "有限理性",
-    "label": "有限理性"
-  },
-  {
-    "type": "file",
-    "name": "前景理论",
-    "label": "前景理论"
-  },
-  {
-    "type": "file",
-    "name": "损失厌恶",
-    "label": "损失厌恶"
-  },
-  {
-    "type": "file",
-    "name": "框架效应",
-    "label": "框架效应"
-  },
-  {
-    "type": "file",
-    "name": "锚定效应",
-    "label": "锚定效应"
-  },
-  {
-    "type": "file",
-    "name": "确认偏差",
-    "label": "确认偏差"
-  },
-  {
-    "type": "file",
-    "name": "沉没成本谬误",
-    "label": "沉没成本谬误"
-  },
-  {
-    "type": "file",
-    "name": "心理账户",
-    "label": "心理账户"
-  }
+	{
+		"type": "file",
+		"name": "有限理性",
+		"label": "有限理性"
+	},
+	{
+		"type": "file",
+		"name": "前景理论",
+		"label": "前景理论"
+	},
+	{
+		"type": "file",
+		"name": "损失厌恶",
+		"label": "损失厌恶"
+	},
+	{
+		"type": "file",
+		"name": "框架效应",
+		"label": "框架效应"
+	},
+	{
+		"type": "file",
+		"name": "锚定效应",
+		"label": "锚定效应"
+	},
+	{
+		"type": "file",
+		"name": "确认偏差",
+		"label": "确认偏差"
+	},
+	{
+		"type": "file",
+		"name": "沉没成本谬误",
+		"label": "沉没成本谬误"
+	},
+	{
+		"type": "file",
+		"name": "心理账户",
+		"label": "心理账户"
+	},
+	{
+		"type": "file",
+		"name": "时间折扣",
+		"label": "时间折扣"
+	}
 ]
