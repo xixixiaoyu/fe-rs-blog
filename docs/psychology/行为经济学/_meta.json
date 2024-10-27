@@ -43,5 +43,10 @@
 		"type": "file",
 		"name": "时间折扣",
 		"label": "时间折扣"
+	},
+	{
+		"type": "file",
+		"name": "过度自信",
+		"label": "过度自信"
 	}
 ]
