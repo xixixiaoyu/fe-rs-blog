@@ -63,5 +63,65 @@
 		"type": "file",
 		"name": "社会规范",
 		"label": "社会规范"
+	},
+	{
+		"type": "file",
+		"name": "公平偏好",
+		"label": "公平偏好"
+	},
+	{
+		"type": "file",
+		"name": "禀赋效应",
+		"label": "禀赋效应"
+	},
+	{
+		"type": "file",
+		"name": "默认选项效应",
+		"label": "默认选项效应"
+	},
+	{
+		"type": "file",
+		"name": "情绪对决策的影响",
+		"label": "情绪对决策的影响"
+	},
+	{
+		"type": "file",
+		"name": "社会比较",
+		"label": "社会比较"
+	},
+	{
+		"type": "file",
+		"name": "风险规避",
+		"label": "风险规避"
+	},
+	{
+		"type": "file",
+		"name": "风险偏好",
+		"label": "风险偏好"
+	},
+	{
+		"type": "file",
+		"name": "互惠行为",
+		"label": "互惠行为"
+	},
+	{
+		"type": "file",
+		"name": "自我控制问题",
+		"label": "自我控制问题"
+	},
+	{
+		"type": "file",
+		"name": "诱导效应",
+		"label": "诱导效应"
+	},
+	{
+		"type": "file",
+		"name": "有限注意力",
+		"label": "有限注意力"
+	},
+	{
+		"type": "file",
+		"name": "选择过载",
+		"label": "选择过载"
 	}
 ]
