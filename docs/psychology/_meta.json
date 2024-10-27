@@ -1,16 +1,23 @@
 [
-  {
-    "type": "dir",
-    "name": "行为经济学",
-    "label": "行为经济学",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "基础心理学",
-    "label": "基础心理学",
-    "collapsible": true,
-    "collapsed": true
-  }
+	{
+		"type": "dir",
+		"name": "行为经济学",
+		"label": "行为经济学",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "发展心理学",
+		"label": "发展心理学",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "基础心理学",
+		"label": "基础心理学",
+		"collapsible": true,
+		"collapsed": true
+	}
 ]
