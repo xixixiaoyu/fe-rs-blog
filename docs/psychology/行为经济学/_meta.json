@@ -1,127 +1,132 @@
 [
-	{
-		"type": "file",
-		"name": "有限理性",
-		"label": "有限理性"
-	},
-	{
-		"type": "file",
-		"name": "前景理论",
-		"label": "前景理论"
-	},
-	{
-		"type": "file",
-		"name": "损失厌恶",
-		"label": "损失厌恶"
-	},
-	{
-		"type": "file",
-		"name": "框架效应",
-		"label": "框架效应"
-	},
-	{
-		"type": "file",
-		"name": "锚定效应",
-		"label": "锚定效应"
-	},
-	{
-		"type": "file",
-		"name": "确认偏差",
-		"label": "确认偏差"
-	},
-	{
-		"type": "file",
-		"name": "沉没成本谬误",
-		"label": "沉没成本谬误"
-	},
-	{
-		"type": "file",
-		"name": "心理账户",
-		"label": "心理账户"
-	},
-	{
-		"type": "file",
-		"name": "时间折扣",
-		"label": "时间折扣"
-	},
-	{
-		"type": "file",
-		"name": "过度自信",
-		"label": "过度自信"
-	},
-	{
-		"type": "file",
-		"name": "代表性启发法",
-		"label": "代表性启发法"
-	},
-	{
-		"type": "file",
-		"name": "可得性启发法",
-		"label": "可得性启发法"
-	},
-	{
-		"type": "file",
-		"name": "社会规范",
-		"label": "社会规范"
-	},
-	{
-		"type": "file",
-		"name": "公平偏好",
-		"label": "公平偏好"
-	},
-	{
-		"type": "file",
-		"name": "禀赋效应",
-		"label": "禀赋效应"
-	},
-	{
-		"type": "file",
-		"name": "默认选项效应",
-		"label": "默认选项效应"
-	},
-	{
-		"type": "file",
-		"name": "情绪对决策的影响",
-		"label": "情绪对决策的影响"
-	},
-	{
-		"type": "file",
-		"name": "社会比较",
-		"label": "社会比较"
-	},
-	{
-		"type": "file",
-		"name": "风险规避",
-		"label": "风险规避"
-	},
-	{
-		"type": "file",
-		"name": "风险偏好",
-		"label": "风险偏好"
-	},
-	{
-		"type": "file",
-		"name": "互惠行为",
-		"label": "互惠行为"
-	},
-	{
-		"type": "file",
-		"name": "自我控制问题",
-		"label": "自我控制问题"
-	},
-	{
-		"type": "file",
-		"name": "诱导效应",
-		"label": "诱导效应"
-	},
-	{
-		"type": "file",
-		"name": "有限注意力",
-		"label": "有限注意力"
-	},
-	{
-		"type": "file",
-		"name": "选择过载",
-		"label": "选择过载"
-	}
+  {
+    "type": "file",
+    "name": "有限理性",
+    "label": "有限理性"
+  },
+  {
+    "type": "file",
+    "name": "前景理论",
+    "label": "前景理论"
+  },
+  {
+    "type": "file",
+    "name": "损失厌恶",
+    "label": "损失厌恶"
+  },
+  {
+    "type": "file",
+    "name": "框架效应",
+    "label": "框架效应"
+  },
+  {
+    "type": "file",
+    "name": "锚定效应",
+    "label": "锚定效应"
+  },
+  {
+    "type": "file",
+    "name": "确认偏差",
+    "label": "确认偏差"
+  },
+  {
+    "type": "file",
+    "name": "沉没成本谬误",
+    "label": "沉没成本谬误"
+  },
+  {
+    "type": "file",
+    "name": "心理账户",
+    "label": "心理账户"
+  },
+  {
+    "type": "file",
+    "name": "时间折扣",
+    "label": "时间折扣"
+  },
+  {
+    "type": "file",
+    "name": "过度自信",
+    "label": "过度自信"
+  },
+  {
+    "type": "file",
+    "name": "代表性启发法",
+    "label": "代表性启发法"
+  },
+  {
+    "type": "file",
+    "name": "可得性启发法",
+    "label": "可得性启发法"
+  },
+  {
+    "type": "file",
+    "name": "社会规范",
+    "label": "社会规范"
+  },
+  {
+    "type": "file",
+    "name": "公平偏好",
+    "label": "公平偏好"
+  },
+  {
+    "type": "file",
+    "name": "禀赋效应",
+    "label": "禀赋效应"
+  },
+  {
+    "type": "file",
+    "name": "默认选项效应",
+    "label": "默认选项效应"
+  },
+  {
+    "type": "file",
+    "name": "情绪对决策的影响",
+    "label": "情绪对决策的影响"
+  },
+  {
+    "type": "file",
+    "name": "社会比较",
+    "label": "社会比较"
+  },
+  {
+    "type": "file",
+    "name": "风险规避",
+    "label": "风险规避"
+  },
+  {
+    "type": "file",
+    "name": "风险偏好",
+    "label": "风险偏好"
+  },
+  {
+    "type": "file",
+    "name": "互惠行为",
+    "label": "互惠行为"
+  },
+  {
+    "type": "file",
+    "name": "自我控制问题",
+    "label": "自我控制问题"
+  },
+  {
+    "type": "file",
+    "name": "诱导效应",
+    "label": "诱导效应"
+  },
+  {
+    "type": "file",
+    "name": "有限注意力",
+    "label": "有限注意力"
+  },
+  {
+    "type": "file",
+    "name": "选择过载",
+    "label": "选择过载"
+  },
+  {
+    "type": "file",
+    "name": "社会偏好",
+    "label": "社会偏好"
+  }
 ]
