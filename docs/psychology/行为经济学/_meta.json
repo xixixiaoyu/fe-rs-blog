@@ -128,5 +128,15 @@
     "type": "file",
     "name": "社会偏好",
     "label": "社会偏好"
+  },
+  {
+    "type": "file",
+    "name": "情境依赖性",
+    "label": "情境依赖性"
+  },
+  {
+    "type": "file",
+    "name": "自我归因偏差",
+    "label": "自我归因偏差"
   }
 ]
