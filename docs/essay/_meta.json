@@ -53,5 +53,10 @@
     "type": "file",
     "name": "大型语言模型的局限与未来：ChatGPT 的现状与挑战",
     "label": "大型语言模型的局限与未来：ChatGPT 的现状与挑战"
+  },
+  {
+    "type": "file",
+    "name": "工时管理",
+    "label": "工时管理"
   }
 ]
