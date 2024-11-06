@@ -15,6 +15,20 @@
   },
   {
     "type": "dir",
+    "name": "教育心理学",
+    "label": "教育心理学",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "社会心理学",
+    "label": "社会心理学",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "近现代史纲要",
     "label": "近现代史纲要",
     "collapsible": true,
