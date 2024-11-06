@@ -1,20 +1,6 @@
 [
   {
     "type": "dir",
-    "name": "ts",
-    "label": "ts",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "vue 组件库封装实战",
-    "label": "vue 组件库封装实战",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
     "name": "react",
     "label": "react",
     "collapsible": true,
@@ -24,20 +10,6 @@
     "type": "dir",
     "name": "vite",
     "label": "vite",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "函数式编程",
-    "label": "函数式编程",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "设计模式",
-    "label": "设计模式",
     "collapsible": true,
     "collapsed": true
   },
