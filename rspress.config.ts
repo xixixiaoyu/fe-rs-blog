@@ -32,6 +32,20 @@ export default defineConfig({
     ],
     hideNavbar: 'never',
     outlineTitle: '目录',
+    search: {
+      position: 'navbar',
+      locales: {
+        zh: {
+          placeholder: '搜索文档',
+          translations: {
+            button: {
+              buttonText: '搜索文档',
+              buttonAriaLabel: '搜索文档',
+            },
+          },
+        },
+      },
+    },
   },
   markdown: {
     mdxRs: false,
