@@ -176,6 +176,7 @@ export async function findToDos() {
 export async function createToDo(formData) {
   const todo = formData.get('todo')
   data.push(todo)
+  // 重新验证 /form2 页面，确保页面显示最新的待办事项
   revalidatePath('/form2')
   return data
 }
