@@ -15,6 +15,13 @@
   },
   {
     "type": "dir",
+    "name": "design",
+    "label": "设计模式",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "杂记",
     "label": "杂记",
     "collapsible": true,
