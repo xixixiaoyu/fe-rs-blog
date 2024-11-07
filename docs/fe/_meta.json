@@ -8,6 +8,13 @@
   },
   {
     "type": "dir",
+    "name": "next",
+    "label": "next",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "vite",
     "label": "vite",
     "collapsible": true,
