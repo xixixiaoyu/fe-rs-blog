@@ -15,7 +15,7 @@
   },
   {
     "type": "dir",
-    "name": "design",
+    "name": "design-pattern",
     "label": "设计模式",
     "collapsible": true,
     "collapsed": true
