@@ -1,32 +1,32 @@
 [
-	{
-		"text": "前端",
-		"link": "/fe/miscellany/编程本质、全栈技术选型",
-		"activeMatch": "/fe/"
-	},
-	{
-		"text": "后端",
-		"link": "/be/nest/15个常用 Nest 装饰器",
-		"activeMatch": "/be/"
-	},
-	{
-		"text": "全栈",
-		"link": "/fullstack/next/cli",
-		"activeMatch": "/fullstack/"
-	},
-	{
-		"text": "AI",
-		"link": "/ai/ChatGPT 简介",
-		"activeMatch": "/ai/"
-	},
-	{
-		"text": "心理学",
-		"link": "/psychology/基础心理学/感觉和知觉的基本概念",
-		"activeMatch": "/psychology/"
-	},
-	{
-		"text": "随笔",
-		"link": "/essay/如何提高专注力",
-		"activeMatch": "/essay/"
-	}
+  {
+    "text": "前端",
+    "link": "/fe/miscellany/编程本质、全栈技术选型",
+    "activeMatch": "/fe/"
+  },
+  {
+    "text": "后端",
+    "link": "/be/nest/15个常用 Nest 装饰器",
+    "activeMatch": "/be/"
+  },
+  {
+    "text": "全栈",
+    "link": "/fullstack/next/cli",
+    "activeMatch": "/fullstack/"
+  },
+  {
+    "text": "AI",
+    "link": "/ai/chatgpt",
+    "activeMatch": "/ai/"
+  },
+  {
+    "text": "心理学",
+    "link": "/psychology/基础心理学/感觉和知觉的基本概念",
+    "activeMatch": "/psychology/"
+  },
+  {
+    "text": "随笔",
+    "link": "/essay/提升专注力",
+    "activeMatch": "/essay/"
+  }
 ]
