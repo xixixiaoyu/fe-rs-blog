@@ -1,17 +1,7 @@
 [
   {
     "type": "file",
-    "name": "ChatGPT 简介",
-    "label": "ChatGPT 简介"
-  },
-  {
-    "type": "file",
-    "name": "从神经网络到通用智能的思考",
-    "label": "从神经网络到通用智能的思考"
-  },
-  {
-    "type": "file",
-    "name": "ChatGPT 的现状与挑战",
-    "label": "ChatGPT 的现状与挑战"
+    "name": "chatgpt",
+    "label": "chatgpt"
   }
 ]
