@@ -29,6 +29,13 @@
   },
   {
     "type": "dir",
+    "name": "ts",
+    "label": "ts",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "miscellany",
     "label": "杂记",
     "collapsible": true,
