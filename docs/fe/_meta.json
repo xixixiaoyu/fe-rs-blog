@@ -1,6 +1,13 @@
 [
   {
     "type": "dir",
+    "name": "vue-design",
+    "label": "vue设计实现",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
     "name": "react",
     "label": "react",
     "collapsible": true,
