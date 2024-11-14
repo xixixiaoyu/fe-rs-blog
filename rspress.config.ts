@@ -34,7 +34,7 @@ export default defineConfig({
     outlineTitle: '目录',
   },
   markdown: {
-    mdxRs: false,
+    mdxRs: true,
     remarkPlugins: [
       [
         remarkAutolinkHeadings,
