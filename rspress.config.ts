@@ -2,6 +2,7 @@ import * as path from 'path'
 import { defineConfig } from 'rspress/config'
 import rehypeSlug from 'rehype-slug'
 import rehypeRaw from 'rehype-raw'
+// @ts-ignore
 import remarkAutolinkHeadings from 'remark-autolink-headings'
 import rehypeKatex from 'rehype-katex'
 
@@ -43,7 +44,7 @@ export default defineConfig({
         },
       ],
     ],
-    rehypePlugins: [rehypeSlug, rehypeRaw, rehypeKatex],
+    rehypePlugins: [rehypeSlug, rehypeRaw as any, rehypeKatex],
   },
   globalStyles: path.join(__dirname, '/docs/styles/global.css'),
   builderConfig: {
