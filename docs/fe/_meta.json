@@ -22,8 +22,8 @@
   },
   {
     "type": "dir",
-    "name": "design-pattern",
-    "label": "设计模式",
+    "name": "echarts",
+    "label": "echarts",
     "collapsible": true,
     "collapsed": true
   },
@@ -31,6 +31,13 @@
     "type": "dir",
     "name": "micro-front",
     "label": "微前端",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "design-pattern",
+    "label": "设计模式",
     "collapsible": true,
     "collapsed": true
   },
