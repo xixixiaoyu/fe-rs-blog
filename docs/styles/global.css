@@ -6,104 +6,194 @@
 :root {
   --primary-color: #3eaf7c;
   --text-color: #2c3e50;
+  --text-color-light: #476582;
   --border-color: #eaecef;
   --code-bg-color: #f8f8f8;
+  --bg-color: #ffffff;
+  --bg-color-secondary: #f8f9fa;
+  --header-height: 3.6rem;
+  --transition-timing: 0.3s ease;
 }
 
 body {
   font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--text-color);
-  line-height: 1.7;
+  line-height: 1.5;
   font-size: 16px;
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 /* 优化链接样式 */
 a {
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all var(--transition-timing);
+  position: relative;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #4abf8a;
+  text-decoration: none;
 }
 
 /* 优化标题样式 */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin: 0.5em 0;
   font-weight: 600;
   line-height: 1.25;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.65em;
+}
+
+h3 {
+  font-size: 1.35em;
 }
 
 /* 优化代码块样式 */
 pre, code {
   font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
   background-color: var(--code-bg-color);
-  border-radius: 4px;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  padding: 1.25em 1.5em;
+  overflow: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* 优化引用块样式 */
 blockquote {
   border-left: 4px solid var(--primary-color);
-  margin: 1em 0;
-  padding: 0.25em 1em;
-  background-color: #f8f8f8;
+  margin: 1.5em 0;
+  padding: 0.8em 1.5em;
+  background-color: var(--bg-color-secondary);
+  border-radius: 0 4px 4px 0;
+  color: var(--text-color-light);
 }
 
 /* 优化表格样式 */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 1em 0;
+  margin: 1.5em 0;
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 th, td {
   border: 1px solid var(--border-color);
-  padding: 0.6em 1em;
+  padding: 0.8em 1.2em;
+}
+
+th {
+  background-color: var(--bg-color-secondary);
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: var(--bg-color-secondary);
 }
 
 /* 优化图片样式 */
 img {
   max-width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-timing);
+}
+
+img:hover {
+  transform: scale(1.01);
 }
 
 /* 优化首页特性卡片样式 */
 .features-container {
-  gap: 20px;
+  gap: 24px;
+  padding: 2rem 0;
 }
 
 .feature-item {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 24px;
-  transition: transform 0.2s ease;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: all var(--transition-timing);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
 }
 
 .feature-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* 移除标题之间的横线 */
+.feature-item .title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.feature-item .details {
+  color: var(--text-color-light);
+  line-height: 1.6;
+}
+
+/* 优化导航栏样式 */
+.nav-bar {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 优化滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 优化选中文本样式 */
+::selection {
+  background-color: rgba(62, 175, 124, 0.2);
+  color: var(--primary-color);
+}
+
+/* 优化分割线样式 */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+/* 移除文档标题的横线 */
 .rspress-doc h1,
 .rspress-doc h2,
 .rspress-doc h3,
 .rspress-doc h4,
 .rspress-doc h5,
 .rspress-doc h6 {
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
-}
-
-/* 特别针对 h2 标题，因为通常横线出现在 h2 标题下 */
-.rspress-doc h2 {
   border: none !important;
-  border-bottom: none !important;
-}
-
-/* 额外添加这个选择器来确保覆盖 */
-:where(.rspress-doc h1),
-:where(.rspress-doc h2) {
-  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
