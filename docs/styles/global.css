@@ -3,6 +3,84 @@
   src: url('../public/LXGWWenKaiScreen.ttf') format('truetype');
 }
 
+:root {
+  --primary-color: #3eaf7c;
+  --text-color: #2c3e50;
+  --border-color: #eaecef;
+  --code-bg-color: #f8f8f8;
+}
+
 body {
-  font-family: 'CustomFont', sans-serif;
+  font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* 优化链接样式 */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 优化标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* 优化代码块样式 */
+pre, code {
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
+  background-color: var(--code-bg-color);
+  border-radius: 4px;
+}
+
+/* 优化引用块样式 */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin: 1em 0;
+  padding: 0.25em 1em;
+  background-color: #f8f8f8;
+}
+
+/* 优化表格样式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1em;
+}
+
+/* 优化图片样式 */
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* 优化首页特性卡片样式 */
+.features-container {
+  gap: 20px;
+}
+
+.feature-item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
 }
