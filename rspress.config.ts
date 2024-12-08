@@ -1,5 +1,7 @@
 import * as path from 'path'
 import { defineConfig } from 'rspress/config'
+import rehypeRaw from 'rehype-raw'
+import rehypeKatex from 'rehype-katex'
 
 export default defineConfig({
 	base: process.env.NODE_ENV === 'development' ? '' : '/fe-rs-blog/',
@@ -32,7 +34,8 @@ export default defineConfig({
 		enableAppearanceAnimation: true,
 	},
 	markdown: {
-		mdxRs: true,
+		mdxRs: false,
+		rehypePlugins: [rehypeRaw as any, rehypeKatex],
 	},
 	globalStyles: path.join(__dirname, '/docs/styles/global.css'),
 	builderConfig: {

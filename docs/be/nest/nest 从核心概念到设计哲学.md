@@ -22,18 +22,18 @@ Nest.js 的出现，正是为了解决这些痛点。它通过模块化设计、
 
 可以将控制器类比为餐厅的服务员，根据客人的需求（路由）将订单（请求）传递给后厨（Service）。
 
-```TypeScript
+```ts
 @Controller('user')
 export class UserController {
-  @Post('create')
-  createUser(@Body() createUserDto: CreateUserDto) {
-    // 处理创建用户的逻辑
-  }
+	@Post('create')
+	createUser(@Body() createUserDto: CreateUserDto) {
+		// 处理创建用户的逻辑
+	}
 
-  @Get('list')
-  getUserList() {
-    // 处理获取用户列表的逻辑
-  }
+	@Get('list')
+	getUserList() {
+		// 处理获取用户列表的逻辑
+	}
 }
 ```
 
@@ -49,13 +49,13 @@ export class UserController {
 
 可以将服务类比为餐厅的厨师，负责根据订单（请求）制作菜品（业务逻辑）。
 
-```TypeScript
+```typescript
 @Injectable()
 export class UserService {
-  async createUser(userData: CreateUserDto) {
-    // 具体的创建用户逻辑
-    // 比如密码加密、数据验证、存储到数据库等
-  }
+	async createUser(userData: CreateUserDto) {
+		// 具体的创建用户逻辑
+		// 比如密码加密、数据验证、存储到数据库等
+	}
 }
 ```
 
@@ -67,11 +67,11 @@ export class UserService {
 
 每个模块通常包含控制器、服务、数据传输对象（DTO）和实体（Entity）等。模块化设计的好处在于将功能划分为独立的单元，便于管理和复用。
 
-```TypeScript
+```typescript
 @Module({
-  controllers: [UserController],
-  providers: [UserService],
-  exports: [UserService]
+	controllers: [UserController],
+	providers: [UserService],
+	exportypescript: [UserService],
 })
 export class UserModule {}
 ```
@@ -84,11 +84,11 @@ export class UserModule {}
 
 它的作用是将组件的依赖关系交由框架管理，开发者只需声明需要的依赖，框架会自动注入对应的实例。
 
-```TypeScript
+```typescript
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
-  // Nest.js 会自动注入 UserService 的实例
+	constructor(private readonly userService: UserService) {}
+	// Nest.js 会自动注入 UserService 的实例
 }
 ```
 
@@ -102,9 +102,9 @@ Nest.js 提供了中间件（Middleware）、守卫（Guard）、拦截器（Int
 
 #### 示例：拦截器记录请求处理时间
 
-```TypeScript
+```typescript
 @Injectable()
-export class LoggingInterceptor implements NestInterceptor {
+export class LoggingInterceptor implementypescript NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const now = Date.now();
     return next
