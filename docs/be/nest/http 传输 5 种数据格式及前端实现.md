@@ -25,11 +25,11 @@ GET https://api.example.com/users/123
 
 **前端实现：**
 
-```JavaScript
-const userId = 123;
-axios.get(`/api/users/${userId}`).then((response) => {
-  console.log(response.data);
-});
+```javascript
+const userId = 123
+axios.get(`/api/users/${userId}`).then(response => {
+	console.log(response.data)
+})
 ```
 
 ## 二、查询字符串：灵活的参数传递
@@ -53,15 +53,17 @@ GET https://api.example.com/search?keyword=javascript&page=1
 
 **前端实现：**
 
-```JavaScript
-axios.get('/api/search', {
-  params: {
-    keyword: 'javascript',
-    page: 1,
-  },
-}).then((response) => {
-  console.log(response.data);
-});
+```javascript
+axios
+	.get('/api/search', {
+		params: {
+			keyword: 'javascript',
+			page: 1,
+		},
+	})
+	.then(response => {
+		console.log(response.data)
+	})
 ```
 
 ## 三、Form-urlencoded：传统表单的默认选择
@@ -88,16 +90,22 @@ username=john&age=25
 
 **前端实现：**
 
-```JavaScript
-const qs = require('qs');
-axios.post('/api/users', qs.stringify({
-  username: 'john',
-  age: 25,
-}), {
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-}).then((response) => {
-  console.log(response.data);
-});
+```javascript
+const qs = require('qs')
+axios
+	.post(
+		'/api/users',
+		qs.stringify({
+			username: 'john',
+			age: 25,
+		}),
+		{
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		}
+	)
+	.then(response => {
+		console.log(response.data)
+	})
 ```
 
 ## 四、Form-data：文件上传的首选
@@ -133,21 +141,23 @@ Content-Type: image/jpeg
 
 **前端实现：**
 
-```JavaScript
-const formData = new FormData();
-formData.append('username', 'john');
-formData.append('file', fileInput.files[0]);
+```javascript
+const formData = new FormData()
+formData.append('username', 'john')
+formData.append('file', fileInput.files[0])
 
-axios.post('/api/upload', formData, {
-  headers: { 'Content-Type': 'multipart/form-data' },
-}).then((response) => {
-  console.log(response.data);
-});
+axios
+	.post('/api/upload', formData, {
+		headers: { 'Content-Type': 'multipart/form-data' },
+	})
+	.then(response => {
+		console.log(response.data)
+	})
 ```
 
 ## 五、JSON：现代 Web API 的标准
 
-**JSON**（JavaScript Object Notation）是一种轻量级的数据交换格式，广泛应用于现代 Web API。例如：
+**JSON**（javascript Object Notation）是一种轻量级的数据交换格式，广泛应用于现代 Web API。例如：
 
 ```Http
 POST /api/users HTTP/1.1
@@ -173,14 +183,16 @@ Content-Type: application/json
 
 **前端实现：**
 
-```JavaScript
-axios.post('/api/users', {
-  username: 'john',
-  age: 25,
-  hobbies: ['reading', 'gaming'],
-}).then((response) => {
-  console.log(response.data);
-});
+```javascript
+axios
+	.post('/api/users', {
+		username: 'john',
+		age: 25,
+		hobbies: ['reading', 'gaming'],
+	})
+	.then(response => {
+		console.log(response.data)
+	})
 ```
 
 ## 五种方式的对比与选择
