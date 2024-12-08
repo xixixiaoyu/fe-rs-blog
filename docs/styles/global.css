@@ -84,3 +84,26 @@ img {
 .feature-item:hover {
   transform: translateY(-5px);
 }
+
+/* 移除标题之间的横线 */
+.rspress-doc h1,
+.rspress-doc h2,
+.rspress-doc h3,
+.rspress-doc h4,
+.rspress-doc h5,
+.rspress-doc h6 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+/* 特别针对 h2 标题，因为通常横线出现在 h2 标题下 */
+.rspress-doc h2 {
+  border: none !important;
+  border-bottom: none !important;
+}
+
+/* 额外添加这个选择器来确保覆盖 */
+:where(.rspress-doc h1),
+:where(.rspress-doc h2) {
+  border-bottom: none !important;
+}
