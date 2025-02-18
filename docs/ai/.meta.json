@@ -1,14 +1,1 @@
-[
-  {
-    "type": "file",
-    "name": "chatgpt",
-    "label": "chatgpt"
-  },
-  {
-    "type": "dir",
-    "name": "langchain",
-    "label": "langchain",
-    "collapsible": true,
-    "collapsed": true
-  }
-]
+[]

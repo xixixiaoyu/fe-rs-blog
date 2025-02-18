@@ -1,20 +1,6 @@
 [
   {
     "type": "dir",
-    "name": "go",
-    "label": "go",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "200问",
-    "label": "200问",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
     "name": "nest",
     "label": "nest",
     "collapsible": true,

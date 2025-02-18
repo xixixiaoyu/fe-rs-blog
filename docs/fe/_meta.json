@@ -1,57 +1,8 @@
 [
   {
     "type": "dir",
-    "name": "vue-design",
-    "label": "vue设计实现",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "react",
-    "label": "react",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "vite",
-    "label": "vite",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "echarts",
-    "label": "echarts",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "micro-front",
-    "label": "微前端",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "design-pattern",
-    "label": "设计模式",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "ts",
-    "label": "ts",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "miscellany",
-    "label": "杂记",
+    "name": "前端面试",
+    "label": "前端面试",
     "collapsible": true,
     "collapsed": true
   }
