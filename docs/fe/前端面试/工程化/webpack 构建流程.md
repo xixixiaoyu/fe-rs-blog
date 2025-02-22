@@ -7,7 +7,9 @@
 7. webpack 会将生成的 assets 写入到配置中指定的输出目录（通常是 `dist` 文件夹）。输出过程，会触发一些插件钩子，比如 `emit` 钩子，允许插件在文件写入之前做一些额外的处理。
 8. 最终收尾，webpack 会输出一些构建的统计信息，比如打包时间、文件大小等。你可以通过配置 `stats` 选项来控制输出的详细程度，并触发 `done` 钩子。
 
-看个 webpack.config.js 的简单配置：
+
+
+再看个 webpack.config.js 的简单配置：
 
 ```js
 module.exports = {
