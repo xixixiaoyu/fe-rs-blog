@@ -22,9 +22,9 @@ import { add } from './math.js'
 console.log(add(2, 3))
 ```
 
-在这个例子中，`main.js` 只使用了 `add` 函数，而没有用到 `subtract`。
+在这个例子中，main.js 只使用了 add 函数，而没有用到 subtract。
 
-Webpack 在打包时可以通过静态分析发现 `subtract` 没有被引用，于是就可以把它从最终的打包结果中移除。
+Webpack 在打包时可以通过静态分析发现 subtract 没有被引用，于是就可以把它从最终的打包结果中移除。
 
 反过来，如果是 CommonJS（module.exports 和 require），它就没这么聪明了，因为 CommonJS 是动态加载的，运行时才知道用没用，webpack 没法提前判断。
 
