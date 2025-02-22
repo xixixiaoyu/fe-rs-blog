@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /psychology/基础心理学/感觉和知觉的基本概念
+      link: /fe/前端面试/工程化/webpack 构建流程
   image:
     src: /banner.jpg
     alt: 主页横幅
