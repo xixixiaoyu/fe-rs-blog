@@ -11,18 +11,13 @@
   },
   {
     "text": "全栈",
-    "link": "/fullstack/next/cli",
+    "link": "/fullstack/",
     "activeMatch": "/fullstack/"
   },
   {
     "text": "AI",
-    "link": "/ai/chatgpt",
+    "link": "/ai/",
     "activeMatch": "/ai/"
-  },
-  {
-    "text": "心理学",
-    "link": "/psychology/基础心理学/感觉和知觉的基本概念",
-    "activeMatch": "/psychology/"
   },
   {
     "text": "随笔",
