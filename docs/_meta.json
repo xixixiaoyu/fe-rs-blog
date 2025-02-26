@@ -10,11 +10,6 @@
     "activeMatch": "/be/"
   },
   {
-    "text": "全栈",
-    "link": "/fullstack/",
-    "activeMatch": "/fullstack/"
-  },
-  {
     "text": "AI",
     "link": "/ai/",
     "activeMatch": "/ai/"
