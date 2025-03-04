@@ -1,221 +1,263 @@
-写代码的时候，一个个 if/else 堆上去，逻辑看着像搭积木，越搭越高，最后自己都头晕？这不仅让代码变得臃肿，后续维护的时候也容易出错。其实，在前端开发中，减少 if/else 的使用可以让代码更简洁、更容易维护。
+### 为什么我们要减少 if...else？
+
+if...else 本身没啥问题，但用多了容易让代码变得像一团乱麻。比如嵌套太多时，逻辑不好理清；或者需求变了，你得在密密麻麻的条件里找地方改，稍不小心就出错。所以，我们的目标是让代码更直观、更灵活，减少冗余的判断。
+
+下面我给你分享 6 个实用方法。
 
 
 
-### 1.用策略模式干掉分支堆砌
+### 1.对象映射法：简单枚举值的最佳拍档
 
-假如你需要在不同条件下执行不同的逻辑，比如支付场景里根据类型调用不同的支付方式，传统的 if/else 写法可能长这样：
+如果你的条件判断是基于一些固定的值（比如状态、类型），可以用对象来映射对应的操作或结果。
+
+#### 场景举例
+
+假设你在写一个状态显示的功能，根据状态值调用不同的函数：
 
 ```js
-function pay(type) {
-  if (type === 'wechat') {
-    wechatPay()
-  } else if (type === 'alipay') {
-    alipayPay()
-  } else {
-    console.log('不支持的支付方式')
+// 优化前
+function showStatus(status) {
+  if (status === 'pending') {
+    showPending()
+  } else if (status === 'success') {
+    showSuccess()
+  } else if (status === 'error') {
+    showError()
   }
 }
 ```
 
-看着还行，但如果支付方式再多几种，代码就变得又臭又长。咱们可以用**策略模式**来优化：把每种逻辑封装成一个函数，用对象存起来，需要的时候直接拿来用。
+#### 优化后
+
+我们可以用一个对象把状态和函数对应起来：
 
 ```js
-const paymentStrategies = {
-  wechat: () => wechatPay(),
-  alipay: () => alipayPay(),
-  default: () => console.log('不支持的支付方式')
-}
-
-function pay(type) {
-  paymentStrategies[type]?.() || paymentStrategies.default()
+function showStatus(status) {
+  const statusMap = {
+    pending: showPending,
+    success: showSuccess,
+    error: showError
+  }
+  statusMap[status]?.() || console.log('状态不存在')
 }
 ```
 
-这样多爽啊！不仅代码变短了，想加新支付方式也简单 —— 直接往 paymentStrategies 里加个键值对就行。Vue 或 React 项目里处理动态表单提交、事件分发的时候，这个方法特别好使。
+这时想加个新状态？直接在 statusMap 里加一项就行，不用改逻辑。
+
+**适用场景**：固定选项的映射，比如状态、类型、角色等。
 
 
 
-### 2.多态或状态模式，应对复杂状态流转
+### 2.策略模式
 
-有些业务逻辑，比如订单状态管理，状态之间会互相跳转，传统写法可能是一堆条件判断嵌套，看着就头疼。比如：
+当每个分支的逻辑比较复杂时，对象映射可能不够用，这时候策略模式就派上场了。它本质上是把每个分支的处理逻辑封装成独立的策略。
+
+假设你有个表单校验功能，要根据不同的规则验证输入：
 
 ```js
-function handleOrder(state, action) {
-  if (state === 'pending' && action === 'confirm') {
-    return 'confirmed'
-  } else if (state === 'confirmed' && action === 'ship') {
-    return 'shipped'
-  } else {
-    return state
+// 优化前
+function validate(input, rule) {
+  if (rule === 'email') {
+    return /@/.test(input)
+  } else if (rule === 'minLength') {
+    return input.length >= 6
+  } else if (rule === 'required') {
+    return !!input
   }
 }
 ```
 
-这种代码改起来费劲，状态多了还容易漏逻辑。咱们可以用**状态模式**来优化，把每个状态的行为单独定义好
+我们可以把每种校验规则定义成独立函数，集中管理：
+
+```js
+const validators = {
+  email: (val) => /@/.test(val),
+  minLength: (val) => val.length >= 6,
+  required: (val) => !!val
+}
+
+function validate(input, rules) {
+  return rules.every(rule => validators[rule](input))
+}
+
+// 使用
+const isValid = validate('test@example.com', ['email', 'required'])
+```
+
+主函数只管调度，不管具体实现，职责更清晰，而且每种校验逻辑独立，改一个不会影响到其他。
+
+
+
+### 3.多态替代：面向对象的优雅解法
+
+如果你喜欢面向对象编程（OOP），可以用多态来消灭 if...else。
+
+假设不同类型的用户需要展示不同的个人主页：
+
+```js
+// 优化前
+function showProfile(userType) {
+  if (userType === 'admin') {
+    showAdminPanel()
+  } else if (userType === 'member') {
+    showMemberPanel()
+  }
+}
+```
+
+用类和继承来实现：
+
+```js
+abstract class User {
+  abstract showProfile()
+}
+
+class Admin extends User {
+  showProfile() {
+    showAdminPanel()
+  }
+}
+
+class Member extends User {
+  showProfile() {
+    showMemberPanel()
+  }
+}
+
+function display(user: User) {
+  user.showProfile()
+}
+
+// 使用
+const admin = new Admin()
+display(admin)
+```
+
+每个类型的逻辑完全隔离，扩展时只管加新类。调用方不需要关心具体类型，符合“开闭原则”。
+
+
+
+### 4.状态机：状态流转的利器
+
+如果你的代码涉及状态之间的跳转，状态机是个很棒的选择。
+
+比如订单状态流转：
+
+```js
+// 优化前
+function nextState(current) {
+  if (current === 'pending') {
+    return 'processing'
+  } else if (current === 'processing') {
+    return 'completed'
+  } else {
+    return current
+  }
+}
+```
+
+用状态机来定义流转规则：
 
 ```js
 const stateMachine = {
-  pending: {
-    confirm: () => 'confirmed',
-    cancel: () => 'canceled'
-  },
-  confirmed: {
-    ship: () => 'shipped'
-  }
+  pending: { next: 'processing' },
+  processing: { next: 'completed' }
 }
 
-function handleOrder(state, action) {
-  return stateMachine[state]?.[action]?.() || state
+function nextState(current) {
+  return stateMachine[current]?.next || current
 }
 ```
 
-这样每个状态的逻辑都独立了，改代码的时候只需要调整对应状态的处理函数，既清晰又安全。React 里用状态机库（如 XState）或者自己手写都很常见。
+状态和流转规则一目了然，扩展新状态只用改配置，不用动逻辑。
 
 
 
-### 3.提前返回，拒绝嵌套地狱
+### 5.卫语句：干掉深层嵌套
 
-条件检查是代码里最常见的场景，但嵌套太多会让逻辑变得难以追踪。比如：
+嵌套的 if...else 是代码可读性的杀手，用卫语句（提前返回）可以让逻辑更平铺直叙。
+
+处理用户输入：
 
 ```js
-function processData(data) {
-  if (data) {
-    if (data.length > 0) {
-      // 处理逻辑
+// 优化前
+function processInput(input) {
+  if (input) {
+    if (input.length > 0) {
+      console.log('处理:', input)
     } else {
-      console.log('数据为空')
+      console.log('输入为空')
     }
   } else {
-    console.log('数据不存在')
+    console.log('输入不存在')
   }
 }
 ```
 
-这种嵌套看着就累，咱们可以用**提前返回**把异常情况先处理掉：
+提前处理异常情况：
 
 ```js
-function processData(data) {
-  if (!data) return console.log('数据不存在')
-  if (data.length === 0) return console.log('数据为空')
-  // 处理逻辑
+function processInput(input) {
+  if (!input) return console.log('输入不存在')
+  if (input.length === 0) return console.log('输入为空')
+  console.log('处理:', input)
 }
 ```
 
-主逻辑一下子就扁平了，读起来也顺畅多了。表单校验、API 数据处理时，这个方法能大大提高代码可读性。
+去掉了嵌套，主逻辑更突出。
 
 
 
-### 4.配置化处理，把规则交给数据
+### 6.配置化处理：动态规则的妙招
 
-有时候条件判断是基于一堆动态规则，比如判断用户能不能领优惠券。传统写法可能是：
+当条件逻辑会频繁变化时，可以用配置来替代硬编码的判断。
+
+比如权限控制：
 
 ```js
-function handleUser(user) {
-  if (user.vipLevel > 5) {
-    sendPremiumGift(user)
-  } else if (user.activityJoined) {
-    sendActivityCoupon(user)
+// 优化前
+function checkPermission(role, action) {
+  if (role === 'admin' && (action === 'create' || action === 'delete')) {
+    return true
+  } else if (role === 'user' && action === 'view') {
+    return true
   }
+  return false
 }
 ```
 
-如果规则经常变，每次都要改代码，太麻烦了。咱们可以用**配置化**的方式，把规则和处理逻辑写成一个表：
+用配置表：
 
 ```js
-const RULE_CONFIG = [
-  { condition: user => user.vipLevel > 5, handler: sendPremiumGift },
-  { condition: user => user.activityJoined, handler: sendActivityCoupon }
-]
+const permissions = {
+  admin: ['create', 'delete'],
+  user: ['view']
+}
 
-function handleUser(user) {
-  const rule = RULE_CONFIG.find(r => r.condition(user))
-  rule?.handler(user)
+function checkPermission(role, action) {
+  return permissions[role]?.includes(action) || false
 }
 ```
 
-这样规则一目了然，想加新规则直接往数组里插个对象就行，代码完全不用动。React 项目里处理权限控制、动态提示的时候，这个思路特别实用。
+权限规则变成数据，改动时只用调整配置。
 
 
 
-### 5.责任链模式，顺序处理多条件
+### 怎么选对方法？
 
-如果你的逻辑需要按顺序检查多个条件，比如表单校验，传统的写法可能是连串的 if：
+这么多方法，怎么选呢？我给你个小指南：
 
-```js
-function validate(input) {
-  if (!input) return false
-  if (input.length < 5) return false
-  if (!/[a-z]/.test(input)) return false
-  return true
-}
-```
+- **简单分支**：用对象映射，干净利落。
+- **复杂校验**：策略模式，逻辑清晰。
+- **状态转换**：状态机，适合流程化。
+- **类型差异**：多态，OOP 的好帮手。
+- **深层嵌套**：卫语句，平铺逻辑。
+- **动态规则**：配置化，灵活应对变化。
 
-这还好，但如果校验逻辑复杂起来，代码就不好维护了。咱们可以用**责任链模式**，把每步校验拆成独立函数：
-
-```js
-class ValidatorChain {
-  constructor() {
-    this.chain = []
-  }
-
-  add(validator) {
-    this.chain.push(validator)
-    return this
-  }
-
-  run(input) {
-    return this.chain.every(fn => fn(input))
-  }
-}
-
-const validator = new ValidatorChain()
-  .add(input => !!input)
-  .add(input => input.length >= 5)
-  .add(input => /[a-z]/.test(input))
-
-console.log(validator.run('test123'))
-```
+另外，结合 TypeScript 的类型守卫和组件化拆分，还能进一步减少不必要的条件判断。不过别为了优化而优化，关键还是根据你的业务场景选最合适的方案。
 
 
 
-### 6.善用 TypeScript 类型系统
+### 最后聊聊
 
-如果你用 TypeScript，有些运行时的类型判断其实可以交给类型系统。比如判断一个元素是不是按钮：
-
-```js
-function handleClick(element: HTMLElement) {
-  if (element.tagName === 'BUTTON') {
-    (element as HTMLButtonElement).disabled = true
-  }
-}
-```
-
-可以用**类型守卫**优化：
-
-```js
-function isButton(element: HTMLElement): element is HTMLButtonElement {
-  return element.tagName === 'BUTTON'
-}
-
-function handleClick(element: HTMLElement) {
-  if (isButton(element)) {
-    element.disabled = true  // TS 自动推断类型
-  }
-}
-```
-
-这样不仅去掉了类型断言，还让代码更安全，编译时就能发现问题。TS 项目里处理 DOM 操作时，这个技巧能省不少心。
-
-
-
-#### **一点小建议**
-
-这些方法虽然好用，但也不是万能药。我的经验是：
-
-1. **简单条件别强行优化**：如果只有一两个分支，直接用 if 可能更直观。
-2. **可读性优先**：别为了减少 if/else 牺牲代码的清晰度。
-3. **高频改动的逻辑尽量解耦**：用策略模式或配置化，能让后续调整更轻松。
-4. **结合框架特性**：Vue 的计算属性、React 的 Hooks 都能帮你少写条件。
-
-这些技巧在实际项目里，比如表单校验、状态管理、支付流程优化中都很常见。关键是根据业务复杂度选对方法，别一味追求形式。
+减少 if...else 的核心思路是**抽象和解耦**。把条件逻辑变成映射、策略或者配置，代码不仅更简洁，还能应对未来的变化。
