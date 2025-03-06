@@ -161,7 +161,7 @@ if (oldEndIdx < oldStartIdx && newStartIdx <= newEndIdx) {
 }
 ```
 
-### 删除节点
+#### 删除节点
 
 反过来，如果旧的是 p-1, p-2, p-3，新的是 p-1, p-3，循环结束后发现 p-2 多余，就卸载掉：
 
