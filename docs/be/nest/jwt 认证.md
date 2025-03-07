@@ -321,7 +321,7 @@ $ curl http://localhost:3000/auth/profile -H "Authorization: Bearer eyJhbGciOiJI
 
 
 
-#### 总结与提升
+### 总结与提升
 
 到这儿，一个基本的认证系统就搞定了！咱们从零开始，搭模块、写登录逻辑、发 JWT，最后保护路由，全程一步步走下来，是不是挺清晰？
 
