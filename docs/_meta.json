@@ -11,8 +11,8 @@
   },
   {
     "text": "AI",
-    "link": "/ai/",
-    "activeMatch": "/ai/lang-chain/rag"
+    "link": "/ai/lang-chain/rag",
+    "activeMatch": "/ai/"
   },
   {
     "text": "随笔",
