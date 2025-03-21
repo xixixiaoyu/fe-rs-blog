@@ -184,6 +184,6 @@ server.status.subscribe((status: MqttStatus) => {
 
 
 
-#### 总结：MQTT 的魅力
+### 总结：MQTT 的魅力
 
 聊到这儿，你应该能感觉到 MQTT 的厉害之处了吧？它轻量、灵活，还能在苛刻的环境下稳定工作。不管是简单的设备通信，还是复杂的微服务系统，MQTT 都能胜任。
