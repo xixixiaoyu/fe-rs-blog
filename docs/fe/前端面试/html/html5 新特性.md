@@ -19,11 +19,12 @@
 
 5. **本地存储**  
    `localStorage` 和 `sessionStorage` 存数据比 Cookie 更简单，容量也更大：
+   
    ```javascript
    localStorage.setItem('name', '小明')
    console.log(localStorage.getItem('name')) // 小明
    ```
-
+   
 6. **离线应用**  
    通过 `manifest` 文件缓存资源，断网也能访问页面。
 
