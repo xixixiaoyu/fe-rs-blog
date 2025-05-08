@@ -185,5 +185,5 @@ node 适合：
 + **<font style="color:rgb(38, 38, 38);">Android 应用开发：</font>**<font style="color:rgb(38, 38, 38);"> Java (以及后来的 Kotlin) 是 Android 官方支持的开发语言。</font>
 + **<font style="color:rgb(38, 38, 38);">对安全性和稳定性要求极高的系统，且需要长期维护和支持的项目。</font>**
 
-<font style="color:rgb(38, 38, 38);">说一句，如果在公司使用，nest.js 更适合内部前端工具链的开发，如果开发后端应用来说，前提是公司有 Node 开发先例最好，且前端人数明显大于后端人数，且前端的经验基本都是两三年以上最好。</font>
+<font style="color:rgb(38, 38, 38);">如果在公司使用，nest.js 更适合内部前端工具链的开发，如果开发后端应用来说，前提是公司有 Node 开发先例最好，且前端人数明显大于后端人数，且前端的经验基本都是两三年以上最好。</font>
 
