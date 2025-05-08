@@ -7,9 +7,9 @@ Nest 底层基于 Express 框架，如果追求极致性能，也可以切换到
 
 Nest 在它们之上加了一层“抽象”，提供了更结构化的开发方式，但同时也允许你直接调用底层框架 (比如 Express) 的功能，非常灵活。
 
-但是 Nest 本身<font style="color:rgb(38, 38, 38);">本身并不和特定的 HTTP 库（像 Express 或 Fastify）紧密耦合，它定义了一个 </font>`<font style="color:rgb(38, 38, 38);">HttpServer</font>`<font style="color:rgb(38, 38, 38);"> 接口，Express 和 Fastify 都有对应的适配器去实现这个接口。你想换底层 HTTP 平台？简单，换个适配器就行，核心业务代码基本不用动。</font>
+但是 Nest 本身本身并不和特定的 HTTP 库（像 Express 或 Fastify）紧密耦合，它定义了一个 `HttpServer` 接口，Express 和 Fastify 都有对应的适配器去实现这个接口。你想换底层 HTTP 平台？简单，换个适配器就行，核心业务代码基本不用动。
 
-<font style="color:rgb(38, 38, 38);">nest 官网：</font>[https://nestjs.com/](https://nestjs.com/)
+nest 官网：[https://nestjs.com/](https://nestjs.com/)
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746688270505-d94f381c-3fc5-43da-81eb-6fcf0a7b62a1.png)
 
@@ -35,9 +35,9 @@ Nest 就是来填补这个空白的。它提供了一套经过深思熟虑的应
 
 用 Node 开发后端大概分三个层次：
 
-+ **<font style="color:rgb(38, 38, 38);">初级玩家</font>**<font style="color:rgb(38, 38, 38);">：使用 Node.js 中的原生 http 或 https 模块提供的 </font>`<font style="color:rgb(38, 38, 38);">createServer API</font>`<font style="color:rgb(38, 38, 38);"> 来创建服务器。这种玩法适合搞点小工具的开发服务，简单快捷。</font>
-+ **<font style="color:rgb(38, 38, 38);">进阶玩家</font>**<font style="color:rgb(38, 38, 38);">：用上 Express、Koa 这类库来处理请求和响应。它们很灵活，但也因为太灵活，代码想怎么写就怎么写，项目一大，代码就是一坨，而且这类框架只实现基本 web 服务，路由、日志、请求拦截等都需要自己实现。</font>
-+ **<font style="color:rgb(38, 38, 38);">专业玩家</font>**<font style="color:rgb(38, 38, 38);">：选择 Nest、Egg.js、MidwayJS 这类企业级框架。这类框架最大的特点就是“有规矩”，它会告诉你代码该怎么组织，很多常用的功能（比如日志、配置、安全）都给你准备好了，开箱即用。</font>
++ **初级玩家**：使用 Node.js 中的原生 http 或 https 模块提供的 `createServer API` 来创建服务器。这种玩法适合搞点小工具的开发服务，简单快捷。
++ **进阶玩家**：用上 Express、Koa 这类库来处理请求和响应。它们很灵活，但也因为太灵活，代码想怎么写就怎么写，项目一大，代码就是一坨，而且这类框架只实现基本 web 服务，路由、日志、请求拦截等都需要自己实现。
++ **专业玩家**：选择 Nest、Egg.js、MidwayJS 这类企业级框架。这类框架最大的特点就是“有规矩”，它会告诉你代码该怎么组织，很多常用的功能（比如日志、配置、安全）都给你准备好了，开箱即用。
 
 我们来看看 Nest 项目结构：
 
@@ -58,36 +58,36 @@ src
 └── app.module.ts
 ```
 
-<font style="color:rgb(38, 38, 38);">模块化非常清晰，每个模块里，Controller 管路由，Service 管业务逻辑，DTO 管数据传输，Guard 管权限，Filter 管异常</font>
+模块化非常清晰，每个模块里，Controller 管路由，Service 管业务逻辑，DTO 管数据传输，Guard 管权限，Filter 管异常
 
-<font style="color:rgb(38, 38, 38);">什么代码放哪里，都安排得妥妥的。</font>
+什么代码放哪里，都安排得妥妥的。
 
-<font style="color:rgb(38, 38, 38);">所以正得益于这么优秀的结构，放眼全球，NestJS 的火爆程度和社区活跃度都是顶级的（比 Egg.js 和 MidwayJS 好太多了），在国内也会越来越流行。如果你想学一个靠谱的 Node.js 框架，NestJS 基本上就是那个“唯一的答案”了。</font>
+所以正得益于这么优秀的结构，放眼全球，NestJS 的火爆程度和社区活跃度都是顶级的（比 Egg.js 和 MidwayJS 好太多了），在国内也会越来越流行。如果你想学一个靠谱的 Node.js 框架，NestJS 基本上就是那个“唯一的答案”了。
 
-<font style="color:rgb(38, 38, 38);">Nest 架构：</font>
+Nest 架构：
 
 ![画板](https://cdn.nlark.com/yuque/0/2025/jpeg/21596389/1746692840336-4bb81140-a30d-4b32-9845-ba368f08790f.jpeg)
 
 
 
-## <font style="color:rgb(38, 38, 38);">不只学框架，更是拥抱整个后端生态</font>
-<font style="color:rgb(38, 38, 38);">学 NestJS 的过程，你可不只是在学一个框架那么简单。你会接触到一大堆后端常用的“神兵利器”：</font>
+## 不只学框架，更是拥抱整个后端生态
+学 NestJS 的过程，你可不只是在学一个框架那么简单。你会接触到一大堆后端常用的“神兵利器”：
 
-+ <font style="color:rgb(38, 38, 38);">数据库：MySQL、PostgreSQL、MongoDB</font>
-+ <font style="color:rgb(38, 38, 38);">缓存：Redis</font>
-+ <font style="color:rgb(38, 38, 38);">消息队列：RabbitMQ、Kafka</font>
-+ <font style="color:rgb(38, 38, 38);">服务发现/配置中心：Nacos</font>
-+ <font style="color:rgb(38, 38, 38);">搜索引擎：Elasticsearch</font>
++ 数据库：MySQL、PostgreSQL、MongoDB
++ 缓存：Redis
++ 消息队列：RabbitMQ、Kafka
++ 服务发现/配置中心：Nacos
++ 搜索引擎：Elasticsearch
 
-<font style="color:rgb(38, 38, 38);">你会慢慢理解一个典型的后端架构长啥样，比如请求怎么进来，怎么做负载均衡，数据怎么存储和查询，异步任务怎么处理等等。</font>
+你会慢慢理解一个典型的后端架构长啥样，比如请求怎么进来，怎么做负载均衡，数据怎么存储和查询，异步任务怎么处理等等。
 
-<font style="color:rgb(38, 38, 38);">这些知识，就算你以后换用 Go 或者 Java，也都是通用的。</font>
+这些知识，就算你以后换用 Go 或者 Java，也都是通用的。
 
-<font style="color:rgb(38, 38, 38);">所以，学 NestJS 是个切入点，帮你打开整个后端技术生态的大门。</font>
+所以，学 NestJS 是个切入点，帮你打开整个后端技术生态的大门。
 
-<font style="color:rgb(38, 38, 38);">Vue/React/Angular + NestJS 这样的全栈技术栈开发起来爽歪歪。</font>
+Vue/React/Angular + NestJS 这样的全栈技术栈开发起来爽歪歪。
 
-<font style="color:rgb(38, 38, 38);">最后说一嘴，虽然大部分人不会找远程工作，但 Nest 在电鸭社区的出现率也蛮高的，国外的初创公司或者小团队，也特别喜欢用 NestJS 来做服务端。</font>
+最后说一嘴，虽然大部分人不会找远程工作，但 Nest 在电鸭社区的出现率也蛮高的，国外的初创公司或者小团队，也特别喜欢用 NestJS 来做服务端。
 
 ****
 
@@ -179,17 +179,17 @@ pnpm run start:dev
 
 node 适合：
 
-+ **<font style="color:rgb(38, 38, 38);">高并发应用：</font>**<font style="color:rgb(38, 38, 38);"> 如实时聊天应用、在线游戏服务器、协作工具等。Node.js 的单线程事件循环机制能够高效处理大量并发连接，而不会造成过多的线程开销。</font>
-+ **<font style="color:rgb(38, 38, 38);">I/O 密集型应用：</font>**<font style="color:rgb(38, 38, 38);"> 如数据流应用、文件上传/下载服务、API 网关等。当应用需要频繁地读写文件、访问数据库或进行网络请求时，Node.js 的非阻塞特性可以显著提高性能。</font>
-+ **<font style="color:rgb(38, 38, 38);">原型开发和快速迭代：</font>**<font style="color:rgb(38, 38, 38);"> JavaScript 的灵活性和庞大的 npm 生态系统使得 Node.js 非常适合快速构建原型和进行敏捷开发。</font>
-+ **<font style="color:rgb(38, 38, 38);">Serverlss 及前后端一体化项目，cli 及中间层开发。</font>**
++ **高并发应用：** 如实时聊天应用、在线游戏服务器、协作工具等。Node.js 的单线程事件循环机制能够高效处理大量并发连接，而不会造成过多的线程开销。
++ **I/O 密集型应用：** 如数据流应用、文件上传/下载服务、API 网关等。当应用需要频繁地读写文件、访问数据库或进行网络请求时，Node.js 的非阻塞特性可以显著提高性能。
++ **原型开发和快速迭代：** JavaScript 的灵活性和庞大的 npm 生态系统使得 Node.js 非常适合快速构建原型和进行敏捷开发。
++ **Serverlss 及前后端一体化项目，cli 及中间层开发。**
 
-<font style="color:rgb(38, 38, 38);">java 更适合：</font>
+java 更适合：
 
-+ **<font style="color:rgb(38, 38, 38);">大型企业级应用：</font>**<font style="color:rgb(38, 38, 38);"> 如银行系统、保险系统、大型电商平台等。Java 的稳定性和成熟的框架（如 Spring）使其成为构建复杂、高可靠性企业应用的理想选择。</font>
-+ **<font style="color:rgb(38, 38, 38);">高性能计算和大数据处理：</font>**<font style="color:rgb(38, 38, 38);"> Java 在多线程处理和内存管理方面有很好的表现，并且拥有如 Hadoop、Spark 等强大的大数据处理框架。</font>
-+ **<font style="color:rgb(38, 38, 38);">Android 应用开发：</font>**<font style="color:rgb(38, 38, 38);"> Java (以及后来的 Kotlin) 是 Android 官方支持的开发语言。</font>
-+ **<font style="color:rgb(38, 38, 38);">对安全性和稳定性要求极高的系统，且需要长期维护和支持的项目。</font>**
++ **大型企业级应用：** 如银行系统、保险系统、大型电商平台等。Java 的稳定性和成熟的框架（如 Spring）使其成为构建复杂、高可靠性企业应用的理想选择。
++ **高性能计算和大数据处理：** Java 在多线程处理和内存管理方面有很好的表现，并且拥有如 Hadoop、Spark 等强大的大数据处理框架。
++ **Android 应用开发：** Java (以及后来的 Kotlin) 是 Android 官方支持的开发语言。
++ **对安全性和稳定性要求极高的系统，且需要长期维护和支持的项目。**
 
-<font style="color:rgb(38, 38, 38);">如果在公司使用，nest.js 更适合内部前端工具链的开发，如果开发后端应用来说，前提是公司有 Node 开发先例最好，且前端人数明显大于后端人数，且前端的经验基本都是两三年以上最好。</font>
+如果在公司使用，nest.js 更适合内部前端工具链的开发，如果开发后端应用来说，前提是公司有 Node 开发先例最好，且前端人数明显大于后端人数，且前端的经验基本都是两三年以上最好。
 
