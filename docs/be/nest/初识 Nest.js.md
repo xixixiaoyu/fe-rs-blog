@@ -176,7 +176,7 @@ node 适合：
 + **<font style="color:rgb(38, 38, 38);">高并发应用：</font>**<font style="color:rgb(38, 38, 38);"> 如实时聊天应用、在线游戏服务器、协作工具等。Node.js 的单线程事件循环机制能够高效处理大量并发连接，而不会造成过多的线程开销。</font>
 + **<font style="color:rgb(38, 38, 38);">I/O 密集型应用：</font>**<font style="color:rgb(38, 38, 38);"> 如数据流应用、文件上传/下载服务、API 网关等。当应用需要频繁地读写文件、访问数据库或进行网络请求时，Node.js 的非阻塞特性可以显著提高性能。</font>
 + **<font style="color:rgb(38, 38, 38);">原型开发和快速迭代：</font>**<font style="color:rgb(38, 38, 38);"> JavaScript 的灵活性和庞大的 npm 生态系统使得 Node.js 非常适合快速构建原型和进行敏捷开发。</font>
-+ **<font style="color:rgb(38, 38, 38);">前端开发者转向后端：</font>**<font style="color:rgb(38, 38, 38);"> 对于熟悉 JavaScript 的前端开发者来说，学习 Node.js 的曲线相对平缓。</font>
++ **<font style="color:rgb(38, 38, 38);">Serverlss 及前后端一体化项目，cli 及中间层开发。</font>**
 
 <font style="color:rgb(38, 38, 38);">java 更适合：</font>
 
