@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'CustomFont';
-  src: url('../public/LXGWWenKaiScreen.ttf') format('truetype');
+  src: url('../public/LXGWWenKaiMono-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -19,7 +19,11 @@ body {
   font-family: 'CustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-size: 16px;
+  font-weight: 500;
+  /* 尝试增加字体粗细 */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 针对 Firefox 的字体平滑 */
 }
 
 
