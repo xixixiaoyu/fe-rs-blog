@@ -17,6 +17,10 @@ github：[https://github.com/nestjs/nest](https://github.com/nestjs/nest)
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746689937949-dc8920ac-b1f2-4c43-a339-6bd71f4e6f22.png)
 
+这其中令我印象深刻的是 issues 很少，某种程度上也反映了它较好的维护和成熟的设计。
+
+
+
 ## 为什么用 Nest？它解决了什么痛点？
 前端有 Vue、React、Angular 这些好用的框架。
 
@@ -32,7 +36,7 @@ Nest 就是来填补这个空白的。它提供了一套经过深思熟虑的应
 用 Node 开发后端大概分三个层次：
 
 + **<font style="color:rgb(38, 38, 38);">初级玩家</font>**<font style="color:rgb(38, 38, 38);">：直接用 </font>`<font style="color:rgb(38, 38, 38);">http</font>`<font style="color:rgb(38, 38, 38);">、</font>`<font style="color:rgb(38, 38, 38);">https://</font>`<font style="color:rgb(38, 38, 38);"> 这些原生模块的 </font>`<font style="color:rgb(38, 38, 38);">createServer</font>`<font style="color:rgb(38, 38, 38);"> API。这种玩法适合搞点小工具的开发服务，简单快捷。</font>
-+ **<font style="color:rgb(38, 38, 38);">进阶玩家</font>**<font style="color:rgb(38, 38, 38);">：用上 Express、Koa 这类库来处理请求和响应。它们很灵活，但也因为太灵活，代码想怎么写就怎么写，项目一大，代码就是一坨。</font>
++ **<font style="color:rgb(38, 38, 38);">进阶玩家</font>**<font style="color:rgb(38, 38, 38);">：用上 Express、Koa 这类库来处理请求和响应。它们很灵活，但也因为太灵活，代码想怎么写就怎么写，项目一大，代码就是一坨，而且这类框架只实现基本 web 服务，路由、日志、请求拦截等都需要自己实现。</font>
 + **<font style="color:rgb(38, 38, 38);">专业玩家</font>**<font style="color:rgb(38, 38, 38);">：选择 Nest、Egg.js、MidwayJS 这类企业级框架。这类框架最大的特点就是“有规矩”，它会告诉你代码该怎么组织，很多常用的功能（比如日志、配置、安全）都给你准备好了，开箱即用。</font>
 
 我们来看看 Nest 项目结构：
@@ -58,7 +62,11 @@ src
 
 <font style="color:rgb(38, 38, 38);">什么代码放哪里，都安排得妥妥的。</font>
 
-<font style="color:rgb(38, 38, 38);">所以正得益于这么优秀的结构，放眼全球，NestJS 的火爆程度和社区活跃度都是顶级的，在国内也越来越流行。如果你想学一个靠谱的 Node.js 框架，NestJS 基本上就是那个“唯一的答案”了。</font>
+<font style="color:rgb(38, 38, 38);">所以正得益于这么优秀的结构，放眼全球，NestJS 的火爆程度和社区活跃度都是顶级的（比 Egg.js 和 MidwayJS 好太多了），在国内也会越来越流行。如果你想学一个靠谱的 Node.js 框架，NestJS 基本上就是那个“唯一的答案”了。</font>
+
+<font style="color:rgb(38, 38, 38);">Nest 架构：</font>
+
+![画板](https://cdn.nlark.com/yuque/0/2025/jpeg/21596389/1746692840336-4bb81140-a30d-4b32-9845-ba368f08790f.jpeg)
 
 
 
