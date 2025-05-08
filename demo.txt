@@ -1,10 +1,4 @@
- {
-    "type": "dir",
-    "name": "nest",
-    "label": "nest",
-    "collapsible": true,
-    "collapsed": true
-  },
+ 
   {
     "type": "dir",
     "name": "go",

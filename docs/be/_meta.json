@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "type": "dir",
+    "name": "nest",
+    "label": "nest",
+    "collapsible": true,
+    "collapsed": true
+  }
+]
