@@ -1,4 +1,4 @@
-<h2 id="VlFOF">NestJS 是什么？</h2>
+## NestJS 是什么？
 Nest 是一个用来构建高效、可扩展的 Node.js 服务器端应用的**框架。**
 
 主要用 TS 编写，当然也可以纯 JS 来写，而且它还融合了面向对象编程 (OOP)、函数式编程 (FP) 和函数式响应编程 (FRP) 的优点。
@@ -17,7 +17,7 @@ github：[https://github.com/nestjs/nest](https://github.com/nestjs/nest)
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746689937949-dc8920ac-b1f2-4c43-a339-6bd71f4e6f22.png)
 
-<h2 id="Z0KAl">为什么用 Nest？它解决了什么痛点？</h2>
+## 为什么用 Nest？它解决了什么痛点？
 前端有 Vue、React、Angular 这些好用的框架。
 
 但是 Node.js 后端这边，虽然库和工具很多，但在“**如何组织项目架构**”这个核心问题上，一直没有一个像前端那样公认的、开箱即用的最佳实践。
@@ -62,7 +62,7 @@ src
 
 
 
-<h2 id="dIwFQ"><font style="color:rgb(38, 38, 38);">不只学框架，更是拥抱整个后端生态</font></h2>
+## <font style="color:rgb(38, 38, 38);">不只学框架，更是拥抱整个后端生态</font>
 <font style="color:rgb(38, 38, 38);">学 NestJS 的过程，你可不只是在学一个框架那么简单。你会接触到一大堆后端常用的“神兵利器”：</font>
 
 + <font style="color:rgb(38, 38, 38);">数据库：MySQL、PostgreSQL、MongoDB</font>
@@ -83,7 +83,7 @@ src
 
 ****
 
-<h2 id="xJmbg">Nest，启动！</h2>
+## Nest，启动！
 直接用官方提供的命令行工具 (CLI)。
 
 1. 全局安装 Nest CLI 打开你的终端（命令行窗口），输入：
@@ -104,7 +104,7 @@ nest new my-awesome-project -p pnpm
 
 
 
-<h2 id="OgspF">项目里都有些什么？</h2>
+## 项目里都有些什么？
 进入你刚创建的项目文件夹 (`cd my-awesome-project`)，你会看到一个 `src` 目录，里面有几个核心文件：
 
 + `main.ts`: 这是你应用的入口文件，就像大门一样。它用 `NestFactory` 来创建 Nest 应用实例，并启动服务器监听端口。
@@ -131,7 +131,7 @@ bootstrap(); // 跑起来！
 
 是不是很简单？`NestFactory.create(AppModule)` 就是创建应用实例的关键，然后 `app.listen(3000)` 就让你的应用跑起来，等待浏览器的访问了。
 
-<h2 id="UuFmJ">跑起来看看！</h2>
+## 跑起来看看！
 在你的项目文件夹里，运行：
 
 ```bash
@@ -157,7 +157,7 @@ pnpm run start:dev
 
 
 
-<h2 id="C71UE">node.js 对比 java</h2>
+## node.js 对比 java
 | 特性 | Node.js | Java |
 | :--- | :--- | :--- |
 | **本质** | JavaScript 的服务器端运行环境 | 面向对象的编程语言和平台 |
