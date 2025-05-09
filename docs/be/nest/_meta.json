@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "基础概览",
 		"label": "基础概览"
+	},
+	{
+		"type": "file",
+		"name": "cli",
+		"label": "ci"
 	}
 ]
