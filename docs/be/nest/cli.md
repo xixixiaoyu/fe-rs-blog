@@ -263,7 +263,14 @@ nest start --watch
 
 
 
-## 总结下
+## 看看 Nest 自带的 npm 脚本
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746801590968-87be0ffb-ceb0-490c-a1fc-dd7ed1ffb2b9.png)
+
+这些命令包含了从代码开发、格式化、打包、调试、测试、部署。
+
+
+
+## 总结
 + `**nest new**`：快速创建项目骨架。
 + `**nest generate**`** ****(或**** **`**nest g**`**)**：高效生成模块、控制器、服务等各种代码片段，甚至是一整套 CRUD 接口。
 + `**nest build**`：使用 `tsc` 或 `webpack` 编译你的 TypeScript 代码。
