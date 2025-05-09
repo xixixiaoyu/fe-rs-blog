@@ -1,8 +1,0 @@
- 
-  {
-    "type": "dir",
-    "name": "go",
-    "label": "go",
-    "collapsible": true,
-    "collapsed": true
-  }
