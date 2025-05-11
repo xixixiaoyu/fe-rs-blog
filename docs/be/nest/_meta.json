@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "IoC",
 		"label": "IoC"
+	},
+	{
+		"type": "file",
+		"name": "OOP、FP 和 FRP",
+		"label": "OOP、FP 和 FRP"
 	}
 ]
