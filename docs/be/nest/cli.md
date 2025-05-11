@@ -32,14 +32,14 @@ nest new 项目名
 ## `nest` 命令都有什么？
 我们先 nest -h 看看：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746773523083-4884ca43-699e-4437-bc7c-066b1dfffc0c.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933380135-d639f986-3444-4cdc-91e7-869cb991049f.png)
 
 它列出了一堆命令，创建新项目的 nest new，创建某些代码的 nest generate，打包的 nest build，开发模式的 nest start 等，我们来聊些其中最常用的：
 
 ### `nest new`：轻松创建新项目
 这个命令志上面见过了，就是用来从零开始搭建一个新的 Nest 项目。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746775461737-5e49f0f8-a9ac-4a86-8990-33d53490673d.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933522991-be528b27-9be6-4208-a86b-46d9874dc73b.png)
 
 它还提供了一些有用的选项：
 
@@ -52,6 +52,10 @@ nest new 项目名 -p pnpm --skip-git
 
 + `--language`：可以指定用 `typescript` (默认) 还是 `javascript`。现在都 2025 年了，而且还是写后端，肯定 TS 啦。
 + `--strict`：这个是 TypeScript 的严格模式开关。默认是 `false`，如果你想一开始就让 TS 编译器对你的代码更严格（比如开启 `noImplicitAny`, `strictNullChecks` 等 5 个选项），可以设置为 `true`。这个后续在 `tsconfig.json` 里也能改，所以不用太纠结。
+
+我们创建个项目：
+
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933562182-c0c989c5-cd75-4352-8782-98f27c37f2b1.png)
 
 ### `nest generate` (或 `nest g`)：代码快速生成器
 nest 命令除了生成整个项目，还允许你快速生成各种资源，比如 controllers, providers, modules 等。资源通常指的是与特定业务逻辑相关的模块
@@ -93,15 +97,15 @@ nest g module 模块名
 
 它会生成 module 的代码，并在 AppModule 自动引入：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746778432795-86f419c8-2401-4971-b2b1-5650b0b35a28.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933614612-1e84df85-83f3-49c9-9f1e-36688d4f565e.png)
 
 userMoudle：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746778512951-db83a3a0-0e53-487b-b060-0f7bab097f5a.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933632539-bd2fb48d-4752-4377-9a97-e7c4c6295d4c.png)
 
 AppModule：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746778468662-7c88cab4-ba12-4e8e-a62c-abe57966ac1e.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933663435-0d5887a4-8da8-4bb5-b97d-b2b37d6468b2.png)
 
 不过我们更常生成完整的模块代码，包含模块、控制器、服务，并且控制器里还带有一整套 CRUD (创建、读取、更新、删除) 的 RESTful API 接口：
 
@@ -109,19 +113,19 @@ AppModule：
 nest g resource resource-name
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746780118204-1f11d0fc-5cd0-4b75-b5fe-78eccd3e7a69.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933696769-2173e144-a8e3-49b6-a510-ccf152dad667.png)
 
 会先问资源要提供哪种 API，有常见的 `REST API` (HTTP)、`GraphQL`、`WebSockets` 等，一般选 `REST API` 就行。
 
 然后它会问你是否生成 CRUD 的入口点？我们选 yes，就会生成上面的 book 模块所需的所有基础文件：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746780669030-f489cf5a-ba02-4f96-8290-37cb9b3883b2.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933719728-a418b3b0-4bb4-44bb-ae1c-13ae97a892a0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746780234058-c5e4161f-8146-4813-ab56-5c7e00647115.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933748836-d7af7d19-4695-4df5-95b5-2e853df72408.png)
 
 book 模块还会自动在 `AppModule` 中引入：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746780484335-b7265f95-bfd2-47cb-ae93-27ed89a4020e.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933771247-31f21906-1813-4f63-b55b-6f323a1b9888.png)
 
 这些代码模板都定义在 `@nestjs/schematics` 这个包里。`nest new` 创建项目时其实也有个 `--collection` 选项，就是用来指定用哪一套代码模板的，不过咱们一般用默认的就好。
 
@@ -164,7 +168,7 @@ nest start --watch
 + 其余像 `--path`, `--config`, `--webpack` 等选项和 `nest build` 里的作用类似。
 
 ### `nest info`：查看项目信息
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746784195739-873678e6-0d17-4439-b9a5-bf3071272082.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933815421-c394534b-b4c9-49e7-a505-d54ee55d4515.png)
 
 显示当前项目的环境信息，包括你的操作系统、Node.js 版本、NPM/Yarn/PNPM 版本，以及项目中 NestJS 相关包的版本。排查环境问题或者提 issue 的时候会很有用。
 
@@ -175,7 +179,7 @@ nest start --watch
 
 打开你项目根目录下的 `nest-cli.json`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746784313137-223a2d74-eaa7-49cf-a118-1bf71fdf5731.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933832482-1b95758c-c82b-40d1-be49-cb29b58b756b.png)
 
 + `compilerOptions`：这里可以配置编译相关的选项，比如 `webpack: true` 就等同于命令行里的 `--webpack`。`deleteOutDir: true` 表示每次构建前清空 `dist` 目录。
 + `assets`：这里可以详细配置哪些非 TS/JS 文件需要被复制到 `dist` 目录，可以用 `include`、`exclude` 来精确匹配，并且可以单独为某些资源指定 `watchAssets`。注意，这通常只处理 `src` 目录下的文件。如果其他地方有文件想复制，可能需要自己写脚本。
@@ -264,7 +268,7 @@ nest start --watch
 
 
 ## 看看 Nest 自带的 npm 脚本
-![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746801590968-87be0ffb-ceb0-490c-a1fc-dd7ed1ffb2b9.png)
+![](https://cdn.nlark.com/yuque/0/2025/png/21596389/1746933890829-7af9ab46-4417-43a2-9541-511b95e0561e.png)
 
 这些命令包含了从代码开发、格式化、打包、调试、测试、部署。
 
