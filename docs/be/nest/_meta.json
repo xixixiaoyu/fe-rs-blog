@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "调试",
 		"label": "调试"
+	},
+	{
+		"type": "file",
+		"name": "IoC",
+		"label": "IoC"
 	}
 ]
