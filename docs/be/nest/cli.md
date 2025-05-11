@@ -275,11 +275,11 @@ nest start --watch
 
 
 ## 总结
-+ `**nest new**`：快速创建项目骨架。
-+ `**nest generate**`** ****(或**** **`**nest g**`**)**：高效生成模块、控制器、服务等各种代码片段，甚至是一整套 CRUD 接口。
-+ `**nest build**`：使用 `tsc` 或 `webpack` 编译你的 TypeScript 代码。
-+ `**nest start**`：启动开发服务器，支持 `--watch` 模式实现热重载，还支持 `--debug` 进行调试。
-+ `**nest info**`：打印项目相关的环境和依赖版本信息。
++ `nest new`：快速创建项目骨架。
++ `nest generate`** (或 **`nest g`**)**：高效生成模块、控制器、服务等各种代码片段，甚至是一整套 CRUD 接口。
++ `nest build`：使用 `tsc` 或 `webpack` 编译你的 TypeScript 代码。
++ `nest start`：启动开发服务器，支持 `--watch` 模式实现热重载，还支持 `--debug` 进行调试。
++ `nest info`：打印项目相关的环境和依赖版本信息。
 
 而且，很多常用的选项都可以在 `nest-cli.json` 文件里进行统一配置。
 
