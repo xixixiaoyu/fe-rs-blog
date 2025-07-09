@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /fe/前端面试/工程化/webpack 构建流程
+      link: /fullstack/前端面试/10-前端工程化
   image:
     src: /banner.jpg
     alt: 主页横幅
