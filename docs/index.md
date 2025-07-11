@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /fe/vue.js 设计与实现/框架设计的核心要素
+      link: /fe/vue.js 设计与实现/命令式与声明式框架：性能与可维护性的权衡
   image:
     src: /banner.jpg
     alt: 主页横幅
