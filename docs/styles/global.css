@@ -36,35 +36,6 @@ blockquote {
   color: var(--text-color-light);
 }
 
-/* 优化图片样式 */
-img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-/* 优化首页特性卡片样式 */
-.features-container {
-  gap: 24px;
-  padding: 2rem 0;
-}
-
-.feature-item {
-  background: var(--bg-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  border: 1px solid var(--border-color);
-}
-
-.feature-item .title {
-  font-size: 1.4em;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.feature-item .details {
-  color: var(--text-color-light);
-}
-
 /* 移除文档标题的横线 */
 .rspress-doc h1,
 .rspress-doc h2,
