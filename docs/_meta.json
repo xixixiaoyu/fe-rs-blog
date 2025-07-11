@@ -1,7 +1,7 @@
 [
   {
     "text": "前端",
-    "link": "/fe/vue.js 设计与实现/命令式与声明式框架：性能与可维护性的权衡",
+    "link": "/fe/vue.js 设计与实现/渲染器设计与实现",
     "activeMatch": "/fullstack/"
   },
   {
