@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /fullstack/前端面试/10-前端工程化
+      link: /fe/vue.js 设计与实现/框架设计的核心要素
   image:
     src: /banner.jpg
     alt: 主页横幅
