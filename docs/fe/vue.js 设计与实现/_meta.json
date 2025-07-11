@@ -1,0 +1,107 @@
+[
+  {
+    "type": "file",
+    "name": "框架设计的核心要素",
+    "label": "框架设计的核心要素"
+  },
+  {
+    "type": "file",
+    "name": "运行时与编译时",
+    "label": "运行时与编译时"
+  },
+  {
+    "type": "file",
+    "name": "命令式与声明式框架：性能与可维护性的权衡",
+    "label": "命令式与声明式框架：性能与可维护性的权衡"
+  },
+  {
+    "type": "file",
+    "name": "响应系统的设计与实现",
+    "label": "响应系统的设计与实现"
+  },
+  {
+    "type": "file",
+    "name": "原始值响应式方案",
+    "label": "原始值响应式方案"
+  },
+  {
+    "type": "file",
+    "name": "Proxy 和 Reflect",
+    "label": "Proxy 和 Reflect"
+  },
+  {
+    "type": "file",
+    "name": "从 Proxy 到深层响应",
+    "label": "从 Proxy 到深层响应"
+  },
+  {
+    "type": "file",
+    "name": "渲染器设计与实现",
+    "label": "渲染器设计与实现"
+  },
+  {
+    "type": "file",
+    "name": "渲染器核心功能：挂载与更新",
+    "label": "渲染器核心功能：挂载与更新"
+  },
+  {
+    "type": "file",
+    "name": "简单 diff",
+    "label": "简单 diff"
+  },
+  {
+    "type": "file",
+    "name": "双端 diff",
+    "label": "双端 diff"
+  },
+  {
+    "type": "file",
+    "name": "快速 diff",
+    "label": "快速 diff"
+  },
+  {
+    "type": "file",
+    "name": "组件实现原理",
+    "label": "组件实现原理"
+  },
+  {
+    "type": "file",
+    "name": "异步组件和函数式组件",
+    "label": "异步组件和函数式组件"
+  },
+  {
+    "type": "file",
+    "name": "内建组件：KeepAlive、Teleport 和 Transition",
+    "label": "内建组件：KeepAlive、Teleport 和 Transition"
+  },
+  {
+    "type": "file",
+    "name": "内建组件：KeepAlive、Teleport 和 Transition (1)",
+    "label": "内建组件：KeepAlive、Teleport 和 Transition (1)"
+  },
+  {
+    "type": "file",
+    "name": "解析器：从状态机到模板 AST 的构建",
+    "label": "解析器：从状态机到模板 AST 的构建"
+  },
+  {
+    "type": "file",
+    "name": "Vue 模板编译器是如何工作的",
+    "label": "Vue 模板编译器是如何工作的"
+  },
+  {
+    "type": "file",
+    "name": "编译优化",
+    "label": "编译优化"
+  },
+  {
+    "type": "file",
+    "name": "vue3 核心设计思路",
+    "label": "vue3 核心设计思路"
+  },
+  {
+    "type": "file",
+    "name": "服务端渲染：从 CSR、SSR 到同构",
+    "label": "服务端渲染：从 CSR、SSR 到同构"
+  }
+]
