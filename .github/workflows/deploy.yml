@@ -44,11 +44,14 @@ jobs:
           cp .nojekyll doc_build/ || true
           echo "Contents of doc_build directory:"
           ls -la doc_build/ || true
+          echo "Checking index.html exists:"
+          test -f doc_build/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
+          echo "First few lines of index.html:"
+          head -5 doc_build/index.html || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: doc_build
-        continue-on-error: false
 
   # Deployment job
   deploy:
