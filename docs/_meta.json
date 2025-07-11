@@ -6,17 +6,17 @@
   },
   {
     "text": "后端",
-    "link": "/be/nest/初识 Nest.js",
+    "link": "/be/nest/",
     "activeMatch": "/be/"
   },
   {
     "text": "AI",
-    "link": "/ai/lang-chain/rag",
+    "link": "/ai/",
     "activeMatch": "/ai/"
   },
   {
     "text": "随笔",
-    "link": "/essay/费曼学习法",
+    "link": "/essay/",
     "activeMatch": "/essay/"
   }
 ]
