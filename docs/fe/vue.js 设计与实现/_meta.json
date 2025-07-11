@@ -1,6 +1,11 @@
 [
   {
     "type": "file",
+    "name": "命令式与声明式框架：性能与可维护性的权衡",
+    "label": "命令式与声明式框架：性能与可维护性的权衡"
+  },
+  {
+    "type": "file",
     "name": "框架设计的核心要素",
     "label": "框架设计的核心要素"
   },
@@ -11,18 +16,13 @@
   },
   {
     "type": "file",
-    "name": "命令式与声明式框架：性能与可维护性的权衡",
-    "label": "命令式与声明式框架：性能与可维护性的权衡"
+    "name": "vue3 核心设计思路",
+    "label": "vue3 核心设计思路"
   },
   {
     "type": "file",
     "name": "响应系统的设计与实现",
     "label": "响应系统的设计与实现"
-  },
-  {
-    "type": "file",
-    "name": "原始值响应式方案",
-    "label": "原始值响应式方案"
   },
   {
     "type": "file",
@@ -33,6 +33,11 @@
     "type": "file",
     "name": "从 Proxy 到深层响应",
     "label": "从 Proxy 到深层响应"
+  },
+  {
+    "type": "file",
+    "name": "原始值响应式方案",
+    "label": "原始值响应式方案"
   },
   {
     "type": "file",
@@ -76,11 +81,6 @@
   },
   {
     "type": "file",
-    "name": "内建组件：KeepAlive、Teleport 和 Transition (1)",
-    "label": "内建组件：KeepAlive、Teleport 和 Transition (1)"
-  },
-  {
-    "type": "file",
     "name": "解析器：从状态机到模板 AST 的构建",
     "label": "解析器：从状态机到模板 AST 的构建"
   },
@@ -93,11 +93,6 @@
     "type": "file",
     "name": "编译优化",
     "label": "编译优化"
-  },
-  {
-    "type": "file",
-    "name": "vue3 核心设计思路",
-    "label": "vue3 核心设计思路"
   },
   {
     "type": "file",
