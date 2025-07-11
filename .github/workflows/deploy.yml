@@ -38,21 +38,7 @@ jobs:
         run: pnpm install
       - name: Build with Rspress
         run: |
-          set +e
           pnpm run build
-          BUILD_EXIT_CODE=$?
-          if [ $BUILD_EXIT_CODE -ne 0 ]; then
-            echo "Build failed with exit code $BUILD_EXIT_CODE, but continuing..."
-            echo "Checking if build output exists..."
-            if [ -d "doc_build" ]; then
-              echo "Build output directory exists, proceeding with deployment"
-            else
-              echo "No build output found, creating minimal structure"
-              mkdir -p doc_build
-              echo '<h1>Site temporarily unavailable</h1>' > doc_build/index.html
-            fi
-          fi
-          set -e
       - name: Copy .nojekyll to build output
         run: |
           cp .nojekyll doc_build/ || true
