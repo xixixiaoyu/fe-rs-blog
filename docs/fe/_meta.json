@@ -5,5 +5,12 @@
     "label": "vue.js 设计与实现",
     "collapsible": true,
     "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "面试",
+    "label": "面试",
+    "collapsible": true,
+    "collapsed": true
   }
 ]
