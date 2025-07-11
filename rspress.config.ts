@@ -4,7 +4,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
 
 export default defineConfig({
-  base: '/',
+  base: process.env.NODE_ENV === 'development' ? '' : '/fe-rs-blog/',
   root: path.join(__dirname, 'docs'),
   title: 'fe-blog',
   description: 'fe-rspress-blog',
