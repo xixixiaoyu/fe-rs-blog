@@ -27,7 +27,6 @@ body {
   /* 针对 Firefox 的字体平滑 */
 }
 
-
 /* 优化引用块样式 */
 blockquote {
   border-left: 4px solid var(--primary-color);
@@ -36,7 +35,6 @@ blockquote {
   background-color: var(--bg-color-secondary);
   color: var(--text-color-light);
 }
-
 
 /* 优化图片样式 */
 img {
