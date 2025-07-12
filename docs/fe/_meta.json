@@ -12,10 +12,5 @@
     "label": "面试",
     "collapsible": true,
     "collapsed": true
-  },
-  {
-    "type": "file",
-    "name": "ts",
-    "label": "ts"
   }
 ]
